@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Navigation from './components/Navigation'
+import {Routes, Route} from 'react-router-dom';
+import Goverment from './components/Goverment'
+import Postpage from './pages/Postpages';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation/>
+      <Routes>
+        <Route path='/goverment24' element={<Goverment/>}/>
+        <Route path='/post' element={<Postpage/>} />
+      </Routes>
     </div>
   );
 }
