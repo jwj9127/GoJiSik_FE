@@ -122,7 +122,7 @@ export default function Postpage() {
             url: '/questions',
             data:Question,
         })
-        .then(result => {console.log('요청성공')
+        .then(result => {console.log('요청성')
         console.log(result)
     })
         .catch(error => {console.log('요청실패')
