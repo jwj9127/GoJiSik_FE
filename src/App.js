@@ -9,7 +9,11 @@ import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 import Postpages from './pages/PostPage';
 import Joinpage from './pages/Joinpage';
-import MyPage from './pages/Mypage';
+import Navigation from './components/Navigation'
+import {Routes, Route} from 'react-router-dom';
+import Goverment from './components/Goverment'
+import Postpage from './pages/Postpages';
+import MyPage from "./pages/MyPage";
 import PostHistoryPage from "./pages/PostHistoryPage";
 import AnswerHistoryPage from "./pages/AnswerHistoryPage";
 import InformationPage from "./pages/InformationPage";
@@ -29,7 +33,17 @@ function App() {
         <Route path='/eCormmerce' element={<EcommercePage/>}/>
         <Route path='/post/postWrite' element={<PostWritepage/>}/>  
         <Route path='/login' element={<Login/>}/>
-        <Route path='/mypage' element={<MyPage/>}/>      
+        <Route path='/mypage' element={<Mypage/>}/>
+        <Route path='/postpage' element={<Postpages/>}/>
+        <Route path='/joinpage' element={<Joinpage/>}/>
+        <Route path='/movie' element={<KioskPage/>}/>
+        <Route path='/ecommercePage' element={<EcommercePage/>}/>
+        <Route path='/post' element={<Postpage/>} />
+        <Route path="/myPage" element = {<MyPage />}></Route>
+        <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
+        <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
+        <Route path="/informationPage" element = {<InformationPage />}></Route>
+        <Route path="/withdrawal" element = {<Withdrawal />}></Route>
       </Routes>
     </div>
   );
