@@ -9,11 +9,7 @@ import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 import Postpages from './pages/PostPage';
 import Joinpage from './pages/Joinpage';
-import Navigation from './components/Navigation'
-import {Routes, Route} from 'react-router-dom';
-import Goverment from './components/Goverment'
-import Postpage from './pages/Postpages';
-import MyPage from "./pages/MyPage";
+import MyPage from './pages/Mypage'
 import PostHistoryPage from "./pages/PostHistoryPage";
 import AnswerHistoryPage from "./pages/AnswerHistoryPage";
 import InformationPage from "./pages/InformationPage";
@@ -38,7 +34,6 @@ function App() {
         <Route path='/joinpage' element={<Joinpage/>}/>
         <Route path='/movie' element={<KioskPage/>}/>
         <Route path='/ecommercePage' element={<EcommercePage/>}/>
-        <Route path='/post' element={<Postpage/>} />
         <Route path="/myPage" element = {<MyPage />}></Route>
         <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
         <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
