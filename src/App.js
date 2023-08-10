@@ -16,7 +16,9 @@ import InformationPage from "./pages/InformationPage";
 import Withdrawal from "./components/Withdrawal";
 import KioskPage from './pages/KioskPage';
 import EcommercePage from './pages/EcommercePage';
-import JuminPage from './pages/JuminPage';
+import JuminPage from './goverment/JuminPage';
+import Year from './goverment/Year';
+import Family from './goverment/Family';
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
         <Route path="/informationPage" element = {<InformationPage />}></Route>
         <Route path="/withdrawal" element = {<Withdrawal />}></Route>
         <Route path="/JuminPage" element = {<JuminPage />}></Route>
+        <Route path="/Year" element = {<Year />}></Route>
+        <Route path="/Family" element = {<Family />}></Route>
       </Routes>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-import '../css/JuminPage.css';
+import '../css/Goverment.css';
+
 
 const Goverment = () => {
     return (
@@ -12,8 +13,8 @@ const Goverment = () => {
             <div className="data">
                 <ul>
                     <li><Link to="/JuminPage"><div className="box"></div><p>주민등록등본</p></Link></li>
-                    <li><Link to="/JuminPage"><div className="box"></div><p>연말정산</p></Link></li>
-                    <li><Link to="/JuminPage"><div className="box"></div><p>가족관계증명서</p></Link></li>
+                    <li><Link to="/Year"><div className="box"></div><p>연말정산</p></Link></li>
+                    <li><Link to="/Family"><div className="box"></div><p>가족관계증명서</p></Link></li>
                     <li><Link to="/JuminPage"><div className="box"></div><p>어쩌고저쩌고</p></Link></li>
                 </ul>
                 <ul>
