@@ -7,7 +7,7 @@ export default function Postpages() {
         setValue(value => !value);
     }
     const MoveToWrite = e => {
-        navigate('/postwrite')
+        navigate('/post/postwrite')
     }
     return(
         <div className="postbox">
