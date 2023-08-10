@@ -1,3 +1,4 @@
+import logo from './logo.svg';
 import './App.css';
 import Navigation from './components/Navigation'
 import {Routes, Route} from 'react-router-dom';
@@ -10,6 +11,13 @@ import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 import Postpages from './pages/PostPage';
 import Joinpage from './pages/Joinpage';
+import MyPage from "./pages/MyPage";
+import PostHistoryPage from "./pages/PostHistoryPage";
+import AnswerHistoryPage from "./pages/AnswerHistoryPage";
+import InformationPage from "./pages/InformationPage";
+import Withdrawal from "./components/Withdrawal";
+import KioskPage from './pages/KioskPage';
+import EcommercePage from './pages/EcommercePage';
 
 function App() {
   return (
@@ -17,14 +25,7 @@ function App() {
       <Navigation/>
       <Routes>
         <Route path='/goverment24' element={<Goverment/>}/>
-        <Route path='/postwrite' element={<PostWritepage/>} />
-        <Route path='/main' element={<Main/>}/>
-        <Route path='/kiosk' element={<Kiosk/>}/>
-        <Route path='/eCormmerce' element={<Ecommerce/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/mypage' element={<Mypage/>}/>
-        <Route path='/postpage' element={<Postpages/>}/>
-        <Route path='/joinpage' element={<Joinpage/>}/>
+        <Route path='/post' element={<Postpage/>} />
       </Routes>
     </div>
   );

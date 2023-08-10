@@ -1,0 +1,68 @@
+body{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.answerReview{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.answerBox{
+    display: flex;
+    width: 1000px;
+    height: 300px;
+    border: 1px solid black;
+    flex-direction: column;
+}
+
+.answerBox_2{
+    display: flex;
+    width: 1000px;
+    height: 300px;
+    border: 1px solid black;
+    flex-direction: column;
+}
+
+.postName{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.review_div{
+    display: flex;
+    justify-content: end;
+}
+
+.review{
+    display: flex;
+    margin-top: 30px;
+    margin-right: 20px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.showAnswer{
+    margin-top: 20px;
+    height: 50px;
+    border: 1px solid black;
+}
