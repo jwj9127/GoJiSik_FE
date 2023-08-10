@@ -1,11 +1,9 @@
-
-
-.main{
+.mypage_main{
     height: 90vh;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 
 .profil{
