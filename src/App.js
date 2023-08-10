@@ -16,6 +16,7 @@ import InformationPage from "./pages/InformationPage";
 import Withdrawal from "./components/Withdrawal";
 import KioskPage from './pages/KioskPage';
 import EcommercePage from './pages/EcommercePage';
+import JuminPage from './pages/JuminPage';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
         <Route path="/informationPage" element = {<InformationPage />}></Route>
         <Route path="/withdrawal" element = {<Withdrawal />}></Route>
+        <Route path="/JuminPage" element = {<JuminPage />}></Route>
       </Routes>
     </div>
   );
