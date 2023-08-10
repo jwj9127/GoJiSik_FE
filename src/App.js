@@ -4,7 +4,6 @@ import {Routes, Route} from 'react-router-dom';
 import Goverment from './components/Goverment'
 import PostWritepage from './pages/PostWritepages';
 import Main from './pages/Mainpage.js'
-import Kiosk from './pages/Kiosk';
 import Ecommerce from './pages/Ecommerce';
 import Login from './pages/Login';
 import Mypage from './pages/Mypage';
@@ -28,10 +27,11 @@ function App() {
       <Navigation/>
       <Routes>
         <Route path='/goverment24' element={<Goverment/>}/>
-        <Route path='/postwrite' element={<PostWritepage/>} />
+        <Route path='/post' element={<Postpages/>} />
         <Route path='/main' element={<Main/>}/>
-        <Route path='/kiosk' element={<Kiosk/>}/>
-        <Route path='/eCormmerce' element={<Ecommerce/>}/>
+        <Route path='/kiosk' element={<KioskPage/>}/>
+        <Route path='/eCormmerce' element={<EcommercePage/>}/>
+        <Route path='/post/postWrite' element={<PostWritepage/>}/>  
         <Route path='/login' element={<Login/>}/>
         <Route path='/mypage' element={<Mypage/>}/>
         <Route path='/postpage' element={<Postpages/>}/>
@@ -40,10 +40,10 @@ function App() {
         <Route path='/ecommercePage' element={<EcommercePage/>}/>
         <Route path='/post' element={<Postpage/>} />
         <Route path="/myPage" element = {<MyPage />}></Route>
-          <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
-          <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
-          <Route path="/informationPage" element = {<InformationPage />}></Route>
-          <Route path="/withdrawal" element = {<Withdrawal />}></Route>
+        <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
+        <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
+        <Route path="/informationPage" element = {<InformationPage />}></Route>
+        <Route path="/withdrawal" element = {<Withdrawal />}></Route>
       </Routes>
     </div>
   );
