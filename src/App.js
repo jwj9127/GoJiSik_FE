@@ -12,12 +12,17 @@ import PostHistoryPage from "./pages/PostHistoryPage";
 import AnswerHistoryPage from "./pages/AnswerHistoryPage";
 import InformationPage from "./pages/InformationPage";
 import Withdrawal from "./components/Withdrawal";
-import EcommercePage from './pages/Ecommerce';
-import MoviePage from './pages/MoviePage';
-import CafePage from './pages/CafePage';
-import FoodPage from './pages/FoodPage';
-import DessertPage from './pages/DessertPage';
-import Cgv from './pages/Movie/Cgv';
+import KioskPage from '../src/pages/Kiosk/KioskPage';
+import EcommercePage from './pages/EcommercePage';
+import JuminPage from './pages/goverment/JuminPage';
+import Year from './pages/goverment/Year';
+import Family from './pages/goverment/Family';
+import Movie from './pages/Kiosk/Movie';
+import Cafe from './pages/Kiosk/Cafe';
+import Food from './pages/Kiosk/Food';
+import Dessert from './pages/Kiosk/Dessert';
+import Cgv from './pages/Kiosk/KioMovie/Cgv';
+
 
 function App() {
   return (
@@ -42,6 +47,14 @@ function App() {
         <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
         <Route path="/informationPage" element = {<InformationPage />}></Route>
         <Route path="/withdrawal" element = {<Withdrawal />}></Route>
+        <Route path="/JuminPage" element = {<JuminPage />}></Route>
+        <Route path="/Year" element = {<Year />}></Route>
+        <Route path="/Family" element = {<Family />}></Route>
+        <Route path="/Movie" element = {<Movie />}></Route>
+        <Route path="/Cafe" element = {<Cafe />}></Route>
+        <Route path="/Food" element = {<Food />}></Route>
+        <Route path="/Dessert" element = {<Dessert />}></Route>
+        <Route path="/Cgv" element = {<Cgv />}></Route>
       </Routes>
     </div>
   );

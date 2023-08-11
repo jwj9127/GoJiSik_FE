@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    text-align: center;
+    
+}
+.UseImage{
+    display: inline-block;
+    margin: 0;
+    align-items: center;
+    background-image: url("../../img/useimg/juminimg.png");
+    background-size: cover;
+    width: 1300px;
+    height: 1000px;
+}
+.title span{
+    width: 300px;
+    height: 50px;
+    border-bottom: 4px solid #C1CCB7;
+    padding: 8px 10px;
+}

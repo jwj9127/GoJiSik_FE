@@ -1,0 +1,44 @@
+.Kiosk_list{
+    margin-top: 100px;
+}
+
+.Lotteria, .Mom, .Mcdo, .Burger, .Kfc{
+    display: flex;
+    width: 240px;
+    height: 270px;
+    margin: 10px;
+    border: 1px solid #8195A9;
+    border-radius: 20px;
+}
+
+.Lotteria{
+    background-image: url('../../img/useimg/lotteria.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0.20000000000000018rem;
+}
+.Mom{
+    background-image: url('../../img/useimg/moms.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0.20000000000000018rem;
+}
+.Mcdo{
+    background-image: url('../../img/useimg/mcdonald.png');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: 0.8rem, -0.000000009em;
+}
+.Burger{
+    background-image: url('../../img/useimg/burgerking.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -0.9rem;
+}
+.Kfc{
+    background-image: url('../../img/useimg/kfc.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -0.9rem;
+}
+
