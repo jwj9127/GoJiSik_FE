@@ -4,7 +4,6 @@ import {Routes, Route} from 'react-router-dom';
 import Goverment from './components/Goverment'
 import PostWritepage from './pages/PostWritepages';
 import Main from './pages/Mainpage.js'
-import Ecommerce from './pages/Ecommerce';
 import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 import Postpages from './pages/PostPage';
