@@ -3,7 +3,7 @@ import "../css/AnswerHistoryPage.css"
 function AnswerHistoryPage(){
     return(
         <>
-        <div className = "main">
+        <div className = "answerHistory_main">
             <div className = "answerReview">답변 내역 보기</div>
             
             <div className = "answerBox">

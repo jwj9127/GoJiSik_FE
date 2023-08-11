@@ -3,7 +3,7 @@ import "../css/InformationPage.css";
 function InformationPage(){
     return(
         <>
-        <div className = "main">
+        <div className = "information_main">
             <div className = "informationFix">내 정보 수정</div>
             <div className = "fix">
                 <div className = "id">아이디</div>

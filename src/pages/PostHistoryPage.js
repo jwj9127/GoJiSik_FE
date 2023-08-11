@@ -3,7 +3,7 @@ import "../css/PostHistoryPage.css"
 function PostHistoryPage(){
     return(
         <>
-        <div className = "main">
+        <div className = "postHistory_main">
             <div className = "questionReview">질문 내역 보기</div>
 
             <div className = "questionBox">

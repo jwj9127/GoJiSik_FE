@@ -4,7 +4,7 @@ import "../css/MyPage.css"
 function MyPage(){
     return(
         <>
-        <div className = 'main'>
+        <div className = 'mypage_main'>
             <div className = 'profil'>프로필</div>
 
             <div className = 'detail'>

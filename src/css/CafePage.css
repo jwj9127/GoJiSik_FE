@@ -1,0 +1,68 @@
+.kiosk_main{
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.Movie, .Cafe, .Food, .Dessert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20%;
+    width: 70px;
+    height: 30px;
+}
+
+.cafe_main{
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.twosome, .mega, .ediya, .palk, .hollys{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.twosome{
+    background-image: url('../img/twosome.jpg');
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    background-position: 1rem, -1rem;
+}
+
+.mega{
+    background-image: url('../img/mega.jpg');
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    background-position: 1rem, -1rem;
+}
+
+.ediya{
+    background-image: url('../img/ediya.jpg');
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    background-position: 1rem, -1rem;
+}
+
+.palk{
+    background-image: url('../img/palk.jpg');
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    background-position: 1rem, -1rem;
+}
+
+.hollys{
+    background-image: url('../img/hollys.jpg');
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    background-position: 1rem, -1rem;
+}
