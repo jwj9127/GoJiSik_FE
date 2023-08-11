@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../../css/kiosk/KioskPage.css';
+import '../../css/kiosk/CafePage.css';
 
 export default function Cafe() {
     return (
@@ -10,7 +10,7 @@ export default function Cafe() {
             </div>
             <div>
                 <div className="tap">
-                    <Link to="/kiosk"><button>전체</button></Link>
+                    
                     <Link to="/Movie"><button>영화관</button></Link>
                     <Link to="/Cafe"><button>카페</button></Link>
                     <Link to="/Food"><button>햄버거</button></Link>
@@ -18,10 +18,17 @@ export default function Cafe() {
                 </div>
                 <div className="Kiosk_list">
                     <ul>
-                        <li><Link to=""><div className="box"></div><p>zkvp1</p></Link></li>
-                        <li><Link to=""><div className="box"></div><p>전체1</p></Link></li>
-                        <li><Link to=""><div className="box"></div><p>영화1</p></Link></li>
-                        <li><Link to=""><div className="box"></div><p>영화1</p></Link></li>
+                        <li><Link to="Two"><div className="Two"></div><p>투썸플레이스</p></Link></li>
+                        <li><Link to="Mega"><div className="Mega"></div><p>메가커피</p></Link></li>
+                        <li><Link to="Ediya"><div className="Ediya"></div><p>이디야</p></Link></li>
+                        <li><Link to="Angel"><div className="Angel"></div><p>엔제리너스</p></Link></li>
+                        
+                    </ul>
+                    <ul>
+                        <li><Link to="Paikdabang"><div className="Paikdabang"></div><p>빽다방</p></Link></li>
+                        <li><Link to="Hollys"><div className="Hollys"></div><p>할리스</p></Link></li>
+                        <li><Link to="Star"><div className="Star"></div><p>스타벅스</p></Link></li>
+                        
                     </ul>
                 </div>
             </div>

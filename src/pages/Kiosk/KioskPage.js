@@ -10,7 +10,6 @@ function KioskPage() {
             </div>
             <div>
                 <div className="tap">
-                    <Link to="/kiosk"><button>전체</button></Link>
                     <Link to="/Movie"><button>영화관</button></Link>
                     <Link to="/Cafe"><button>카페</button></Link>
                     <Link to="/Food"><button>햄버거</button></Link>

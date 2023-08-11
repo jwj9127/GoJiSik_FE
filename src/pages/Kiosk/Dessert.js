@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../../css/kiosk/KioskPage.css';
+import '../../css/kiosk/DessertPage.css';
 
 export default function Dessert() {
     return (
@@ -10,7 +10,7 @@ export default function Dessert() {
             </div>
             <div>
                 <div className="tap">
-                <Link to="/kiosk"><button>전체</button></Link>
+                
                     <Link to="/Movie"><button>영화관</button></Link>
                     <Link to="/Cafe"><button>카페</button></Link>
                     <Link to="/Food"><button>햄버거</button></Link>
@@ -18,10 +18,9 @@ export default function Dessert() {
                 </div>
                 <div className="Kiosk_list">
                     <ul>
-                        <li><Link to=""><div className="box"></div><p>Dessert</p></Link></li>
-                        <li><Link to=""><div className="box"></div><p>전체1</p></Link></li>
-                        <li><Link to=""><div className="box"></div><p>영화1</p></Link></li>
-                        <li><Link to=""><div className="box"></div><p>영화1</p></Link></li>
+                        <li><Link to="sulbing"><div className="sulbing"></div><p>설빙</p></Link></li>
+                        <li><Link to="br"><div className="br"></div><p>배스킨 라빈스</p></Link></li>
+                        <li><Link to="waffle"><div className="waffle"></div><p>와플대학</p></Link></li>
                     </ul>
                 </div>
             </div>

@@ -23,6 +23,7 @@ import Movie from './pages/Kiosk/Movie';
 import Cafe from './pages/Kiosk/Cafe';
 import Food from './pages/Kiosk/Food';
 import Dessert from './pages/Kiosk/Dessert';
+import Cgv from './pages/Kiosk/KioMovie/Cgv';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/Cafe" element = {<Cafe />}></Route>
         <Route path="/Food" element = {<Food />}></Route>
         <Route path="/Dessert" element = {<Dessert />}></Route>
+        <Route path="/Cgv" element = {<Cgv />}></Route>
       </Routes>
     </div>
   );
