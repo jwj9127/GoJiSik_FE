@@ -2,13 +2,13 @@ import React from "react";
 import { useState, useCallback } from "react";
 import axios from 'axios';
 
-const AudioRecord = () => {
-  const [stream, setStream] = useState();
-  const [media, setMedia] = useState();
-  const [onRec, setOnRec] = useState(true);
-  const [source, setSource] = useState();
-  const [analyser, setAnalyser] = useState();
-  const [audioUrl, setAudioUrl] = useState();
+// const AudioRecord = () => {
+//   const [stream, setStream] = useState();
+//   const [media, setMedia] = useState();
+//   const [onRec, setOnRec] = useState(true);
+//   const [source, setSource] = useState();
+//   const [analyser, setAnalyser] = useState();
+//   const [audioUrl, setAudioUrl] = useState();
 
 //   const onRecAudio = () => {
 //     // 음원정보를 담은 노드를 생성하거나 음원을 실행또는 디코딩 시키는 일을 한다

@@ -1,15 +1,13 @@
 import './App.css';
 import Navigation from './components/Navigation'
 import {Routes, Route} from 'react-router-dom';
-import Goverment from './components/Goverment'
+import Goverment from './components/Goverment';
 import PostWritepage from './pages/PostWritepages';
-import Main from './pages/Mainpage.js'
-import Ecommerce from './pages/Ecommerce';
+import Main from './pages/Mainpage.js';
 import Login from './pages/Login';
-import Mypage from './pages/Mypage';
 import Postpages from './pages/PostPage';
 import Joinpage from './pages/Joinpage';
-import MyPage from './pages/Mypage'
+import MyPage from './pages/Mypage';
 import PostHistoryPage from "./pages/PostHistoryPage";
 import AnswerHistoryPage from "./pages/AnswerHistoryPage";
 import InformationPage from "./pages/InformationPage";
@@ -25,6 +23,7 @@ import Food from './pages/Kiosk/Food';
 import Dessert from './pages/Kiosk/Dessert';
 import Cgv from './pages/Kiosk/KioMovie/Cgv';
 
+
 function App() {
   return (
     <div className="App">
@@ -33,14 +32,16 @@ function App() {
         <Route path='/goverment24' element={<Goverment/>}/>
         <Route path='/post' element={<Postpages/>} />
         <Route path='/main' element={<Main/>}/>
-        <Route path='/kiosk' element={<KioskPage/>}/>
-        <Route path='/eCormmerce' element={<EcommercePage/>}/>
         <Route path='/post/postWrite' element={<PostWritepage/>}/>  
         <Route path='/login' element={<Login/>}/>
-        <Route path='/mypage' element={<Mypage/>}/>
         <Route path='/postpage' element={<Postpages/>}/>
         <Route path='/joinpage' element={<Joinpage/>}/>
-        <Route path='/ecommercePage' element={<EcommercePage/>}/>
+        <Route path='/movie' element={<MoviePage/>}/>
+        <Route path='/cgv' element={<Cgv/>}/>
+        <Route path='/cafe' element={<CafePage/>}/>
+        <Route path='/food' element={<FoodPage/>}/>
+        <Route path='/dessert' element={<DessertPage/>}/>
+        <Route path='/eCormmerce' element={<EcommercePage/>}/>
         <Route path="/myPage" element = {<MyPage />}></Route>
         <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
         <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>

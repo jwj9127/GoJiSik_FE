@@ -1,0 +1,12 @@
+.joinbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.joinform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
