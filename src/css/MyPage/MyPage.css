@@ -1,0 +1,73 @@
+.mypage_main {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profil {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-weight: bold;
+    background-size: 10rem;
+    background-repeat: no-repeat;
+    color: beige;
+}
+
+.detail {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.gradeAndpoint {
+    display: flex;
+}
+
+.grade {
+    margin-right: 20px;
+}
+
+.point {
+    margin-left: 20px;
+}
+
+.view {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.record {
+    display: flex;
+    flex-direction: column;
+}
+
+.postHistoryPage {
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.answerHistoryPage {
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.informationPage {
+    border: 1px solid black;
+}
+
+.bulletin {
+    margin-bottom: 20px;
+}
+
+.answer {
+    margin-top: 20px;
+}

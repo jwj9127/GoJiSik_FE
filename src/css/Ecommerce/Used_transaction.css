@@ -1,0 +1,47 @@
+.ecommerce_list {
+    margin-top: 100px;
+}
+
+.shoppingmall,
+.used_transaction,
+.airplane,
+.place,
+.public_transport {
+    display: flex;
+    width: 240px;
+    height: 270px;
+    margin: 10px;
+    border: 1px solid #8195A9;
+    border-radius: 20px;
+}
+
+.carrot,
+.lightning,
+.used_country {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.carrot {
+    background-image: url('../../img/Ecommerce/carrot.jpg');
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    background-position: 1rem, -1rem;
+}
+
+.lightning {
+    background-image: url('../../img/Ecommerce/lightning.jpeg');
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    background-position: 1rem, -1rem;
+}
+
+.used_country {
+    background-image: url('../../img/Ecommerce/used_country.jpg');
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    background-position: 1rem, -1rem;
+}
