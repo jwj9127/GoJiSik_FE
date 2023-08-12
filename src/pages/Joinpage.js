@@ -2,41 +2,6 @@ import React, { useCallback, useEffect, useState } from "react";
 import '../css/Joinpage.css'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-{/*import { findAllByAltText } from "@testing-library/react";*/}
-// IMP.init('imp88508343'); // 'imp00000000' 대신 발급받은 가맹점 식별코드를 사용합니다.
-// const AgreePage=()=> {
-//     const [isChecked, setIsChecked] = useState(false);
-//     const [allChecked, setAllChecked] = useState({
-//         isChecked : false
-//     });
-
-//     const handleCheckboxChange = () => {
-//         setIsChecked(!isChecked);
-//     }
-
-//     const handleAllCheckboxChange = () => {
-//         setAllChecked(!allChecked);
-//     }
-
-//     return (
-//         <div className="JoinBox">
-//             <h1>약관동의</h1>
-//             <form>
-//                 전체동의
-//                 <input type="checkbox" className="checkbox" checked={allChecked} onChange={handleAllCheckboxChange} />
-//                 <label htmlFor="checkboxInput1">약관1 동의</label>
-//                 <input required type="checkbox" id="checkboxInput1" className="checkbox" onClick={handleCheckboxChange} />
-//                 <label htmlFor="checkboxInput2">약관2 동의</label>
-//                 <input required type="checkbox" id="checkboxInput2" className="checkbox" onClick={handleCheckboxChange} />
-//                 <label htmlFor="checkboxInput3">약관3 동의</label>
-//                 <input required type="checkbox" id="checkboxInput3" className="checkbox" onClick={handleCheckboxChange} />
-//                 <label htmlFor="checkboxInput4">약관4 동의</label>
-//                 <input required type="checkbox" id="checkboxInput4" className="checkbox" onClick={handleCheckboxChange} />
-//                 <input type="submit" value={'회원가입'}/>
-//             </form>
-//         </div>
-//     );
-// }
 
 export default function Joinpage(){
     const navigate = useNavigate();
@@ -105,7 +70,7 @@ export default function Joinpage(){
             setPwMessage('숫자 4 자리를 입력해주세요!')
             setIsPw(false)
         } else {
-            setPwMessage('정확히 입력하셨습니다!')
+            setPwMessage('올바른 형식입니다.')
             setIsPw(true)
         }
     },[])
@@ -203,12 +168,12 @@ export default function Joinpage(){
         <div className="joinbox">
          <h1 className="jointext">회원가입</h1>
          <form className="joinform">
-            <div>
+            <div className="joinform-box">
                 <label htmlFor="inputname" className="joinform-nametext">이름 : </label>
                 <input required type="text" id="inputid" placeholder="이름을 입력해주세요" onChange={inputName}/>
                 {name.length > 0 && <span className={`message ${isName ? 'success' : 'error'}`}>{nameMessage}</span>}
             </div>
-            <div>
+            <div className="joinform-box">
                 <select className="selectfontsize" onChange={selectSize} value={fontsize}>\
                     {fontsizelist.map((item) => (
                         <option value={item} key={item}>
@@ -217,25 +182,25 @@ export default function Joinpage(){
                     ))}
                 </select>
             </div>
-            <div>
+            <div className="joinform-box">
                 <label htmlFor="inputpw" className="joinform-pwtext">비밀번호 : </label>
                 <input required type='password' id="inputpw" className="joinform-inputpw" placeholder="숫자 4자리를 입력해주세요" maxLength={4} onChange={inputPw}/>
                 {pw.length > 0 && (
                  <span className={`message ${isPw ? 'success' : 'error'}`}>{pwMessage}</span>
                 )}
             </div>
-            <div>
+            <div className="joinform-box">
                 <label htmlFor="inputpwchk" className="joinform-pwchktext">비밀번호 확인 : </label>
                 <input required type='password' id="inputpwchk" className='joinform-inputpwchk' placeholder="비밀번호를 다시 입력해주세요" maxLength={4} onChange={inputPwchk}/>
                 {pwchk.length > 0 && (
                     <span className={`message ${isPwConfirm ? 'success' : 'error'}`}>{pwchkMessage}</span>
                 )}
             </div>
-            <div>
+            <div className="joinform-box">
                 <lable htmlFor='inputbirth' className='joinform-birthtext'>생년월일 : </lable>
                 <input required type="date" className="joinform-inputbirth" onChange={inputBirth}/>
             </div>
-            <div>
+            <div className="joinform-box">
                 <label htmlFor='inputid' className="joinform-idtext">전화번호 : </label>
                 <input required type="tel" id="inputid" className="joinform-inputid" placeholder="전화번호를 입력해주세요(010-1234-5678)" onChange={inputId} maxLength={11} minLength={11}/>
                 {id.length > 0 && (

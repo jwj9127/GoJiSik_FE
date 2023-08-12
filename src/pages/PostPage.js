@@ -1,8 +1,19 @@
-import React, { useState  } from "react";
+import React, { useEffect, useState  } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 export default function Postpages() {
     const [value,setValue] = useState(true);
     const navigate = useNavigate();
+
+    // 이따 보기!!!
+    // useEffect(() => {
+    //     axios({
+    //         method : 'get',
+    //         url : 
+    //     })
+    // }, [])
+
     const toggleclick = e => {  
         setValue(value => !value);
     }
