@@ -18,14 +18,14 @@ export default function Food() {
                 </div>
                 <div className="Kiosk_list">
                     <ul>
-                        <li><Link to="Lotteria"><div className="Lotteria"></div><p>롯데리아</p></Link></li>
-                        <li><Link to="Mom"><div className="Mom"></div><p>맘스터치</p></Link></li>
-                        <li><Link to="Mcdo"><div className="Mcdo"></div><p>맥도날드</p></Link></li>
+                        <li><Link to="/Lotteria"><div className="Lotteria"></div><p>롯데리아</p></Link></li>
+                        <li><Link to="/Mom"><div className="Mom"></div><p>맘스터치</p></Link></li>
+                        <li><Link to="/Mcdo"><div className="Mcdo"></div><p>맥도날드</p></Link></li>
                         
                     </ul>
                     <ul>
-                        <li><Link to="Burger"><div className="Burger"></div><p>버거킹</p></Link></li>
-                        <li><Link to="Kfc"><div className="Kfc"></div><p>KFC</p></Link></li>
+                        <li><Link to="/Burger"><div className="Burger"></div><p>버거킹</p></Link></li>
+                        <li><Link to="/Kfc"><div className="Kfc"></div><p>KFC</p></Link></li>
                     </ul>
                 </div>
             </div>

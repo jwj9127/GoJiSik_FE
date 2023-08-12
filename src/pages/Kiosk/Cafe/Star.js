@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../../../css/kiosk/MoviePage.css';
 
-
-export default function Cineq() {
+export default function Star() {
     return (
 
         <>
             <div className="title">
-                <span>키오스크</span>
+            <Link to="/kiosk"><span>키오스크</span></Link>
             </div>
             <div className="tap">
                 <Link to="/Movie"><button>영화관</button></Link>
@@ -16,8 +16,8 @@ export default function Cineq() {
                 <Link to="/Dessert"><button>디저트</button></Link>
             </div>
             <div>
-                <p>CGV</p>
-                <div></div>
+                <p>스타벅스</p>
+                <div className="Usestar"></div>
             </div>
         </>
     )

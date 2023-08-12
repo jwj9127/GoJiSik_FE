@@ -53,25 +53,66 @@
     background-repeat:no-repeat;
     background-position: -9.2rem;
 }
-.Usecgv, .Usemegabox, .Uselotte{
+.Usecgv, .Usemegabox, .Uselotte, .UseTwsom, .Usemega, .Useediya,
+ .Useangel ,.Usepaik, .Useholly, .Usestar, .Usemom, .Usemcdo, .Uselotteria,
+  .Usekfc, .Useburger, .Usewaffle, .Usesulbing, .Usebr{
     width: 1507px;
     height:3449px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -1.2rem;
 }
 .Usecgv{
     background-image: url('../../img/useimg/UseCgv.png');
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: -1.2rem;
 }
 .Usemegabox{
     background-image: url('../../img/useimg/UseCgv.png');
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: -1.2rem;
 }
 .Uselotte{
     background-image: url('../../img/useimg/UseCgv.png');
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: -1.2rem;
+}
+.UseTwsom{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Usemega{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Useediya{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Useangel{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Usepaik{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Useholly{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Usestar{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Usemom{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Usemcdo{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Uselotteria{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Usekfc{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Useburger{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Usewaffle{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Usesulbing{
+    background-image: url('../../img/useimg/UseCgv.png');
+}
+.Usebr{
+    background-image: url('../../img/useimg/UseCgv.png');
 }
