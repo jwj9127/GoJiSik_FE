@@ -24,6 +24,8 @@ import Cafe from './pages/Kiosk/Cafe';
 import Food from './pages/Kiosk/Food';
 import Dessert from './pages/Kiosk/Dessert';
 import Cgv from './pages/Kiosk/KioMovie/Cgv';
+import Megabox from './pages/Kiosk/KioMovie/Megabox';
+import Lotte from './pages/Kiosk/KioMovie/Lotte';
 
 function App() {
   return (
@@ -54,6 +56,8 @@ function App() {
         <Route path="/Food" element = {<Food />}></Route>
         <Route path="/Dessert" element = {<Dessert />}></Route>
         <Route path="/Cgv" element = {<Cgv />}></Route>
+        <Route path="/Megabox" element = {<Megabox />}></Route>
+        <Route path="/Lotte" element = {<Lotte />}></Route>
       </Routes>
     </div>
   );

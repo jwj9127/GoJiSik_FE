@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../../../css/kiosk/MoviePage.css';
 
-
-export default function Cgv() {
+export default function Megabox() {
     return (
 
         <>
@@ -16,8 +16,8 @@ export default function Cgv() {
                 <Link to="/Dessert"><button>디저트</button></Link>
             </div>
             <div>
-                <p>CGV</p>
-                <div></div>
+                <p>MEGABOX</p>
+                <div className="Usemegabox"></div>
             </div>
         </>
     )

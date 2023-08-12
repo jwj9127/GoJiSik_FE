@@ -1,7 +1,27 @@
+.tap{
+    margin: 60px 60px;
+}
+.tap button{
+    font-size: 1.5rem;
+    width: auto;
+    height: 50px;
+    border: 3px solid #C1CCB7;
+    border-radius: 50px;
+    padding: 10px 25px;
+    margin: 0 20px;
+}
 .Kiosk_list{
     margin-top: 100px;
 }
-
+.Kiosk_list ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+.Kiosk_list ul li{
+    margin: 0 35px 80px;
+}
 .Lotteria, .Mom, .Mcdo, .Burger, .Kfc{
     display: flex;
     width: 240px;
