@@ -17,7 +17,7 @@ export default function Br() {
             </div>
             <div>
                 <p>엔제리너스</p>
-                <div className="Usebr"></div>
+                <div className="Usebr"> 좀 돼라</div>
             </div>
         </>
     )
