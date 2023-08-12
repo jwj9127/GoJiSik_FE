@@ -27,6 +27,7 @@ import Public_transport from './pages/Ecommerce/Public_transport';
 import Shoppingmall from './pages/Ecommerce/Shoppingmall';
 import KioskPage from './pages/Kiosk/KioskPage';
 import EcommercePage from './pages/Ecommerce/EcommercePage';
+import Agreepage from './pages/Agreepage';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
         <Route path="/Food" element={<Food />}></Route>
         <Route path="/Dessert" element={<Dessert />}></Route>
         <Route path="/Cgv" element={<Cgv />}></Route>
+        <Route path='/Agreepage' element={<Agreepage />} />
       </Routes>
     </div>
   );
