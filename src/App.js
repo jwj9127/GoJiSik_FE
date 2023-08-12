@@ -13,7 +13,7 @@ import AnswerHistoryPage from "./pages/AnswerHistoryPage";
 import InformationPage from "./pages/InformationPage";
 import Withdrawal from "./components/Withdrawal";
 import KioskPage from '../src/pages/Kiosk/KioskPage';
-import EcommercePage from './pages/EcommercePage';
+import Ecommerce from './pages/Ecommerce';
 import JuminPage from './pages/goverment/JuminPage';
 import Year from './pages/goverment/Year';
 import Family from './pages/goverment/Family';
@@ -22,7 +22,11 @@ import Cafe from './pages/Kiosk/Cafe';
 import Food from './pages/Kiosk/Food';
 import Dessert from './pages/Kiosk/Dessert';
 import Cgv from './pages/Kiosk/KioMovie/Cgv';
-
+import MoviePage from './pages/Kiosk/Movie';
+import CafePage from './pages/CafePage';
+import FoodPage from './pages/CafePage';
+import DessertPage from './pages/Kiosk/Dessert';
+import Agreepage from './pages/Agreepage';
 
 function App() {
   return (
@@ -41,7 +45,7 @@ function App() {
         <Route path='/cafe' element={<CafePage/>}/>
         <Route path='/food' element={<FoodPage/>}/>
         <Route path='/dessert' element={<DessertPage/>}/>
-        <Route path='/eCormmerce' element={<EcommercePage/>}/>
+        <Route path='/eCormmerce' element={<Ecommerce/>}/>
         <Route path="/myPage" element = {<MyPage />}></Route>
         <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
         <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
@@ -55,6 +59,7 @@ function App() {
         <Route path="/Food" element = {<Food />}></Route>
         <Route path="/Dessert" element = {<Dessert />}></Route>
         <Route path="/Cgv" element = {<Cgv />}></Route>
+        <Route path='/Agreepage' element={<Agreepage/>}/>
       </Routes>
     </div>
   );
