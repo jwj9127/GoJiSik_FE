@@ -27,7 +27,7 @@ export default function Cafe() {
                     <ul>
                         <li><Link to="/Paikdabang"><div className="Paikdabang"></div><p>빽다방</p></Link></li>
                         <li><Link to="/Hollys"><div className="Hollys"></div><p>할리스</p></Link></li>
-                        <li><Link to="/Star"><div className="Star"></div><p>스타벅스</p></Link></li>
+                        
                         
                     </ul>
                 </div>

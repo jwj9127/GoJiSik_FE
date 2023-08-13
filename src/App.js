@@ -25,14 +25,12 @@ import Dessert from './pages/Kiosk/Dessert';
 import Cgv from './pages/Kiosk/KioMovie/Cgv';
 import Megabox from './pages/Kiosk/KioMovie/Megabox';
 import Lotte from './pages/Kiosk/KioMovie/Lotte';
-import Cineq from './pages/Kiosk/KioMovie/Cineq';
 import Two from './pages/Kiosk/Cafe/Two';
 import Mega from './pages/Kiosk/Cafe/Mega';
 import Ediya from './pages/Kiosk/Cafe/Ediya';
 import Angel from './pages/Kiosk/Cafe/Angel';
 import Paikdabang from './pages/Kiosk/Cafe/Paikdabang';
 import Hollys from './pages/Kiosk/Cafe/Hollys';
-import Star from './pages/Kiosk/Cafe/Star';
 import Lotteria from './pages/Kiosk/Food/Lotteria';
 import Mom from './pages/Kiosk/Food/Mom';
 import Mcdo from './pages/Kiosk/Food/Mcdo';
@@ -74,14 +72,12 @@ function App() {
         <Route path="/Cgv" element = {<Cgv />}></Route>
         <Route path="/Megabox" element = {<Megabox />}></Route>
         <Route path="/Lotte" element = {<Lotte />}></Route>
-        <Route path="/Lotte" element = {<Cineq />}></Route>
         <Route path="/Two" element = {<Two />}></Route>
         <Route path="/Mega" element = {<Mega />}></Route>
         <Route path="/Ediya" element = {<Ediya />}></Route>
         <Route path="/Angel" element = {<Angel />}></Route>
         <Route path="/Paikdabang" element = {<Paikdabang />}></Route>
         <Route path="/Hollys" element = {<Hollys />}></Route>
-        <Route path="/Star" element = {<Star />}></Route>
         <Route path="/Lotteria" element = {<Lotteria />}></Route>
         <Route path="/Mom" element = {<Mom />}></Route>
         <Route path="/Mcdo" element = {<Mcdo />}></Route>

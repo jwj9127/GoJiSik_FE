@@ -32,7 +32,7 @@ function KioskPage() {
                         <li><Link to="/Mom"><div className="Mom"></div><p>CGV</p></Link></li>
                         <li><Link to="/Megabox"><div className="Megabox"></div><p>전체1</p></Link></li>
                         <li><Link to="/Mcdo"><div className="Mcdo"></div><p>영화1</p></Link></li>
-                        <li><Link to="/Cineq"><div className="Cineq"></div><p>영화1</p></Link></li>
+            
                     </ul>
                 </div>
             </div>

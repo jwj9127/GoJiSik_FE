@@ -17,7 +17,7 @@ export default function Two() {
             </div>
             <div>
                 <p>투썸플레이스</p>
-                <div className="Usecgv"></div>
+                <div className="UseTwsom"></div>
             </div>
         </>
     )
