@@ -51,18 +51,16 @@ function App() {
       <Navigation />
       <div className='App-body'>
         <Routes>
+          <Route path='/' element={<Main/>}/>
           <Route path='/goverment24' element={<Goverment/>}/>
           <Route path='/post' element={<Postpages/>} />
-          <Route path='/main' element={<Main/>}/>
           <Route path='/kiosk' element={<KioskPage/>}/>
           <Route path='/eCormmerce' element={<EcommercePage/>}/>
           <Route path='/post/postWrite' element={<PostWritepage/>}/>  
           <Route path='/login' element={<Login/>}/>
-          <Route path='/mypage' element={<Mypage/>}/>
           <Route path='/postpage' element={<Postpages/>}/>
           <Route path='/joinpage' element={<Joinpage/>}/>
           <Route path='/ecommercePage' element={<EcommercePage/>}/>
-          <Route path="/myPage" element = {<MyPage />}></Route>
           <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
           <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
           <Route path="/informationPage" element = {<InformationPage />}></Route>
