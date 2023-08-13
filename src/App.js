@@ -32,35 +32,36 @@ function App() {
   return (
     <div className="App">
       <Navigation/>
-      <Routes>
-        <Route path='/goverment24' element={<Goverment/>}/>
-        <Route path='/post' element={<Postpages/>} />
-        <Route path='/main' element={<Main/>}/>
-        <Route path='/post/postWrite' element={<PostWritepage/>}/>  
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/postpage' element={<Postpages/>}/>
-        <Route path='/joinpage' element={<Joinpage/>}/>
-        <Route path='/movie' element={<MoviePage/>}/>
-        <Route path='/cgv' element={<Cgv/>}/>
-        <Route path='/cafe' element={<CafePage/>}/>
-        <Route path='/food' element={<FoodPage/>}/>
-        <Route path='/dessert' element={<DessertPage/>}/>
-        <Route path='/eCormmerce' element={<Ecommerce/>}/>
-        <Route path="/myPage" element = {<MyPage />}></Route>
-        <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
-        <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
-        <Route path="/informationPage" element = {<InformationPage />}></Route>
-        <Route path="/withdrawal" element = {<Withdrawal />}></Route>
-        <Route path="/JuminPage" element = {<JuminPage />}></Route>
-        <Route path="/Year" element = {<Year />}></Route>
-        <Route path="/Family" element = {<Family />}></Route>
-        <Route path="/Movie" element = {<Movie />}></Route>
-        <Route path="/Cafe" element = {<Cafe />}></Route>
-        <Route path="/Food" element = {<Food />}></Route>
-        <Route path="/Dessert" element = {<Dessert />}></Route>
-        <Route path="/Cgv" element = {<Cgv />}></Route>
-        <Route path='/Agreepage' element={<Agreepage/>}/>
-      </Routes>
+      <div className='App-body'>
+        <Routes>
+          <Route path='/' element={<Main/>}/>
+          <Route path='/goverment24' element={<Goverment/>}/>
+          <Route path='/post' element={<Postpages/>} />
+          <Route path='/post/postWrite' element={<PostWritepage/>}/>  
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/joinpage' element={<Joinpage/>}/>
+          <Route path='/movie' element={<MoviePage/>}/>
+          <Route path='/cgv' element={<Cgv/>}/>
+          <Route path='/cafe' element={<CafePage/>}/>
+          <Route path='/food' element={<FoodPage/>}/>
+          <Route path='/dessert' element={<DessertPage/>}/>
+          <Route path='/eCormmerce' element={<Ecommerce/>}/>
+          <Route path="/myPage" element = {<MyPage />}></Route>
+          <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
+          <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
+          <Route path="/informationPage" element = {<InformationPage />}></Route>
+          <Route path="/withdrawal" element = {<Withdrawal />}></Route>
+          <Route path="/JuminPage" element = {<JuminPage />}></Route>
+          <Route path="/Year" element = {<Year />}></Route>
+          <Route path="/Family" element = {<Family />}></Route>
+          <Route path="/Movie" element = {<Movie />}></Route>
+          <Route path="/Cafe" element = {<Cafe />}></Route>
+          <Route path="/Food" element = {<Food />}></Route>
+          <Route path="/Dessert" element = {<Dessert />}></Route>
+          <Route path="/Cgv" element = {<Cgv />}></Route>
+          <Route path='/Agreepage' element={<Agreepage/>}/>
+        </Routes>
+      </div>
     </div>
   );
 }
