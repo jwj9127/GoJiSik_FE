@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../../../css/kiosk/MoviePage.css';
 
-
-export default function Cgv() {
+export default function Kfc() {
     return (
 
         <>
             <div className="title">
-                <span>키오스크</span>
+            <Link to="/kiosk"><span>키오스크</span></Link>
             </div>
             <div className="tap">
                 <Link to="/Movie"><button>영화관</button></Link>
@@ -17,7 +17,7 @@ export default function Cgv() {
             </div>
             <div>
                 <p>CGV</p>
-                <div></div>
+                <div className="Usekfc"></div>
             </div>
         </>
     )

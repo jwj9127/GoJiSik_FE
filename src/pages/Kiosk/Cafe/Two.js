@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../../../css/kiosk/MoviePage.css';
 
-export default function Megabox() {
+export default function Two() {
     return (
 
         <>
             <div className="title">
-                <span>키오스크</span>
+            <Link to="/kiosk"><span>키오스크</span></Link>
             </div>
             <div className="tap">
                 <Link to="/Movie"><button>영화관</button></Link>
@@ -16,8 +16,8 @@ export default function Megabox() {
                 <Link to="/Dessert"><button>디저트</button></Link>
             </div>
             <div>
-                <p>MEGABOXxx</p>
-                <div className="Usemegabox"></div>
+                <p>투썸플레이스</p>
+                <div className="UseTwsom"></div>
             </div>
         </>
     )
