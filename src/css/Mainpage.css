@@ -2,36 +2,91 @@
     display: flex;
     flex-direction: column;
     align-items:center;
+    background-color: #FDFBEB;
 }
+
 .mainbox {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
-    width: 70vh;
+    width: 80vh;
     height: 100vh;
 }
+
 .mainbox-categorybox{
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    height: 26%;
+    background-color: #d4e9e1;
+    padding: 4rem;
+    border-radius: 50px;
+}
+.categorytext{
+    position: absolute;
+    top: 0;
+}
+.mainbox-categorybox-box{
+    display: flex;
     width: 100%;
-    height: 45%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
 }
 .mainbox-categorybox__goverment24box,
 .mainbox-categorybox__kioskbox,
 .mainbox-categorybox__ecommercebox{
-    border: 1px solid black;
+    background-color: #E4A45B;
+    border: none;
+    border-radius: 50px;
     width: 30%;
-    height: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    color: #213920;
     &:hover{
         cursor: pointer;
         text-decoration: underline;
         color: blue;
+        transform: scale(105%);
+    }
+    &:active{
+        transform: scale(90%);
+        color: white;
     }
 }
+.main-postbox{
+    width: 80vw;
+    height: auto;
+    border-radius: 50px;
+    background-color: rgba(231, 199, 180, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .mainbox-bestpostbox{
-   
+   border: 1px solid rgba(231, 199, 180, 1);
+   margin: 1rem;
+   width: 77vw;
+   height: auto;
+   border-radius: 50px;
+   display: flex;
+}
+.titlepost{
+    margin: 0;
+    text-align: left;
+}
+.posttext{
+    font-size: 1rem;
+}
+.postlistbox{
+    border-bottom: 1px solid black;
 }

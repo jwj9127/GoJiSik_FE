@@ -22,7 +22,6 @@ function MyPage(){
                 </div>
                 <div className = 'informationPage'><Link to = {'/informationPage'}>내 정보 조회</Link></div>
             </div>
-
             <div className = 'withdrawal'><Link to = {'/withdrawal'}>회원 탈퇴</Link></div>
         </div>
         </>
