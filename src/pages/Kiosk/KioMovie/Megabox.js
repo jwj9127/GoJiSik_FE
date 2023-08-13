@@ -16,7 +16,7 @@ export default function Megabox() {
                 <Link to="/Dessert"><button>디저트</button></Link>
             </div>
             <div>
-                <p>MEGABOX</p>
+                <p>MEGABOXxx</p>
                 <div className="Usemegabox"></div>
             </div>
         </>
