@@ -22,7 +22,7 @@ export default function Main() {
         navigate('/goverment24')
     }
     const MoveToKiosk = e => {
-        navigate('/kiosk');
+        navigate('/movie');
     }
     const MoveToEcor = e => {
         navigate('/eCormmerce');

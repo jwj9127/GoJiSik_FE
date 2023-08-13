@@ -7,7 +7,7 @@ function Movie() {
 
         <>
             <div className="title">
-            <Link to="/kiosk"><span>키오스크</span></Link>
+                <Link to={'/kiosk'}><span>키오스크</span></Link>
             </div>
             <div className="tap">
                 <Link to="/Movie"><button>영화관</button></Link>
