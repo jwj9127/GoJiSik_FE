@@ -19,9 +19,8 @@
     cursor: pointer;
     background-color: white;
     border-radius: 50px;
-    &:hover{
-        color: blue;
-        transform: scale(110%);
+    &:hover{    
+        
     }
     &:active{
         transform: scale(90%);
@@ -43,7 +42,7 @@
     &:hover{
         background-color:  rgba(231,199,180,0.3);
         transform: scale(110%);
-        text-decoration: none;
+        color: blue;
     }
     &:active{
         transform: scale(90%);

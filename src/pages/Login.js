@@ -7,6 +7,7 @@ export default function Loginpage(){
     const UserInfo = new FormData();
     const [id, setId] = useState('');
     const [pw, setPw] = useState('')
+    const [isLogin, setIsLogin] = useState(true)
     const [token, setToken] = useState('')
 
     const StartLogin = e => {
@@ -19,18 +20,22 @@ export default function Loginpage(){
             url : '/users',
             data : UserInfo
         }) .then(result => {
+            setIsLogin(true)
             setToken(result.data.token)
         })
         .catch(error => {
             alert('로그인실패')
+            setIsLogin(false)
         })
     }
 
     const inputId = e => {
         setId(e.target.value)
+        setIsLogin(true)
     }
     const inputPw = e => {
         setPw(e.target.value)
+        setIsLogin(true)
     }
 
     return(
@@ -38,19 +43,20 @@ export default function Loginpage(){
             <div className="loginpage-logo"></div>
             <form className="loginform">
                 <div className="loginpage-loginbox">
-                    <div className="loginpage-loginbox__idbox">
-                        <label for='ID'>아이디 : </label>
-                        <input className="ID" type="text" placeholder="전화번호를 입력해주세요 ( '-' 제외)" onChange={inputId}></input>
+                    <div className="loginpage-loginbox__box">
+                        <label htmlfor='id'>아이디</label>
+                        <input id="id" className="ID" type="text" placeholder="전화번호를 입력해주세요 ( '-' 제외)" onChange={inputId}></input>
                     </div>
-                    <div className="loginpage-loginbox__pwbox">
-                        <label for='PW'>비밀번호 : </label>
-                        <input className="PW" type="password" placeholder="설정하신 비밀번호 4자리를 입력해주세요" onChange={inputPw}></input>
+                    <div className="loginpage-loginbox__box">
+                        <label htmlFor="pw">비밀번호</label>
+                        <input id="pw" className="PW" type="password" placeholder="설정하신 비밀번호 4자리를 입력해주세요" onChange={inputPw}></input>
                     </div>
                 </div>
-                <input type="submit" value={'로그인'} onClick={StartLogin}/>
+                <span className="loginerrormsg">{isLogin?null :'설정하신 아이디와 비밀번호의 형식과 다릅니다.'}</span>
+                <input type="submit" value={'로그인'} onClick={StartLogin} className="loginbtn"/>
                 <div className="joinbtn">
                     아직 회원이 아니신가요?
-                    <Link to={'/Agreepage'}>회원가입</Link>
+                    <span className="gotojoinbtn"><Link to={'/Agreepage'}>회원가입</Link></span>
                 </div>
             </form>
         </div>
