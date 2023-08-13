@@ -1,0 +1,47 @@
+.ecommerce_list {
+    margin-top: 100px;
+}
+
+.shoppingmall,
+.used_transaction,
+.airplane,
+.place,
+.public_transport {
+    display: flex;
+    width: 240px;
+    height: 270px;
+    margin: 10px;
+    border: 1px solid #8195A9;
+    border-radius: 20px;
+}
+
+.skyscanner,
+.trip,
+.interpark {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.skyscanner {
+    background-image: url('../../img/Ecommerce/skyscanner.jpg');
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    background-position: 1rem, -1rem;
+}
+
+.trip {
+    background-image: url('../../img/Ecommerce/trip.png');
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    background-position: 1rem, -1rem;
+}
+
+.interpark {
+    background-image: url('../../img/Ecommerce/interpark.jpg');
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    background-position: 1rem, -1rem;
+}

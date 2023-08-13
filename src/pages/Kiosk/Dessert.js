@@ -18,9 +18,9 @@ export default function Dessert() {
                 </div>
                 <div className="Kiosk_list">
                     <ul>
-                        <li><Link to="sulbing"><div className="sulbing"></div><p>설빙</p></Link></li>
-                        <li><Link to="br"><div className="br"></div><p>배스킨 라빈스</p></Link></li>
-                        <li><Link to="waffle"><div className="waffle"></div><p>와플대학</p></Link></li>
+                        <li><Link to="/Sulbing"><div className="sulbing"></div><p>설빙</p></Link></li>
+                        <li><Link to="/Br"><div className="br"></div><p>배스킨 라빈스</p></Link></li>
+                        <li><Link to="/Waffle"><div className="waffle"></div><p>와플대학</p></Link></li>
                     </ul>
                 </div>
             </div>

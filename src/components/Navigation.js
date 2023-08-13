@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Navigation.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import {CgLogIn} from 'react-icons/cg'
 import {BsPersonCircle} from 'react-icons/bs'
@@ -10,7 +10,7 @@ const Navigation = () => {
     const MoveToMain = e => {
         navigate('/');
     }
-    return(
+    return (
         <>
         <div className='Navigation'>
             <div className='logobox' onClick={MoveToMain}></div>
