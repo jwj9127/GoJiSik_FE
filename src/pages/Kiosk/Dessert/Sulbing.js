@@ -16,7 +16,7 @@ export default function Sulbing() {
                 <Link to="/Dessert"><button>디저트</button></Link>
             </div>
             <div>
-                <p>엔제리너스</p>
+                <p>설빙</p>
                 <div className="Usesulbing"></div>
             </div>
         </>

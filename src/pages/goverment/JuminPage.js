@@ -12,7 +12,7 @@ import '../../css/goverment/JuminPage.css';
             <div className="">
                 <h1>주민등록</h1>
             </div>
-            <div className="UseImage" />
+            <div className="Usejuminpage" />
         </>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import '../../css/goverment/JuminPage.css';
 
 
 function Family() {
@@ -12,9 +12,9 @@ function Family() {
             <div className="">
                 <h1>가족관계증명서</h1>
             </div>
-            <div className="UseImage">
-                <img src="useimg/juminimg.png" />
-            </div>
+            <div className="Usefamily"> </div>
+                
+           
         </>
     )
 }
