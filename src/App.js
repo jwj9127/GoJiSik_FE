@@ -58,7 +58,7 @@ function App() {
         <Route path='/eCormmerce' element={<EcommercePage/>}/>
         <Route path='/post/postWrite' element={<PostWritepage/>}/>  
         <Route path='/login' element={<Login/>}/>
-        <Route path='/mypage' element={<Mypage/>}/>
+        <Route path='/mypage' element={<MyPage/>}/>
         <Route path='/postpage' element={<Postpages/>}/>
         <Route path='/joinpage' element={<Joinpage/>}/>
         <Route path='/ecommercePage' element={<EcommercePage/>}/>

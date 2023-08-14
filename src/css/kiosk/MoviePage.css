@@ -56,10 +56,11 @@
 .Usecgv, .Usemegabox, .Uselotte, .UseTwsom, .Usemega, .Useediya,
  .Useangel ,.Usepaik, .Useholly, .Usestar, .Usemom, .Usemcdo, .Uselotteria,
   .Usekfc, .Useburger, .Usewaffle, .Usesulbing, .Usebr{
-    width: 1440px;
+    width: 100%;
+    height: 100vw;
     background-size: cover;
     background-repeat:no-repeat;
-    background-position: -1.2rem;
+    background-position:center center;
 }
 .Usecgv{
     background-image: url('../../img/useimg/UseCgv.png');
@@ -82,7 +83,7 @@
 }
 .Usemega{
     background-image: url('../../img/useimg/UseCgv.png');
-    height:4609px;
+    height:3051px;
 }
 .Useediya{
     background-image: url('../../img/useimg/UseEdiya.png');
@@ -102,7 +103,7 @@
 }
 .Usemom{
     background-image: url('../../img/useimg/UseMom.png');
-    height:1764px;
+    height:2114px;
     background-size: 95%;
     background-position: 2.0rem -3.2rem;
 }
