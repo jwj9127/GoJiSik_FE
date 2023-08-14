@@ -1,4 +1,4 @@
-.mypage_main{
+.mypage_main {
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     justify-content: space-around;
 }
 
-.profil{
+.profil {
     width: 150px;
     height: 150px;
     display: flex;
@@ -20,40 +20,54 @@
     color: beige;
 }
 
-.detail{
+.detail {
     width: 80vw;
     display: flex;
     justify-content: space-around;
 }
 
-.gradeAndpoint{
+.gradeAndpoint {
     display: flex;
 }
 
-.grade{
+.grade {
     margin-right: 20px;
 }
 
-.point{
+.point {
     margin-left: 20px;
 }
 
-.view{
+.view {
     width: 80vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.record{
+.record {
     display: flex;
     flex-direction: column;
 }
 
-.bulletin{
+.postHistoryPage {
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.answerHistoryPage {
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.modifyUserPage {
+    border: 1px solid black;
+}
+
+.bulletin {
     margin-bottom: 20px;
 }
 
-.answer{
+.answer {
     margin-top: 20px;
 }

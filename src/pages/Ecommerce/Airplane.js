@@ -2,20 +2,24 @@ import { Link } from "react-router-dom";
 import '../../css/Ecommerce/Airplane.css'
 
 export default function Airplane() {
-    return(
+    return (
         <>
-        <div className = "ecommerce_main">
-            <div className = "shoppingmall"><Link to={'/shoppingmall'}>쇼핑몰</Link></div>
-            <div className = "used_transaction"><Link to={'/used_transaction'}>중고거래</Link></div>
-            <div className = "airplane"><Link to={'/airplane'}>비행기</Link></div>
-            <div className = "place"><Link to={'/place'}>숙소</Link></div>
-            <div className = "public_transport"><Link to={'/public_transport'}>대중교통</Link></div>
-        </div>
-        <div className = "airplane_main">
-            <Link to={'/skyscanner'}><div className = "skyscanner"></div></Link>
-            <Link to={'/trip'}><div className = "trip"></div></Link>
-            <Link to={'/interpark'}><div className = "interpark"></div></Link>
-        </div>
+            <div className="title">
+                <Link to="/ecommerce"><span>이커머스</span></Link>
+            </div>
+            <div className="tap">
+                <Link to={'/shoppingmall'}><button>쇼핑몰</button></Link>
+                <Link to={'/used_transaction'}><button>중고거래</button></Link>
+                <Link to={'/airplane'}><button>비행기</button></Link>
+                <Link to={'/place'}><button>숙소</button></Link>
+            </div>
+            <div className="ecommerce_list">
+                <ul>
+                    <li><Link to={'/skyscanner'}><div className="skyscanner"></div></Link><p>스카이스캐너</p></li>
+                    <li><Link to={'/trip'}><div className="trip"></div></Link><p>트립닷컴</p></li>
+                    <li><Link to={'/interpark'}><div className="interpark"></div></Link><p>인터파크</p></li>
+                </ul>
+            </div>
         </>
     )
 }

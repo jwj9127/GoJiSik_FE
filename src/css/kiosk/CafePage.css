@@ -1,0 +1,54 @@
+.Kiosk_list{
+    margin-top: 100px;
+}
+
+.Two, .Mega, .Ediya, .Angel, .Paikdabang, .Hollys, .Star{
+    display: flex;
+    width: 240px;
+    height: 270px;
+    margin: 10px;
+    border: 1px solid #8195A9;
+    border-radius: 20px;
+}
+
+.Two{
+    background-image: url('../../img/useimg/twosome.jpg');
+    background-size: cover;
+    background-position: -0.8rem;
+}
+.Mega{
+    background-image: url('../../img/useimg/mega.jpg');
+    background-size: 98%;
+    background-repeat: no-repeat;
+    background-position: -0.05rem;
+}
+.Ediya{
+    background-image: url('../../img/useimg/ediya.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -0.9rem;
+}
+.Angel{
+    background-image: url('../../img/useimg/Angel.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -0.9rem;
+}
+.Paikdabang{
+    background-image: url('../../img/useimg/palk.jpg');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: 0.9000000000000004rem;
+}
+.Hollys{
+    background-image: url('../../img/useimg/hollys.jpg');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: 0.9000000000000004rem;
+}
+.Star{
+    background-image: url('../../img/useimg/star.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -7.3rem;
+}

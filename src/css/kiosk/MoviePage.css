@@ -1,0 +1,34 @@
+.Kiosk_list{
+    margin-top: 100px;
+}
+.Cgv, .Megabox, .Lotte, .Cineq{
+    display: flex;
+    width: 240px;
+    height: 270px;
+    margin: 10px;
+    border: 1px solid #8195A9;
+    border-radius: 20px;
+}
+
+.Cgv{
+    background-image: url('../../img/useimg/cgv.png');
+    background-size: cover;
+    background-position: -0.5rem;
+}
+.Megabox{
+    background-image: url('../../img/useimg/megabox.png');
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-position: -3.0rem;
+}
+.Lotte{
+    background-image: url('../../img/useimg/롯데시네마.png');
+    background-size: cover;
+    background-position: -1.0rem;
+}
+.Cineq{
+    background-image: url('../../img/useimg/씨네큐.jpeg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -9.2rem;
+}
