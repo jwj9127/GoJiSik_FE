@@ -82,7 +82,7 @@
     height:3200px;
 }
 .Usemega{
-    background-image: url('../../img/useimg/UseCgv.png');
+    background-image: url('../../img/useimg/UseMega.png');
     height:3051px;
 }
 .Useediya{
@@ -128,7 +128,8 @@
     height:2366px;
 }
 .Usesulbing{
-    background-image: url('../../img/useimg/UseCgv.png');
+    background-image: url('../../img/useimg/UseSulbing.png');
+    background-position: 0 1rem;
 }
 .Usebr{
     background-image: url('../../img/useimg/UseBr.png');
