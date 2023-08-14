@@ -23,10 +23,3 @@
     margin: 0 35px 80px;
 }
 
-.box {
-    display: flex;
-    width: 220px;
-    height: 270px;
-    background-color: rgb(180, 180, 180);
-    margin: 10px;
-}

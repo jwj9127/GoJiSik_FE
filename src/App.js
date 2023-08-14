@@ -44,6 +44,15 @@ import Shoppingmall from './pages/Ecommerce/Shoppingmall';
 import KioskPage from './pages/Kiosk/KioskPage';
 import EcommercePage from './pages/Ecommerce/EcommercePage';
 import Agreepage from './pages/Agreepage';
+import Transfer from './pages/goverment/Transfer';
+import Passport from './pages/goverment/Passport';
+import Immigration from './pages/goverment/Immigration';
+import Wokr from './pages/goverment/Work';
+import Generation from './pages/goverment/Generation';
+import Income from './pages/goverment/Income';
+import Car from './pages/goverment/Car';
+import Covid from './pages/goverment/Covid';
+import Ground from './pages/goverment/Ground';
 
 
 function App() {
@@ -119,6 +128,18 @@ function App() {
         <Route path="/Dessert" element={<Dessert />}></Route>
         <Route path="/Cgv" element={<Cgv />}></Route>
         <Route path='/Agreepage' element={<Agreepage />} />
+        <Route path='/Transfer' element={<Transfer />} />
+        <Route path='/Passport' element={<Passport />} />
+        <Route path='/Immigration' element={<Immigration />} />
+        <Route path='/Work' element={<Wokr/>} />
+        <Route path='/Generation' element={<Generation/>} />
+        <Route path='/Income' element={<Income/>} />
+        <Route path='/Car' element={<Car/>} />
+        <Route path='/Covid' element={<Covid/>} />
+        <Route path='/Ground' element={<Ground/>} />
+       
+        
+
       </Routes>
     </div>
   );

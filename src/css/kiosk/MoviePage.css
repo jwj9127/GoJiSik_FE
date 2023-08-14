@@ -22,7 +22,7 @@
 .Kiosk_list ul li{
     margin: 0 35px 80px;
 }
-.Cgv, .Megabox, .Lotte, .Cineq{
+.Cgv, .Two, .Megabox, .Lotte, .Cineq{
     display: flex;
     width: 240px;
     height: 270px;
