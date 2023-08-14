@@ -28,7 +28,7 @@ export default function Main() {
         navigate('/movie');
     }
     const MoveToEcor = e => {
-        navigate('/eCormmerce');
+        navigate('/ecommerce');
     }
     return(
         <div className="Mainbody">

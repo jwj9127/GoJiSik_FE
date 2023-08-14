@@ -17,7 +17,7 @@ const Navigation = () => {
             <div className='navigationbox'>
                 <div id='1' className='btn navigationbox-govermentbtn'><Link to='/goverment24'>정부24</Link></div>
                 <div id='2' className='btn navigationbox-kioskbtn'><Link to='/movie'>키오스크</Link></div>
-                <div id='3' className='btn navigationbox-ecommercebtn'><Link to='/eCormmerce'>전자상거래</Link></div>
+                <div id='3' className='btn navigationbox-ecommercebtn'><Link to='/shoppingmall'>전자상거래</Link></div>
                 <div id='4' className='btn navigationbox-postbtn' ><Link to={'/post'}>게시글</Link></div>
             </div>
             <div className='mypagebox'>
