@@ -1,0 +1,75 @@
+.loginpage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+.loginpage-logo{
+    width: 50vw;
+    height: 80vh;
+    background-image: url('../img/로그인페이지로고.png');
+    background-repeat: no-repeat;
+    background-position: 12rem 6rem;
+}
+
+.loginform{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50vw;
+    height: 50vh;
+}
+.loginpage-loginbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+.loginpage-loginbox__box{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.ID, .PW{
+    position: relative;
+    font-size: 1.5rem;
+    width: 23vw;
+    height: 3rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    bottom: 0.6rem;
+}
+.loginbtn{
+    border: none;
+    background-color: #E3EEDE;
+    font-size: 1.5rem;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 23vw;
+    margin-left: 19.5rem;
+    &:hover{
+        transform: scale(105%);
+    }
+    &:active{
+        color: white;
+        transform: scale(95%);
+    }
+}
+.loginerrormsg{
+    color: red;
+    margin-top:-3rem;
+    margin-left: 13rem;
+}
+.joinbtn{
+    margin-left: 6rem;
+}
+.gotojoinbtn :first-child{
+    padding-left: 2rem;
+    &:hover{
+        text-decoration: underline;
+        color: blue;
+    }
+}

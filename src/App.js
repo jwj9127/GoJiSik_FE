@@ -10,8 +10,6 @@ import Joinpage from './pages/Joinpage';
 import MyPage from './pages/MyPage/MyPage';
 import PostHistoryPage from "./pages/MyPage/PostHistoryPage";
 import AnswerHistoryPage from "./pages/MyPage/AnswerHistoryPage";
-import InformationPage from "./pages/MyPage/InformationPage";
-import Withdrawal from "./components/Withdrawal";
 import JuminPage from './pages/goverment/JuminPage';
 import Year from './pages/goverment/Year';
 import Family from './pages/goverment/Family';
@@ -39,10 +37,8 @@ import Waffle from './pages/Kiosk/Dessert/Waffle';
 import Used_transaction from './pages/Ecommerce/Used_transaction';
 import Airplane from './pages/Ecommerce/Airplane';
 import Place from './pages/Ecommerce/Place';
-import Public_transport from './pages/Ecommerce/Public_transport';
 import Shoppingmall from './pages/Ecommerce/Shoppingmall';
 import KioskPage from './pages/Kiosk/KioskPage';
-import EcommercePage from './pages/Ecommerce/EcommercePage';
 import Agreepage from './pages/Agreepage';
 import Transfer from './pages/goverment/Transfer';
 import Passport from './pages/goverment/Passport';
@@ -53,94 +49,108 @@ import Income from './pages/goverment/Income';
 import Car from './pages/goverment/Car';
 import Covid from './pages/goverment/Covid';
 import Ground from './pages/goverment/Ground';
-
+import ModifyUserPage from './pages/MyPage/ModifyUserPage';
+import Elevne_street from './pages/Ecommerce/Shoppingmall/Eleven_street';
+import Gmarket from './pages/Ecommerce/Shoppingmall/Gmarket';
+import Coupang from './pages/Ecommerce/Shoppingmall/Coupang';
+import Naver from './pages/Ecommerce/Shoppingmall/Naver';
+import Interpark from './pages/Ecommerce/Airplane/Interpark';
+import Skyscanner from './pages/Ecommerce/Airplane/Skyscanner';
+import Trip from './pages/Ecommerce/Airplane/Trip';
+import Hotels_combine from './pages/Ecommerce/Place/Hotels_combine';
+import How from './pages/Ecommerce/Place/How';
+import Yanolja from './pages/Ecommerce/Place/Yanolja';
+import Lightning from './pages/Ecommerce/Used_transaction/Lightning';
+import EcommercePage from './pages/Ecommerce/EcommercePage';
 
 function App() {
   return (
     <div className="App">
       <Navigation />
-      <Routes>
-        <Route path='/goverment24' element={<Goverment/>}/>
-        <Route path='/post' element={<Postpages/>} />
-        <Route path='/main' element={<Main/>}/>
-        <Route path='/kiosk' element={<KioskPage/>}/>
-        <Route path='/eCormmerce' element={<EcommercePage/>}/>
-        <Route path='/post/postWrite' element={<PostWritepage/>}/>  
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/mypage' element={<MyPage/>}/>
-        <Route path='/postpage' element={<Postpages/>}/>
-        <Route path='/joinpage' element={<Joinpage/>}/>
-        <Route path='/ecommercePage' element={<EcommercePage/>}/>
-        <Route path="/myPage" element = {<MyPage />}></Route>
-        <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
-        <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
-        <Route path="/informationPage" element = {<InformationPage />}></Route>
-        <Route path="/withdrawal" element = {<Withdrawal />}></Route>
-        <Route path="/JuminPage" element = {<JuminPage />}></Route>
-        <Route path="/Year" element = {<Year />}>ㅎ</Route>
-        <Route path="/Family" element = {<Family />}></Route>
-        <Route path="/Movie" element = {<Movie />}></Route>
-        <Route path="/Cafe" element = {<Cafe />}></Route>
-        <Route path="/Food" element = {<Food />}></Route>
-        <Route path="/Dessert" element = {<Dessert />}></Route>
-        <Route path="/Cgv" element = {<Cgv />}></Route>
-        <Route path="/Megabox" element = {<Megabox />}></Route>
-        <Route path="/Lotte" element = {<Lotte />}></Route>
-        <Route path="/Two" element = {<Two />}></Route>
-        <Route path="/Mega" element = {<Mega />}></Route>
-        <Route path="/Ediya" element = {<Ediya />}></Route>
-        <Route path="/Angel" element = {<Angel />}></Route>
-        <Route path="/Paikdabang" element = {<Paikdabang />}></Route>
-        <Route path="/Hollys" element = {<Hollys />}></Route>
-        <Route path="/Lotteria" element = {<Lotteria />}></Route>
-        <Route path="/Mom" element = {<Mom />}></Route>
-        <Route path="/Mcdo" element = {<Mcdo />}></Route>
-        <Route path="/Burger" element = {<Burger />}></Route>
-        <Route path="/Kfc" element = {<Kfc />}></Route>
-        <Route path="/Sulbing" element = {<Sulbing />}></Route>
-        <Route path="/Br" element = {<Br />}></Route>
-        <Route path="/Waffle" element = {<Waffle />}></Route>
-        <Route path='/goverment24' element={<Goverment />} />
-        <Route path='/post' element={<Postpages />} />
-        <Route path='/main' element={<Main />} />
-        <Route path='/post/postWrite' element={<PostWritepage />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/postpage' element={<Postpages />} />
-        <Route path='/joinpage' element={<Joinpage />} />
-        <Route path='/ecommerce' element={<EcommercePage />} />
-        <Route path='/shoppingmall' element={<Shoppingmall />} />
-        <Route path='/used_transaction' element={<Used_transaction />} />
-        <Route path='/airplane' element={<Airplane />} />
-        <Route path='/place' element={<Place />} />
-        <Route path='/public_transport' element={<Public_transport />} />
-        <Route path="/myPage" element={<MyPage />}></Route>
-        <Route path="/postHistoryPage" element={<PostHistoryPage />}></Route>
-        <Route path="/answerHistoryPage" element={<AnswerHistoryPage />}></Route>
-        <Route path="/informationPage" element={<InformationPage />}></Route>
-        <Route path="/withdrawal" element={<Withdrawal />}></Route>
-        <Route path="/JuminPage" element={<JuminPage />}></Route>
-        <Route path="/Year" element={<Year />}></Route>
-        <Route path="/Family" element={<Family />}></Route>
-        <Route path="/kiosk" element={<KioskPage />}></Route>
-        <Route path="/Movie" element={<Movie />}></Route>
-        <Route path="/Cafe" element={<Cafe />}></Route>
-        <Route path="/Food" element={<Food />}></Route>
-        <Route path="/Dessert" element={<Dessert />}></Route>
-        <Route path="/Cgv" element={<Cgv />}></Route>
-        <Route path='/Agreepage' element={<Agreepage />} />
-        <Route path='/Transfer' element={<Transfer />} />
-        <Route path='/Passport' element={<Passport />} />
-        <Route path='/Immigration' element={<Immigration />} />
-        <Route path='/Work' element={<Wokr/>} />
-        <Route path='/Generation' element={<Generation/>} />
-        <Route path='/Income' element={<Income/>} />
-        <Route path='/Car' element={<Car/>} />
-        <Route path='/Covid' element={<Covid/>} />
-        <Route path='/Ground' element={<Ground/>} />
-       
-        
-
-      </Routes>
+      <div className='App-body'>
+        <Routes>
+          <Route path='/' element={<Main/>}/>
+          <Route path='/goverment24' element={<Goverment/>}/>
+          <Route path='/post' element={<Postpages/>} />
+          <Route path='/kiosk' element={<KioskPage/>}/>
+          <Route path='/ecommerce' element={<EcommercePage/>}/>
+          <Route path='/post/postWrite' element={<PostWritepage/>}/>  
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/postpage' element={<Postpages/>}/>
+          <Route path='/joinpage' element={<Joinpage/>}/>
+          <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
+          <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
+          <Route path="/JuminPage" element = {<JuminPage />}></Route>
+          <Route path="/Year" element = {<Year />}></Route>
+          <Route path="/Family" element = {<Family />}></Route>
+          <Route path="/Movie" element = {<Movie />}></Route>
+          <Route path="/Cafe" element = {<Cafe />}></Route>
+          <Route path="/Food" element = {<Food />}></Route>
+          <Route path="/Dessert" element = {<Dessert />}></Route>
+          <Route path="/Cgv" element = {<Cgv />}></Route>
+          <Route path="/Megabox" element = {<Megabox />}></Route>
+          <Route path="/Lotte" element = {<Lotte />}></Route>
+          <Route path="/Two" element = {<Two />}></Route>
+          <Route path="/Mega" element = {<Mega />}></Route>
+          <Route path="/Ediya" element = {<Ediya />}></Route>
+          <Route path="/Angel" element = {<Angel />}></Route>
+          <Route path="/Paikdabang" element = {<Paikdabang />}></Route>
+          <Route path="/Hollys" element = {<Hollys />}></Route>
+          <Route path="/Lotteria" element = {<Lotteria />}></Route>
+          <Route path="/Mom" element = {<Mom />}></Route>
+          <Route path="/Mcdo" element = {<Mcdo />}></Route>
+          <Route path="/Burger" element = {<Burger />}></Route>
+          <Route path="/Kfc" element = {<Kfc />}></Route>
+          <Route path="/Sulbing" element = {<Sulbing />}></Route>
+          <Route path="/Br" element = {<Br />}></Route>
+          <Route path="/Waffle" element = {<Waffle />}></Route>
+          <Route path='/goverment24' element={<Goverment />} />
+          <Route path='/post' element={<Postpages />} />
+          <Route path='/main' element={<Main />} />
+          <Route path='/post/postWrite' element={<PostWritepage />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/postpage' element={<Postpages />} />
+          <Route path='/joinpage' element={<Joinpage />} />
+          <Route path='/shoppingmall' element={<Shoppingmall />} />
+          <Route path='/eleven_street' element={<Elevne_street />} />
+          <Route path='/gmarket' element={<Gmarket />} />
+          <Route path='/coupang' element={<Coupang />} />
+          <Route path='/naver_shopping' element={<Naver />} />
+          <Route path='/lightning' element={<Lightning />} />
+          <Route path='/interpark' element={<Interpark />} />
+          <Route path='/skyscanner' element={<Skyscanner />} />
+          <Route path='/Trip' element={<Trip />} />
+          <Route path='/hotels_combine' element={<Hotels_combine />} />
+          <Route path='/how' element={<How />} />
+          <Route path='/yanolja' element={<Yanolja />} />
+          <Route path='/used_transaction' element={<Used_transaction />} />
+          <Route path='/airplane' element={<Airplane />} />
+          <Route path='/place' element={<Place />} />
+          <Route path="/myPage" element={<MyPage />}></Route>
+          <Route path="/postHistoryPage" element={<PostHistoryPage />}></Route>
+          <Route path="/answerHistoryPage" element={<AnswerHistoryPage />}></Route>
+          <Route path="/modifyUserPage" element={<ModifyUserPage />}></Route>
+          <Route path="/JuminPage" element={<JuminPage />}></Route>
+          <Route path="/Year" element={<Year />}></Route>
+          <Route path="/Family" element={<Family />}></Route>
+          <Route path="/kiosk" element={<KioskPage />}></Route>
+          <Route path="/Movie" element={<Movie />}></Route>
+          <Route path="/Cafe" element={<Cafe />}></Route>
+          <Route path="/Food" element={<Food />}></Route>
+          <Route path="/Dessert" element={<Dessert />}></Route>
+          <Route path="/Cgv" element={<Cgv />}></Route>
+          <Route path='/Agreepage' element={<Agreepage />} />
+           <Route path='/Transfer' element={<Transfer />} />
+          <Route path='/Passport' element={<Passport />} />
+          <Route path='/Immigration' element={<Immigration />} />
+          <Route path='/Work' element={<Wokr/>} />
+          <Route path='/Generation' element={<Generation/>} />
+          <Route path='/Income' element={<Income/>} />
+          <Route path='/Car' element={<Car/>} />
+          <Route path='/Covid' element={<Covid/>} />
+          <Route path='/Ground' element={<Ground/>} />
+        </Routes>
+      </div>
     </div>
   );
 }

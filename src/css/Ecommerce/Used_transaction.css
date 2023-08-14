@@ -5,8 +5,7 @@
 .shoppingmall,
 .used_transaction,
 .airplane,
-.place,
-.public_transport {
+.place {
     display: flex;
     width: 240px;
     height: 270px;
@@ -15,9 +14,7 @@
     border-radius: 20px;
 }
 
-.carrot,
-.lightning,
-.used_country {
+.lightning {
     display: flex;
     width: 300px;
     height: 300px;
@@ -25,23 +22,30 @@
     margin: 20px;
 }
 
-.carrot {
-    background-image: url('../../img/Ecommerce/carrot.jpg');
-    background-repeat: no-repeat;
-    background-size: 17rem;
-    background-position: 1rem, -1rem;
-}
-
 .lightning {
-    background-image: url('../../img/Ecommerce/lightning.jpeg');
+    background-image: url('../../img/Ecommerce/lightning.jpg');
     background-repeat: no-repeat;
     background-size: 17rem;
     background-position: 1rem, -1rem;
 }
 
-.used_country {
-    background-image: url('../../img/Ecommerce/used_country.jpg');
-    background-repeat: no-repeat;
-    background-size: 17rem;
-    background-position: 1rem, -1rem;
+.ecommerce_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ecommerce_img p{
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.lightning_img{
+    width: 99vw;
+    height: 4700px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -1.2rem;
+    background-image: url('../../img/Ecommerce/lightning.png');
 }

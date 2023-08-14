@@ -1,10 +1,11 @@
-import "../../css/MyPage/InformationPage.css";
+import "../../css/MyPage/ModifyUserPage.css";
 
-function InformationPage() {
+export default function ModifyUserPage() {
+    
     return (
         <>
-            <div className="information_main">
-                <div className="informationFix">내 정보 수정</div>
+            <div className="modifyUser_main">
+                <div className="modifyUserFix">내 정보 수정</div>
                 <div className="fix">
                     <div className="id">아이디</div>
                     <div className="pw">비밀번호</div>
@@ -16,5 +17,3 @@ function InformationPage() {
         </>
     )
 }
-
-export default InformationPage;

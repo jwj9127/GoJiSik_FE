@@ -5,8 +5,7 @@
 .shoppingmall,
 .used_transaction,
 .airplane,
-.place,
-.public_transport {
+.place {
     display: flex;
     width: 240px;
     height: 270px;
@@ -34,13 +33,6 @@
     background-position: 1rem, -1rem;
 }
 
-.auction {
-    background-image: url('../../img/Ecommerce/auction.jpg');
-    background-repeat: no-repeat;
-    background-size: 17rem;
-    background-position: 1rem, -1rem;
-}
-
 .gmarket {
     background-image: url('../../img/Ecommerce/gmarket.jpg');
     background-repeat: no-repeat;
@@ -60,4 +52,50 @@
     background-repeat: no-repeat;
     background-size: 17rem;
     background-position: 1rem, -1rem;
+}
+
+.ecommerce_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ecommerce_img p{
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.elevne_street_img{
+    width: 99vw;
+    height: 10000px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -1.2rem;
+    background-image: url('../../img/Ecommerce/Elevne_street.png');
+}
+
+.gmarket_img{
+    width: 99vw;
+    height: 7000px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -1.2rem;
+    background-image: url('../../img/Ecommerce/Gmarket.png');
+}
+
+.coupang_img, .naver_img{
+    width: 99vw;
+    height: 4500px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -1.2rem;
+}
+
+.coupang_img{
+    background-image: url('../../img/Ecommerce/Coupang.png');
+}
+
+.naver_img{
+    background-image: url('../../img/Ecommerce/Naver.png');
 }

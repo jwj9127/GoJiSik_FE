@@ -5,8 +5,7 @@
 .shoppingmall,
 .used_transaction,
 .airplane,
-.place,
-.public_transport {
+.place {
     display: flex;
     width: 240px;
     height: 270px;
@@ -16,12 +15,11 @@
 }
 
 .hotels_combine,
-.agoda,
 .yanolja,
 .how {
     display: flex;
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
     border: 1px solid black;
     margin: 20px;
 }
@@ -30,26 +28,59 @@
     background-image: url('../../img/Ecommerce/hotels_combine.png');
     background-repeat: no-repeat;
     background-size: 17rem;
-    background-position: 0rem, -1rem;
-}
-
-.agoda {
-    background-image: url('../../img/Ecommerce/agoda.png');
-    background-repeat: no-repeat;
-    background-size: 17rem;
-    background-position: 0rem, -1rem;
+    background-position: 1rem, -1rem;
 }
 
 .yanolja {
     background-image: url('../../img/Ecommerce/yanolja.jpg');
     background-repeat: no-repeat;
     background-size: 17rem;
-    background-position: 0rem, -1rem;
+    background-position: 1rem, -1rem;
 }
 
 .how {
     background-image: url('../../img/Ecommerce/how.jpg');
     background-repeat: no-repeat;
     background-size: 17rem;
-    background-position: 0rem, -1rem;
+    background-position: 1rem, -1rem;
+}
+
+.ecommerce_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ecommerce_img p{
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.how_img{
+    width: 99vw;
+    height: 3800px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -1.2rem;
+    background-image: url('../../img/Ecommerce/how.png');
+
+}
+
+.yanolja_img{
+    width: 99vw;
+    height: 6300px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -1.2rem;
+    background-image: url('../../img/Ecommerce/yanolja.png');
+}
+
+.hotels_combine_img{
+    width: 99vw;
+    height: 4600px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -1.2rem;
+    background-image: url('../../img/Ecommerce/hotels_combine_img.png');
 }
