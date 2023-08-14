@@ -68,7 +68,7 @@ function App() {
         <Route path="/informationPage" element = {<InformationPage />}></Route>
         <Route path="/withdrawal" element = {<Withdrawal />}></Route>
         <Route path="/JuminPage" element = {<JuminPage />}></Route>
-        <Route path="/Year" element = {<Year />}></Route>
+        <Route path="/Year" element = {<Year />}>ㅎ</Route>
         <Route path="/Family" element = {<Family />}></Route>
         <Route path="/Movie" element = {<Movie />}></Route>
         <Route path="/Cafe" element = {<Cafe />}></Route>
