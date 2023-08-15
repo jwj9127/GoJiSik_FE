@@ -164,11 +164,11 @@ export default function PostWritepage() {
     const postWrite = e => {
         e.preventDefault();
         Question.append('files', file)
-        Question.append('dto', {
-          'title' : posttitle,
-          'category' : category,
-          'contents' : contents
-        })
+        Question.append("dto", new Blob([JSON.stringify({                                            
+          'title': posttitle,                                                          
+          'category': category,                                                             
+          'contents': contents                                                
+         })], { type: "application/json" })); 
         axios({
             method:'post',
             url: '//localhost:8080/questions',

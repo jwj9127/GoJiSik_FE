@@ -28,7 +28,7 @@ export default function Postpages() {
         setInputSearch(e.target.value);
     }
     const search = e => {
-        setSearchlist('s')
+        
     }
     return(
         <div className="postbox">
@@ -44,12 +44,12 @@ export default function Postpages() {
             </div>
             <div className="postbox-postlistbox">
                 <ul className="postlist">
-                    {/* {postlist.map((post)=> (
+                    {postlist.map((post)=> (
                         <li key={post.id}>
-                            <Link to={`/post/${question_id}`}>{post.title}</Link>
+                            <Link to={`/post/${post.id}`}>{post.title}</Link>
                             작성자: {post.name}
                         </li>
-                    ))} */}
+                    ))}
                 </ul>
             </div>
         </div>
