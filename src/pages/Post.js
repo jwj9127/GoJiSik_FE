@@ -1,6 +1,6 @@
 import React from "react";
 
-const Post = ({idx, title, category, contents, file}) => {
+export default function Post ({idx, title, category, contents, file}) {
     return(
         <div className="post">
             <div className="post-titlebox">
