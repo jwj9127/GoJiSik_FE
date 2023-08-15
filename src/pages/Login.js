@@ -21,7 +21,8 @@ export default function Loginpage(){
             data : UserInfo
         }) .then(result => {
             setIsLogin(true)
-            setToken(result.data.token)
+            // setToken(result.data.token)
+            window.localStorage.setItem('token', token);
         })
         .catch(error => {
             alert('로그인실패')
@@ -54,8 +55,8 @@ export default function Loginpage(){
                 </div>
                 <span className="loginerrormsg">{isLogin?null :'설정하신 아이디와 비밀번호의 형식과 다릅니다.'}</span>
                 <input type="submit" value={'로그인'} onClick={StartLogin} className="loginbtn"/>
-                <div className="joinbtn">
-                    아직 회원이 아니신가요?
+                <div className="jointextbox">
+                    회원이 아니신가요?
                     <span className="gotojoinbtn"><Link to={'/Agreepage'}>회원가입</Link></span>
                 </div>
             </form>

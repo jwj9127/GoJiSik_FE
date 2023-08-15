@@ -1,0 +1,58 @@
+.agreepagebody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+    background-color: #FDFBEB;
+}
+label {
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+input{
+    cursor: pointer;
+}
+.labelstyle{
+    color : #95B687;
+}
+.agreepagebox{
+    width: 40vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.agreebox{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 2rem;
+}
+
+.agreetextbox{
+    width: 30rem;
+    overflow: auto;
+    height: 8rem;
+    border: 1px solid black;
+    font-size: 1rem;
+    text-align: justify;
+    border-radius: 7px;
+}
+.allagreebox{
+    border: none;
+    height: 4rem;
+}
+
+.gotojoin{
+    border: none;
+    border-radius: 7px;
+    width: 20vw;
+    height: 5vh;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.postbox-wirtebox{
+    display: flex;
+    flex-direction: column;
+}

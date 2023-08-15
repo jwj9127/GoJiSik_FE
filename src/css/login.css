@@ -63,11 +63,12 @@
     margin-top:-3rem;
     margin-left: 13rem;
 }
-.joinbtn{
-    margin-left: 6rem;
+.jointextbox{
+    display: flex;
+    flex-direction: column;
+    padding-left: 21.5vw;
 }
 .gotojoinbtn :first-child{
-    padding-left: 2rem;
     &:hover{
         text-decoration: underline;
         color: blue;

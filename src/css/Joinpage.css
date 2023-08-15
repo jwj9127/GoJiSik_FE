@@ -7,6 +7,51 @@
 .joinform{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+}
+.joinform-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60vh;
+    width: 30vw;
+    margin-top: 3rem;
+}
+.joinfrom-box{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.joinform-boxtobox{
+    display: flex;
+    justify-content: space-between;
+}
+.input-info{
+    width: 15vw;
+    height: 3rem;
+    border-radius: 7px;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.3);
+    &:focus{
+        border-color: #70e848;
+    }
+}
+.message{
+    font-size: 1.2rem;
+}
+.success{
+    color: #70e848;
+}
+.error{
+    color: #e70d06aa;
+}
+.joinbtn{
+    border: none;
+    border-radius: 7px;
+    width: 15rem;
+    margin-left: 0;
+    height: 3rem;
 }

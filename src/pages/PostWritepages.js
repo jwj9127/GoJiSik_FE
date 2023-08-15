@@ -1,6 +1,9 @@
 import React,  { useState,}  from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import '../css/postWritepage.css'
+import {BsMicFill} from 'react-icons/bs'
+
 
 export default function PostWritepage() {
     const navigate = useNavigate();
@@ -189,12 +192,14 @@ export default function PostWritepage() {
     return(
         <div className="postwrite">
             <div className="postbox" >
-                <form>
-                    <div className="postbox-title">
-                        <input required type="text" placeholder="제목" maxLength={20} name='posttitle' onChange={handletitle}/>
+                <form className="postWriteform">
+                    <div className="infobox postbox-title">
+                        <label htmlFor="inputtitle">제목</label>
+                        <input required  className="postinfo" id="inputtitle" type="text" placeholder="제목을 입력해주세요." maxLength={20} name='posttitle' onChange={handletitle}/>
                     </div>
-                    <div className="postbox-category">
-                        <select onChange={handlecategory} value={category}>
+                    <div className="infobox postbox-category">
+                        <label htmlFor="categoryselect">카테고리</label>
+                        <select id='categoryselect' className=" postinfo" onChange={handlecategory} value={category}>
                             {selectList.map((item) => (
                                 <option value={item} key={item}>
                                     {item}
@@ -203,12 +208,14 @@ export default function PostWritepage() {
                         </select>    
                     </div>
                     <div className="postbox-wirtebox">
+                        <label htmlFor="contents">내용</label>
                         <textarea rows={30} cols={80} onChange={hadlecontents}></textarea>
-                        <input type="file" accept="image/*" onChange={handleimage}/>
-                        <h2>음성 녹음</h2>
-                        <button onClick={onRec ? onRecAudio : offRecAudio}>녹음</button>
-                        <button onClick={play} disabled={disabled}>재생</button>
-                        <input type="submit" value={'게시글 등록'} onClick={postWrite}/>
+                        이미지 첨부
+                        <input className="postbtn" type="file" accept="image/*" onChange={handleimage}/>
+                        음성 첨부
+                        <button className="postbtn" onClick={onRec ? onRecAudio : offRecAudio}><BsMicFill/> 녹음</button>
+                        <button className="postbtn" onClick={play} disabled={disabled}>재생</button>
+                        <input className="postwritebtn" type="submit" value={'게시글 등록'} onClick={postWrite}/>
                     </div>
                 </form>
             </div>
