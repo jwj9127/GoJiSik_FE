@@ -25,8 +25,8 @@ export default function PostWritepage() {
     const [disabled, setDisabled] = useState(true); // 😀😀😀
     const file = [image, audio]
 
-    const Token = window.localStorage.getItem('token')
-    Question.append('token', Token)
+    const token = window.localStorage.getItem('token')
+
     const onRecAudio = (e) => {
       e.preventDefault();
       setDisabled(true) // 😀😀😀
@@ -178,6 +178,7 @@ export default function PostWritepage() {
             url: '//localhost/questions',
             headers: {
               "Content-Type": "multipart/form-data", // Content-Type을 반드시 이렇게 하여야 한다.
+              "Authorization": `Bearer ${token}`,
             },
             data:Question,
         })
