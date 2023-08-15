@@ -164,15 +164,11 @@ export default function PostWritepage() {
     const postWrite = e => {
         e.preventDefault();
         Question.append('files', file)
-        Question.append('title', posttitle);
-        Question.append('category', category);
-        Question.append('contents', contents);
-        Question.append('image', image);  
-        console.log(Question.get('title'))
-        console.log(Question.get('category'))
-        console.log(Question.get('contents'))
-        console.log(Question.get('image'))
-        console.log(Question.get('files'))
+        Question.append('dto', {
+          'title' : posttitle,
+          'category' : category,
+          'contents' : contents
+        })
         axios({
             method:'post',
             url: '//localhost:8080/questions',
