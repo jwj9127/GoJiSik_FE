@@ -21,13 +21,13 @@ export default function PostDetails () {
     },[])
 
     return(
-       <div>
-        <Post 
-        question_id = {question_id}
-        title = {post.title}
-        contents={post.contents}
-        writer ={post.writer}
-        />
-       </div>
+       <>
+            <Post 
+            question_id = {question_id}
+            title = {post.title}
+            contents={post.contents}
+            writer ={post.writer}
+            />
+       </>
     )
 }

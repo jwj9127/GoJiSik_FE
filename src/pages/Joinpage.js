@@ -11,7 +11,6 @@ export default function Joinpage(){
     const [pw, setPw] = useState('');
     const [pwchk, setPwchk] = useState('');
     const [birthday, setBirthday] = useState('');
-    const [fontsize, setFontsize] = useState(24);
     
     //에러메시지 상태
     const [nameMessage, setNameMessage] = useState('');
@@ -24,7 +23,7 @@ export default function Joinpage(){
     const [isPw, setIsPw] = useState(false);
     const [isPwConfirm, setIsPwConfirm] = useState(false);
     const [buttonColor, setButtonColor] = useState('#B4B4B4');
-    const userInfo = new FormData(); 
+    const userInfo = {}
     const fontsizelist = [24, 32, 40]
     {/*const Agencylist = ['SKT', 'LGU+', 'KT']*/}
     // 입력값이 변경될 때마다 유효성 검사 수행 및 버튼 상태 업데이트
@@ -43,10 +42,6 @@ export default function Joinpage(){
           }
         }, [])
     
-    const selectSize = e => {
-        setFontsize(e.target.value)
-    }
-
     const inputId = useCallback(e => {
         const idRegex = /^01(?:0|1|[6-9])(?:\d{4})\d{4}$/
         const idCurrent = e.target.value
@@ -98,10 +93,10 @@ export default function Joinpage(){
    }, [isName, isId, isPw, isPwConfirm])
     const Joincomplete = e => {
         e.preventDefault();
-        userInfo.append('name', name);
-        userInfo.append('phonenum', id);
-        userInfo.append('password', pw);
-        userInfo.append('birthday', birthday);
+        userInfo['username'] = name;
+        userInfo['phonenum'] = id;
+        userInfo['password'] = pw;
+        userInfo['birthday'] = new Date(birthday);
         console.log(userInfo.get('name'));
         console.log(userInfo.get('phonenum'));
         console.log(userInfo.get('password'));
@@ -109,6 +104,9 @@ export default function Joinpage(){
         axios({
             method:'post',
             url: '//localhost:8080/users',
+            headers : {
+                "Content-Type": `application/json`,
+            },
             data:userInfo,
         })
         .then(result => {console.log('요청성')
@@ -133,15 +131,6 @@ export default function Joinpage(){
                     </div>
                     {name.length > 0 && <span className={`message ${isName ? 'success' : 'error'}`}>{nameMessage}</span>}
                 </div>
-                {/* <div className="joinform-box">
-                    <select className="selectfontsize" onChange={selectSize} value={fontsize}>\
-                        {fontsizelist.map((item) => (
-                            <option value={item} key={item}>
-                                {item}
-                            </option>
-                        ))}
-                    </select>
-                </div> */}
                 <div className="joinform-box">
                     <div className='joinform-boxtobox'>
                         <label htmlFor="inputpw" className="joinform-pwtext">비밀번호  </label>
