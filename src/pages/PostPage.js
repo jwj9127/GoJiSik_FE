@@ -19,7 +19,10 @@ export default function Postpages() {
         .then((response)=>{
             setPostlist(response.data)
         })
-    }, [])
+        .catch((error) => {
+            console.error('에러왜나 : ', error)
+        })
+    }, []);
 
     const toggleclick = e => {  
         setValue(value => !value);
@@ -47,7 +50,7 @@ export default function Postpages() {
             </div>
             <div className="postbox-postlistbox">
             <ul className="postlist">
-                {postlist && postlist.data.map((post) => (
+                {postlist?.map((post) => (
                     <li key={post.id}>
                          <Link to={`/post/${post.id}`}>{post.title}</Link>
                          작성자: {post.name}
