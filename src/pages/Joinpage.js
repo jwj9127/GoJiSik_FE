@@ -97,10 +97,6 @@ export default function Joinpage(){
         userInfo['phonenum'] = id;
         userInfo['password'] = pw;
         userInfo['birthday'] = new Date(birthday);
-        console.log(userInfo.get('name'));
-        console.log(userInfo.get('phonenum'));
-        console.log(userInfo.get('password'));
-        console.log(userInfo.get('birthday'));
         axios({
             method:'post',
             url: '//localhost:8080/users',
