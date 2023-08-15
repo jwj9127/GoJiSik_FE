@@ -163,11 +163,11 @@ export default function PostWritepage() {
     // };
     const postWrite = e => {
         e.preventDefault();
+        Question.append('files', file)
         Question.append('title', posttitle);
         Question.append('category', category);
         Question.append('contents', contents);
-        Question.append('image', image);
-        Question.append('files', file)
+        Question.append('image', image);  
         console.log(Question.get('title'))
         console.log(Question.get('category'))
         console.log(Question.get('contents'))
@@ -175,7 +175,7 @@ export default function PostWritepage() {
         console.log(Question.get('files'))
         axios({
             method:'post',
-            url: '//localhost/questions',
+            url: '//localhost:8080/questions',
             headers: {
               "Content-Type": "multipart/form-data", // Content-Type을 반드시 이렇게 하여야 한다.
               "Authorization": `Bearer ${token}`,
