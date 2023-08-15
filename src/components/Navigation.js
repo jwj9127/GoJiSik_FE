@@ -17,7 +17,7 @@ const Navigation = () => {
 
     const logoutbtn = e => {
         e.preventDefault();
-        window.localStorage.setItem(null)
+        window.localStorage.removeItem('token');
     }
 
     return (
