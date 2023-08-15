@@ -2,17 +2,22 @@ import React from "react";
 import { useEffect, useState } from "react";
 import Post from './Post'
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 export default function PostDetails () {
     const {question_id} = useParams();
     const [post, setPost] = useState({});
-    const getPost = async => {
-        const resp = await( await axios.get(`//localhost:8080/post/${question_id}`)).data;
-        setPost(resp.data);
-    }
+    
 
     useEffect(()=> {
-        getPost()
+       axios({
+        method : 'get',
+        url : `//localhost:8080/post/${question_id}`,
+        responseType : 'json',
+       })
+       .then((response)=>{
+        setPost(response.data)
+       })
     },[])
 
     return(

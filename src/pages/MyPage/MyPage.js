@@ -13,7 +13,6 @@ function MyPage() {
     const backgroundArr = [img1, img2, img3, img4, img5];
     const randomIndex = Math.floor(Math.random() * backgroundArr.length);
     const backgroundImg = backgroundArr[randomIndex];
-    const token = useSelector(state => state.Auth.token);
 
     const handleDeleteProfile = (e) => {
         e.preventDefault();

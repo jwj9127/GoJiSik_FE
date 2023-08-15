@@ -1,17 +1,19 @@
 import React from 'react'
-import {GoUpload} from 'react-icons/Fc'
+import {GoUpload} from 'react-icons/go'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
 
 export default function Comments(){
     const [comment, setComment] = useState('')
     const [iscomment, setIscomment] = useState(false)
     const [commentlist, setCommetlist] = useState('')
-    const [id, setId] = useState('')
+    const [answer_id, setId] = useState('')
     const commentInput = e =>{
         setComment(e.target.value)
-        if(comment === ''){
-            setIscomment(false)
-        } else{
+        if(comment.length > 0){
             setIscomment(true)
+        } else{
+            setIscomment(false)
         }
     }
     const commentbtn = e =>{

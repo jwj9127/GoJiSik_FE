@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/Navigation.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import {CgLogIn} from 'react-icons/cg'
 import {BsPersonCircle} from 'react-icons/bs'
-import { useSelector } from 'react-redux';
 
 const Navigation = () => {
     const navigate = useNavigate();
