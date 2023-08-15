@@ -18,13 +18,12 @@ export default function Comments(){
         axios({
             url : '/answers',
             method : 'post',
-            data : {contents = comment}
+            data : {contents : comment}
         }).then(res => setId(res.data.id))
     }
     useEffect(()=>{
         axios.get(`/answers/${answer_id}`)
         .then(res => setCommetlist(res.data));
-        .catch(err => console.log(err));
     },[])
     return(
         <>

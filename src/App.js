@@ -62,6 +62,7 @@ import How from './pages/Ecommerce/Place/How';
 import Yanolja from './pages/Ecommerce/Place/Yanolja';
 import Lightning from './pages/Ecommerce/Used_transaction/Lightning';
 import EcommercePage from './pages/Ecommerce/EcommercePage';
+import PostDetails from './pages/PostDetails';
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../css/Navigation.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +11,11 @@ const Navigation = () => {
     const MoveToMain = e => {
         navigate('/');
     }
-    // const token = useSelector(state => state.Auth.token);
+    const [isToken, setIsToken] = useState(null);
+    useEffect(()=>{
+        window.localStorage.getItem('token');
+    })
+
     return (
         <>
         <div className='Navigation'>

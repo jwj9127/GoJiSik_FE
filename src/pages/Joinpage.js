@@ -104,10 +104,10 @@ export default function Joinpage(){
         userInfo.append('birthday', birthday);
         userInfo.append('font_size', fontsize);
         console.log(userInfo.get('name'));
-        console.log(userInfo.get('phone_num'));
+        console.log(userInfo.get('phonenum'));
         console.log(userInfo.get('password'));
         console.log(userInfo.get('birthday'));
-        console.log(userInfo.get('font_size'));
+        console.log(userInfo.get('fontsize'));
         axios({
             method:'post',
             url: '/users',

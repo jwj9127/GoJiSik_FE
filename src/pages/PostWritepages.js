@@ -25,6 +25,8 @@ export default function PostWritepage() {
     const [disabled, setDisabled] = useState(true); // 😀😀😀
     const file = [image, audio]
 
+    const Token = window.localStorage.getItem('token')
+    Question.append(Token)
     const onRecAudio = (e) => {
       e.preventDefault();
       setDisabled(true) // 😀😀😀

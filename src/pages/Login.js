@@ -21,8 +21,8 @@ export default function Loginpage(){
             data : UserInfo
         }) .then(result => {
             setIsLogin(true)
-            // setToken(result.data.token)
-            window.localStorage.setItem('token', token);
+            window.localStorage.setItem('token', result.data.token);
+            setToken(result.data.token)
         })
         .catch(error => {
             alert('로그인실패')
