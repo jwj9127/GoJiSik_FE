@@ -4,7 +4,7 @@ import axios from "axios";
 import '../css/login.css'
 
 export default function Loginpage(){
-    const UserInfo = new FormData();
+    const UserInfo = {}
     const [id, setId] = useState('');
     const [pw, setPw] = useState('')
     const [isLogin, setIsLogin] = useState(true)
@@ -12,8 +12,8 @@ export default function Loginpage(){
     const navigate = useNavigate()
     const StartLogin = e => {
         e.preventDefault();
-        UserInfo.append('phone_num', id)
-        UserInfo.append('password', pw)
+        UserInfo['phone_num'] = id
+        UserInfo['password'] = pw
 
         axios({
             method : 'post',
