@@ -6,17 +6,19 @@ import '../css/postpages.css'
 
 export default function Postpages() {
     const [value, setValue] = useState(true);
-    const [postlist, setPostlist] = useState(null);
+    const [postlist, setPostlist] = useState([]);
     const navigate = useNavigate();
     const [inputSearch, setInputSearch] = useState('')
     const [searchlist, setSearchlist] = useState('')
-    const getpostlist = async() => {
-        const response = await (await axios.get('//localhost:8080/questions')).data
-        setPostlist(response.data)
-    }
 
     useEffect(()=>{
-        getpostlist();
+        axios({
+            method: 'get',
+            url : "//localhost:8080/questions",
+        })
+        .then((response)=>{
+            setPostlist(response.data)
+        })
     }, [])
 
     const toggleclick = e => {  
@@ -44,14 +46,14 @@ export default function Postpages() {
                 <button className="btn postbox-postwritebox" onClick={MoveToWrite}>게시글 작성</button>
             </div>
             <div className="postbox-postlistbox">
-                <ul className="postlist">
-                    {postlist.map((post)=> (
-                        <li key={post.id}>
-                            <Link to={`/post/${post.id}`}>{post.title}</Link>
-                            작성자: {post.name}
-                        </li>
-                    ))}
-                </ul>
+            <ul className="postlist">
+                {postlist && postlist.map((post) => (
+                    <li key={post.id}>
+                         <Link to={`/post/${post.id}`}>{post.title}</Link>
+                         작성자: {post.name}
+                    </li>
+                 ))}
+            </ul>
             </div>
         </div>
     )
