@@ -12,7 +12,7 @@ export default function Loginpage(){
     const navigate = useNavigate()
     const StartLogin = e => {
         e.preventDefault();
-        UserInfo['phone_num'] = id
+        UserInfo['phonenum'] = id
         UserInfo['password'] = pw
 
         axios({
