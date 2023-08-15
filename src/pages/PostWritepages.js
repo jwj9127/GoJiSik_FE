@@ -168,11 +168,6 @@ export default function PostWritepage() {
         Question.append('contents', contents);
         Question.append('image', image);
         Question.append('files', file)
-        console.log(Question.get('title'))
-        console.log(Question.get('category'))
-        console.log(Question.get('contents'))
-        console.log(Question.get('image'))
-        console.log(Question.get('files'))
         axios({
             method:'post',
             url: '//localhost/questions',
