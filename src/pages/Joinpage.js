@@ -99,18 +99,16 @@ export default function Joinpage(){
     const Joincomplete = e => {
         e.preventDefault();
         userInfo.append('name', name);
-        userInfo.append('phone_num', id);
+        userInfo.append('phonenum', id);
         userInfo.append('password', pw);
         userInfo.append('birthday', birthday);
-        userInfo.append('font_size', fontsize);
         console.log(userInfo.get('name'));
         console.log(userInfo.get('phonenum'));
         console.log(userInfo.get('password'));
         console.log(userInfo.get('birthday'));
-        console.log(userInfo.get('fontsize'));
         axios({
             method:'post',
-            url: '/users',
+            url: '//localhost:8080/users',
             data:userInfo,
         })
         .then(result => {console.log('요청성')

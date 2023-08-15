@@ -17,7 +17,7 @@ export default function Loginpage(){
 
         axios({
             method : 'post',
-            url : '/users',
+            url : '//localhost:8080/users',
             data : UserInfo
         }) .then(result => {
             setIsLogin(true)

@@ -28,7 +28,7 @@ const Navigation = () => {
             </div>
             <div className='mypagebox'>
                 <button className='btn mypagebox-loginbtn'><Link to='/login'><span className='loginicons'><CgLogIn size={20}/></span>로그인</Link></button>
-                {/* {token ? (<button className='btn mypagebox-mypagebtn'><Link to='/mypage'><span><BsPersonCircle size={50} color='#8195A9'/></span></Link></button>) : null} */}
+                <button className='btn mypagebox-mypagebtn' disabled={!isToken}><Link to='/mypage'><span><BsPersonCircle size={50} color='#8195A9'/></span></Link></button>
             </div>
         </div>
         </>

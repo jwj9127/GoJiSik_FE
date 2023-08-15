@@ -9,14 +9,14 @@ export default function Postpages() {
     const navigate = useNavigate();
     const [inputSearch, setInputSearch] = useState('')
     const [searchlist, setSearchlist] = useState('')
-    // const getpostlist = async() => {
-    //     const response = await (await axios.get('//localhost:8080/questions')).data
-    //     setPostlist(response.data)
-    // }
+    const getpostlist = async() => {
+        const response = await (await axios.get('//localhost:8080/questions')).data
+        setPostlist(response.data)
+    }
 
-    // useEffect(()=>{
-    //     getpostlist();
-    // }, [])
+    useEffect(()=>{
+        getpostlist();
+    }, [])
 
     const toggleclick = e => {  
         setValue(value => !value);

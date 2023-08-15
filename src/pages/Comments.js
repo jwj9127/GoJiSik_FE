@@ -16,7 +16,7 @@ export default function Comments(){
     }
     const commentbtn = e =>{
         axios({
-            url : '/answers',
+            url : '//localhost:8080/answers',
             method : 'post',
             data : {contents : comment}
         }).then(res => setId(res.data.id))

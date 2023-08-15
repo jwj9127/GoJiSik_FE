@@ -175,7 +175,7 @@ export default function PostWritepage() {
         console.log(Question.get('files'))
         axios({
             method:'post',
-            url: '/questions',
+            url: '//localhost/questions',
             headers: {
               "Content-Type": "multipart/form-data", // Content-Type을 반드시 이렇게 하여야 한다.
             },
