@@ -16,7 +16,7 @@ export default function Waffle() {
                 <Link to="/Dessert"><button>디저트</button></Link>
             </div>
             <div>
-                <p>엔제리너스</p>
+                <p>와플대학</p>
                 <div className="Usewaffle"></div>
             </div>
         </>

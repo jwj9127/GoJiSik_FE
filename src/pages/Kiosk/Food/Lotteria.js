@@ -16,7 +16,7 @@ export default function Lotteria() {
                 <Link to="/Dessert"><button>디저트</button></Link>
             </div>
             <div>
-                <p>CGV</p>
+                <p>롯데리아</p>
                 <div className="Uselotteria"></div>
             </div>
         </>

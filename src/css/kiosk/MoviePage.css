@@ -22,7 +22,7 @@
 .Kiosk_list ul li{
     margin: 0 35px 80px;
 }
-.Cgv, .Megabox, .Lotte, .Cineq{
+.Cgv, .Two, .Megabox, .Lotte, .Cineq{
     display: flex;
     width: 240px;
     height: 270px;
@@ -56,10 +56,11 @@
 .Usecgv, .Usemegabox, .Uselotte, .UseTwsom, .Usemega, .Useediya,
  .Useangel ,.Usepaik, .Useholly, .Usestar, .Usemom, .Usemcdo, .Uselotteria,
   .Usekfc, .Useburger, .Usewaffle, .Usesulbing, .Usebr{
-    width: 1440px;
+    width: 100%;
+    height: 100vw;
     background-size: cover;
     background-repeat:no-repeat;
-    background-position: -1.2rem;
+    background-position:center center;
 }
 .Usecgv{
     background-image: url('../../img/useimg/UseCgv.png');
@@ -81,8 +82,8 @@
     height:3200px;
 }
 .Usemega{
-    background-image: url('../../img/useimg/UseCgv.png');
-    height:4609px;
+    background-image: url('../../img/useimg/UseMega.png');
+    height:3051px;
 }
 .Useediya{
     background-image: url('../../img/useimg/UseEdiya.png');
@@ -102,7 +103,7 @@
 }
 .Usemom{
     background-image: url('../../img/useimg/UseMom.png');
-    height:1764px;
+    height:2114px;
     background-size: 95%;
     background-position: 2.0rem -3.2rem;
 }
@@ -127,7 +128,8 @@
     height:2366px;
 }
 .Usesulbing{
-    background-image: url('../../img/useimg/UseCgv.png');
+    background-image: url('../../img/useimg/UseSulbing.png');
+    background-position: 0 1rem;
 }
 .Usebr{
     background-image: url('../../img/useimg/UseBr.png');

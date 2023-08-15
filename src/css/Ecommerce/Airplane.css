@@ -5,8 +5,7 @@
 .shoppingmall,
 .used_transaction,
 .airplane,
-.place,
-.public_transport {
+.place {
     display: flex;
     width: 240px;
     height: 270px;
@@ -44,4 +43,31 @@
     background-repeat: no-repeat;
     background-size: 17rem;
     background-position: 1rem, -1rem;
+}
+
+.interpark_img{
+    width: 99vw;
+    height: 6300px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -1.2rem;
+    background-image: url('../../img/Ecommerce/interpark.png');
+}
+
+.trip_img{
+    width: 99vw;
+    height: 7300px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -1.2rem;
+    background-image: url('../../img/Ecommerce/trip_img.png');
+}
+
+.skyscanner_img{
+    width: 99vw;
+    height: 6300px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: -1.2rem;
+    background-image: url('../../img/Ecommerce/skyscanner.png');
 }
