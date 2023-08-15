@@ -3,18 +3,66 @@ body{
     text-align: center;
     
 }
-.UseImage{
-    display: inline-block;
-    margin: 0;
-    align-items: center;
-    background-image: url("../../img/useimg/juminimg.png");
-    background-size: cover;
-    width: 1300px;
-    height: 1000px;
-}
 .title span{
     width: 300px;
     height: 50px;
     border-bottom: 4px solid #C1CCB7;
     padding: 8px 10px;
 }
+.Usejuminpage, .Useyear, .Usefamily, .Usetransfer, .Usepassport, .Useimmigration,
+ .Usework ,.Usegeneration, .Useincome, .Usecar, .Usecovid, .Useground{
+    width: 100%;
+    height: 100vw;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+.Usejuminpage{
+    background-image: url("../../img/Goverment/UseJumin.png");
+    height: 8399px;
+}
+.Useyear{
+    background-image: url("../../img/Goverment/UseYear.png");
+    height: 10933px;
+}
+.Usefamily{
+    background-image: url("../../img/Goverment/UseFamily.png");
+    height: 6202px;
+}
+.Usetransfer{
+    background-image: url("../../img/Goverment/UseTransfer.png");
+    height: 12438px;
+}
+.Usepassport{
+    background-image: url("../../img/Goverment/UsePassport.png");
+    height: 10027px;
+}
+.Useimmigration{
+    background-image: url("../../img/Goverment/UseImmigration.png");
+    height: 6707px;
+}
+.Usework{
+    background-image: url("../../img/Goverment/UseWork.png");
+    height: 4911px;
+}
+.Usegeneration{
+    background-image: url("../../img/Goverment/UseGeneration.png");
+    height: 8174px;
+}
+.Useincome{
+    background-image: url("../../img/Goverment/UseIncome.png");
+    height: 5368px;
+}
+.Usecar{
+    background-image: url("../../img/Goverment/UseCar.png");
+    height: 8134px;
+}
+.Usecovid{
+    background-image: url("../../img/Goverment/UseCovid.png");
+    height: 8820px;
+}
+.Useground{
+    background-image: url("../../img/Goverment/UseGround.png");
+    height: 5718px;
+}
+

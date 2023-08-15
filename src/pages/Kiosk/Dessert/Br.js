@@ -16,8 +16,8 @@ export default function Br() {
                 <Link to="/Dessert"><button>디저트</button></Link>
             </div>
             <div>
-                <p>엔제리너스</p>
-                <div className="Usebr"> 좀 돼라</div>
+                <p>배스킨 라빈스</p>
+                <div className="Usebr"></div>
             </div>
         </>
     )

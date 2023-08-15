@@ -16,7 +16,7 @@ export default function Burger() {
                 <Link to="/Dessert"><button>디저트</button></Link>
             </div>
             <div>
-                <p>CGV</p>
+                <p>버거킹</p>
                 <div className="Useburger"></div>
             </div>
         </>

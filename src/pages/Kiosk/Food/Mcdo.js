@@ -16,7 +16,7 @@ export default function Mcdo() {
                 <Link to="/Dessert"><button>디저트</button></Link>
             </div>
             <div>
-                <p>CGV</p>
+                <p>맥도날드</p>
                 <div className="Usemcdo"></div>
             </div>
         </>

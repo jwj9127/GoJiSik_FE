@@ -16,7 +16,7 @@ export default function Kfc() {
                 <Link to="/Dessert"><button>디저트</button></Link>
             </div>
             <div>
-                <p>CGV</p>
+                <p>kfc</p>
                 <div className="Usekfc"></div>
             </div>
         </>
