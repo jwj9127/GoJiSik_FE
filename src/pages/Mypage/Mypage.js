@@ -7,11 +7,13 @@ import img4 from "../../img/MyPage/img_4.jpg";
 import img5 from "../../img/MyPage/img_5.jpg";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 function MyPage() {
     const backgroundArr = [img1, img2, img3, img4, img5];
     const randomIndex = Math.floor(Math.random() * backgroundArr.length);
     const backgroundImg = backgroundArr[randomIndex];
+    const token = useSelector(state => state.Auth.token);
 
     const handleDeleteProfile = (e) => {
         e.preventDefault();
@@ -23,7 +25,7 @@ function MyPage() {
             })
             .then(
                 ()=>{
-                    navigator('/main');
+                    navigator('/');
                 }
             )
             .catch((err) => alert(err.response.data.message));

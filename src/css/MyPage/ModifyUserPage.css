@@ -24,6 +24,11 @@
     justify-content: space-around;
 }
 
-.id, .pw, .email, .nickName{
+button{
+    width: 100px;
+    height: 30px;
+}
+
+.id, .pw, .new_pw, .new_pw_check, .nickName{
     margin-left: 20px;
 }
