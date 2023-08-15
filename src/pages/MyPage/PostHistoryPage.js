@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../css/MyPage/PostHistoryPage.css";
-import Post from "../Post";
+import PostDetails from "../PostDetails";
 import axios from "axios";
 
 export default function PostHistoryPage() {
@@ -25,10 +25,10 @@ export default function PostHistoryPage() {
 
                 <div className="questionList">
                 {postList.map((item) => (
-                            <Post
-                            idx={Post.idx}
-                            title={Post.title}
-                            contents={Post.contents}
+                            <PostDetails
+                            idx={item.idx}
+                            title={item.title}
+                            contents={item.contents}
                           />
                 ))}
                 </div>
