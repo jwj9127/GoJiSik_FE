@@ -12,7 +12,7 @@ const Navigation = () => {
     }
     const [isToken, setIsToken] = useState(null);
     useEffect(()=>{
-        window.localStorage.getItem('token');
+        setIsToken(window.localStorage.getItem('token'));
     })
 
     const logoutbtn = e => {
