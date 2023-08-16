@@ -34,7 +34,7 @@ export default function Postpages() {
     useEffect(()=>{
         getpostInfo();
     }, [isClick])
-    
+
     useEffect(()=>{
         axios({
             method: 'get',
@@ -94,7 +94,7 @@ export default function Postpages() {
                 <ul className="postlist">
                     {postlist.data?.map((post) => (
                         <li key={post.id}>
-                            <Link to={`/post/postdetails`} onClick={isClicked}>{post.title}</Link>
+                            <Link to={`/postdetails`} onClick={isClicked}>{post.title}</Link>
                             작성자: {post.writer}
                             작성일: {post.createdDate} 
                             조회수: {post.hits}
