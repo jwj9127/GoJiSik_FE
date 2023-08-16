@@ -78,7 +78,7 @@ function App() {
           <Route path='/post/postWrite' element={<PostWritepage/>}/>  
           <Route path='/login' element={<Login/>}/>
           <Route path='/postpage' element={<Postpages/>}/>
-          <Route path='/' element={<PostDetails/>}/>
+          <Route path='/postdetails' element={<PostDetails/>}/>
           <Route path='/joinpage' element={<Joinpage/>}/>
           <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
           <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>
