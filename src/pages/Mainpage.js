@@ -10,6 +10,7 @@ export default function Main() {
     const navigate = useNavigate();
     const [postdata, setPostdata] = useState([]);
     const [recentPost, setRecentPost] = useState([]);
+    const [bestpost, setBestpost] = useState([]);
     useEffect(()=>{
         const BestPost = async () => {
             try{
@@ -30,6 +31,11 @@ export default function Main() {
         }
     }, [postdata]);
 
+    useEffect(()=>{
+        let bestpost = recentPost.sort((a, b) => (b.hits - a.hits))
+        console.log(bestpost)
+        setBestpost(bestpost);
+    }, [recentPost])
 
     const MoveToGover = e => {
         navigate('/goverment24')
@@ -64,10 +70,9 @@ export default function Main() {
                 </div>
             </div>
             <div className="main-postbox">
-                <h3>최신 게시글 목록</h3>
+                <h3>인기 게시글 목록</h3>
                 <div className="mainbox-bestpostbox">
-                    {console.log(recentPost)}
-                    {recentPost?.map(item => (
+                    {bestpost?.map(item => (
                         <li className="bestpostlist" key={item.id} id={item.id}>
                             <Link to='/postdetails' state={{id : item.id}}>
                                 <h4 className="titlepost">제목 : {item.title}</h4>

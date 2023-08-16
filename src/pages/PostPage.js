@@ -14,8 +14,8 @@ export default function Postpages() {
     const [isClick, setIsClick] = useState(false)
     const [postInfo, setPostInfo] = useState();
     const [isLogin, setIsLogin] = useState(false);
-
-
+    const [rehitarry, setRehitarry] = useState([]);
+    const [togglevalue, setTogglevalue] = useState(false)
     useEffect(()=>{
         axios({
             method: 'get',
@@ -37,16 +37,32 @@ export default function Postpages() {
         }
     })
 
-    const toggleclick = e => {  
+    const toggleclick = e => {
         setValue(value => !value);
     }
-    const MoveToWrite = e => {
+    const MoveToWrite = e => { 
         navigate('/post/postwrite')
     }
     const inputsearch = e => {
         setInputSearch(e.target.value);
         console.log(inputSearch)
     }
+    // useEffect(() => {
+    //     if(postlist){
+    //         console.log(postlist.data)
+    //     if (value) {
+    //         // 조회순 정렬
+    //         let sortedArray = postlist.slice().sort((a, b) => b.hits - a.hits);
+    //         setTogglevalue(false);
+    //         setRehitarry(sortedArray);
+    //     } else {
+    //         // 최신순 정렬
+    //         let sortedArray = postlist.slice().sort((a, b) => new Date(b.createdDate) - new Date(a.createdDate));
+    //         setRehitarry(sortedArray);
+    //         setTogglevalue(true);
+    //     }
+    // }
+    // }, [value, postlist]);
     return(
         <div className="postbox">
                 <h3>게시글 목록</h3>
@@ -56,7 +72,7 @@ export default function Postpages() {
                 </div> */}
                 
                 <div className="btnbox">
-                    <button className="btn postbox-viewtogglebtn" onClick={toggleclick}>{value?'조회순':'최신순'}</button>
+                    <button className="btn postbox-viewtogglebtn" value={togglevalue} onClick={toggleclick}>{value?'조회순':'최신순'}</button>
                     <button className="btn postbox-postwritebox" disabled={!isLogin} onClick={MoveToWrite}>게시글 작성</button>
                 </div>
                 <div className="postbox-postlistbox">
