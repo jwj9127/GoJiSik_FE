@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import '../css/postWritepage.css'
 import {BsMicFill} from 'react-icons/bs'
 
-
 export default function PostWritepage() {
     const navigate = useNavigate();
     const Question = new FormData();

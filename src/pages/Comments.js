@@ -40,7 +40,7 @@ export default function Comments(post){
                 <button className="commentbtn" disabled={!iscomment} onClick = {commentbtn}><GoUpload/></button>
                 <hr/>
                 <ul>
-                    {commentlist?.map(item => <li key={item.key}>
+                    {commentlist.data?.map(item => <li key={item.key}>
                         <div>작성자 : {item.writer}</div>
                         <div>{item.contents}</div>
                         <span>작성일 : {item.createdDate}</span>
