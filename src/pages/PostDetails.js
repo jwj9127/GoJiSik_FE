@@ -19,14 +19,14 @@ export default function PostDetails(clickId) {
         })
         .catch(err => console.log(err))
     },[]) 
-    useEffect(()=>{
-        axios({
-            method : 'get',
-            url : `//localhost:8080/files/${clickId.post}`
-        })
-        .then(res => setFiles(res.data.file))
-        .catch(err => console.log('에러입니다' + err))
-    })
+    // useEffect(()=>{
+    //     axios({
+    //         method : 'get',
+    //         url : `//localhost:8080/files/${clickId.post}`
+    //     })
+    //     .then(res => setFiles(res.data.file))
+    //     .catch(err => console.log('에러입니다' + err))
+    // })
     return(
         <div className = 'postdetails'>  
             <h3>제목</h3>
@@ -42,11 +42,11 @@ export default function PostDetails(clickId) {
                 {thisPost.contents}
             </div>
             <h3>첨부파일</h3>
-            <div>
+            {/* <div>
                {files.map(item => {
                 <div>{item}</div>
                })}
-            </div>
+            </div> */}
             <h3>댓글</h3>
             <Comments id={thisPost.id}/>
         </div>

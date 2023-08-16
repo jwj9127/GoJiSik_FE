@@ -14,7 +14,6 @@ export default function Postpages() {
     const [isClick, setIsClick] = useState(false)
     const [postInfo, setPostInfo] = useState();
     const [isLogin, setIsLogin] = useState(false);
-    const [isInput, setIsinput] = useState(false)
     const [clickId, setClickId] = useState('')
 
     const isClicked = (e) => {
@@ -65,25 +64,21 @@ export default function Postpages() {
         setInputSearch(e.target.value);
         console.log(inputSearch)
     }
-    useEffect(()=>{
-        if(inputSearch > 0){
-            setIsinput(true)
-        } else{
-            setIsinput(false)
-        }
-    },[inputSearch])
-    const search = e => {
-        
-    }
+    // const search = e => {
+    //     axios({
+    //         method : 'post',
+    //         url : ``
+    //     })
+    // }
     return(
         <div className="postbox">
             {isClick? <PostDetails post={clickId}/> :
             <>
                 <h3>게시글 목록</h3>
-                <div className="searchbox">
+                {/* <div className="searchbox">
                     <input classname='inputserch' placeholder="검색할 제목을 입력해주세요." onChange={inputsearch}/>
-                    <button className="searchbtn" disabled={!isInput} onClick={search}>검색</button>
-                </div>
+                    <button className="searchbtn" onClick={search}>검색</button>
+                </div> */}
                 
                 <div className="btnbox">
                     <button className="btn postbox-viewtogglebtn" onClick={toggleclick}>{value?'조회순':'최신순'}</button>

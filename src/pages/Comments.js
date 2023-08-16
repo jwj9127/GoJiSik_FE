@@ -3,11 +3,12 @@ import {GoUpload} from 'react-icons/go'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
-export default function Comments(post){
+export default function Comments({id}){
     const [comment, setComment] = useState('')
     const [iscomment, setIscomment] = useState(false)
     const [commentlist, setCommetlist] = useState('')
     const [answer_id, setId] = useState('')
+    const [postInfo, setPostInfo] = useState([])
 
     const token = window.localStorage.getItem('token')
 
@@ -19,24 +20,32 @@ export default function Comments(post){
             setIscomment(false)
         }
     }
+
     const commentbtn = e =>{
         axios({
-            url : '//localhost:8080/answers',
+            url : `//localhost:8080/answers/${id}`,
             method : 'post',
             headers : {
-                'token' : token
+                'Authorization' : `Bearer ${token}`
             },
             data : {contents : comment}
         }).then(res => setId(res.data.id))
     }
+    const getCommentlist = ()=> {
+        console.log(id)
+        axios({
+            method : 'get',
+            url : `//localhost:8080/answers/${id}`
+        })
+        .then(res => setCommetlist(res.data));
+    }
+    useEffect(()=>{
+        if (id) {
+            getCommentlist();
+        }
+    },[id])
+        
     
-    axios({
-        method : 'get',
-        url : `//localhost:8080/answers/${post.id}`
-    })
-    .then(res => setCommetlist(res.data))
-    .catch(err => console.log(err));
-
     return(
         <>
             <div className="commentsbox">

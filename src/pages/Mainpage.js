@@ -9,18 +9,28 @@ import {FaInternetExplorer} from 'react-icons/fa'
 export default function Main() {
     const navigate = useNavigate();
     const [postdata, setPostdata] = useState([]);
+    const [recentPost, setRecentPost] = useState([]);
     useEffect(()=>{
         const BestPost = async () => {
             try{
                 const response = await axios.get('//localhost:8080/questions')
-                setPostdata(response)
+                setPostdata(response.data.data)
+                console.log(response.data.data)
             } catch(error){
                 console.error('Error fetching data:', error);
             }
         };
-
         BestPost();
     }, [])
+    useEffect(() => {
+        if (postdata.length > 0) {
+            const recent = postdata.slice(0, 3);
+            setRecentPost(recent);
+            console.log(recent);
+        }
+    }, [postdata]);
+
+
     const MoveToGover = e => {
         navigate('/goverment24')
     }
@@ -56,25 +66,13 @@ export default function Main() {
             <div className="main-postbox">
                 <h3>인기 게시글 목록</h3>
                 <div className="mainbox-bestpostbox">
-                    <ul>
-                       <li className="postlistbox">
-                        <h4 className="titlepost">제목입니다.</h4>
-                        <span className="posttext">작성자 : 조아빈, 조회수 : 1111</span>
-                       </li>
-                       <li className="postlistbox">
-                        <h4 className="titlepost">제목입니다.</h4>
-                        <span className="posttext">작성자 : 조아빈, 조회수 : 1111</span>
-                       </li>
-                       <li className="postlistbox">
-                        <h4 className="titlepost">제목입니다.</h4>
-                        <span className="posttext">작성자 : 조아빈, 조회수 : 1111</span>
-                       </li>
-                    </ul>
-                    {/* {postdata.map(((item) => (
-                        <li value={item} key={item}>
-                             {item}
+                    {console.log(recentPost)}
+                    {recentPost?.map(item => (
+                        <li className="bestpostlist" key={item.id}>
+                            <h4 className="titlepost">제목 : {item.title}</h4>
+                            <div className="posttext">작성자: {item.writer}, 조회수: {item.hits}</div>
                         </li>
-                    )))} */}
+                    ))}
                 </div>
             </div>
          </div>

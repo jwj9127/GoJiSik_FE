@@ -90,3 +90,12 @@
 .postlistbox{
     border-bottom: 1px solid black;
 }
+
+.mainbox-bestpostbox{
+    display: flex;
+    flex-direction: column;
+}
+.bestpostlist{
+    display: flex;
+    
+}
