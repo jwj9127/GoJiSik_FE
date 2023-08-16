@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #8195A9;
     width: 100%;
     height: 10vh;
     margin-top: 0;
@@ -63,6 +63,7 @@
     justify-content: space-between;
     width: 30%;
 }
+
 .mypagebox{
     display: flex;
     justify-content: space-between;
