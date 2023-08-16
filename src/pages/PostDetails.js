@@ -6,13 +6,18 @@ import Comments from './Comments'
 export default function PostDetails(post) {
 
     const [files, setFiles] = useState([]);
+    const [thisPost, setThisPost] = useState([]);
 
     useEffect(()=>{
         axios({
             method : 'get',
             url : `//localhost::8080/questions/${post.id}`,
         })
-        .then(res => setFiles(files))
+        .then(res =>{
+            setFiles(res.files)
+            setThisPost(res.data)
+            console.log(res.data)
+        })
         .catch(err => console.log(err))
     },[]) 
 
