@@ -47,22 +47,22 @@ export default function Postpages() {
         setInputSearch(e.target.value);
         console.log(inputSearch)
     }
-    useEffect(() => {
-        if(postlist.length>0){
-            console.log(postlist)
-        if (value) {
-            // 조회순 정렬
-            let sortedArray = postlist.slice().sort((a, b) => b.hits - a.hits);
-            setTogglevalue(false);
-            setRehitarry(sortedArray);
-        } else {
-            // 최신순 정렬
-            let sortedArray = postlist.slice().sort((a, b) => new Date(b.createdDate) - new Date(a.createdDate));
-            setRehitarry(sortedArray);
-            setTogglevalue(true);
-        }
-    }
-    }, [value, postlist]);
+    // useEffect(() => {
+    //     if(postlist.length>0){
+    //         console.log(postlist)
+    //     if (value) {
+    //         // 조회순 정렬
+    //         let sortedArray = postlist.slice().sort((a, b) => b.hits - a.hits);
+    //         setTogglevalue(false);
+    //         setRehitarry(sortedArray);
+    //     } else {
+    //         // 최신순 정렬
+    //         let sortedArray = postlist.slice().sort((a, b) => new Date(b.createdDate) - new Date(a.createdDate));
+    //         setRehitarry(sortedArray);
+    //         setTogglevalue(true);
+    //     }
+    // }
+    // }, [value, postlist]);
     return(
         <div className="postbox">
                 <h3>게시글 목록</h3>
@@ -77,7 +77,7 @@ export default function Postpages() {
                 </div>
                 <div className="postbox-postlistbox">
                 <ul className="postlist">
-                    {rehitarry?.map((post) => (
+                    {postlist.data?.map((post) => (
                         <Link to={'/postdetails'} state={{id:post.id}}>
                         <li key={post.id}>
                             제목 : {post.title}
