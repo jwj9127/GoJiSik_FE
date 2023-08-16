@@ -11,7 +11,7 @@ export default function PostDetails(post) {
     useEffect(()=>{
         axios({
             method : 'get',
-            url : `//localhost:8080/questions/${post}`,
+            url : `//localhost:8080/questions/${post.post}`,
         })
         .then(res =>{
             setFiles(res.files)
@@ -20,7 +20,14 @@ export default function PostDetails(post) {
         })
         .catch(err => console.log(err))
     },[]) 
-
+    useEffect(()=>{
+        axios({
+            method : 'get',
+            url : `//localhost:8080/files/${post.post}`
+        })
+        .then(res => setFiles(res.data.file))
+        .catch(err => console.log('에러입니다' + err))
+    })
     return(
         <div className = 'postdetails'>  
             <h3>제목</h3>
