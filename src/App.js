@@ -7,7 +7,7 @@ import Main from './pages/Mainpage.js';
 import Login from './pages/Login';
 import Postpages from './pages/PostPage';
 import Joinpage from './pages/Joinpage';
-import MyPage from './pages/MyPage/Mypage';
+import MyPage from './pages/MyPage/MyPage';
 import PostHistoryPage from "./pages/MyPage/PostHistoryPage";
 import AnswerHistoryPage from "./pages/MyPage/AnswerHistoryPage";
 import JuminPage from './pages/goverment/JuminPage';
