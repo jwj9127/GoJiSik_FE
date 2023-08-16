@@ -27,10 +27,9 @@
     justify-content: center;
     align-items:flex-start;
     
-    padding-right: 10rem;
+    padding-right: 5rem;
 }
 .loginpage-loginbox__box{
-    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -41,7 +40,7 @@
 .ID, .PW{
     position: relative;
     font-size: 1.5rem;
-    width: 23vw;
+    width: 27vw;
     height: 3rem;
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -54,9 +53,9 @@
     padding: 2rem;
     border-radius: 15px;
     width: 23vw;
-    margin-top: 80px;
+    margin-top: 5px;
     margin-bottom: 20px;
-    margin-left: 30%;
+    margin-left: 35%;
     &:hover{
         transform: scale(105%);
     }
@@ -67,18 +66,21 @@
 }
 .loginerrormsg{
     color: red;
-    margin-top:-3rem;
-    margin-left: 13rem;
+    margin-top: -0.5rem;
+    margin-left: 13.5rem;
 }
 
 .joinbtn{
     margin-left: 1rem;
 }
 .jointextbox{
-    display: flex;
     flex-direction: column;
     padding-left: 21.5vw;
-
+    padding: 5px;
+    margin-left: 95px;
+}
+.gotojoinbtn{
+    margin-left: 30px;
 }
 .gotojoinbtn :first-child{
     &:hover{

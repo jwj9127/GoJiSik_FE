@@ -109,7 +109,7 @@ export default function Agreepage() {
                     </div>
                 </div>
                 <div className="agreebox">
-                    <div>
+                    <div >
                         <input type="checkbox" id="checkagree1" className="agreebox-agreecheckbox" onChange={onCheck1} checked={isChecked1}/>
                         <label htmlFor="checkagree1"><span className = "labelstyle">[필수]</span> 이용약관 </label>
                     </div>

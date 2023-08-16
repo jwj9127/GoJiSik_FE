@@ -3,11 +3,21 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 3rem;
-    background-color: #FDFBEB;
+    background-image: url(../img/배경\ 사진.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: 35px 0;
 }
+.agreebox span{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
 label {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
     cursor: pointer;
+    font-weight: bold;
+    
 }
 input{
     cursor: pointer;
@@ -28,20 +38,24 @@ input{
     flex-direction: column;
     align-items: start;
     margin-bottom: 2rem;
+    margin-top: 20px;
 }
 
 .agreetextbox{
     width: 30rem;
     overflow: auto;
     height: 8rem;
-    border: 1px solid black;
+    border: 1px solid #C1CCB7;
     font-size: 1rem;
     text-align: justify;
     border-radius: 7px;
+    padding: 15px;
+    margin-top: 15px;
 }
 .allagreebox{
     border: none;
     height: 4rem;
+    margin-top: -5px;
 }
 
 .gotojoin{
