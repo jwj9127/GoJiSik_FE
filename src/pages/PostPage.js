@@ -23,7 +23,6 @@ export default function Postpages() {
         // getpostInfo(e.target.id)
         console.log(e)
         console.log(e.target.id)
-        navigate('/postdetails')
     }
 
     // const getpostInfo = (key) => {
