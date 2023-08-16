@@ -29,16 +29,13 @@ export default function Comments(post){
             data : {contents : comment}
         }).then(res => setId(res.data.id))
     }
-    const getCommentlist = ()=> {
-        axios({
-            method : 'get',
-            url : `//localhost:8080/answers/${post.id}`
-        })
-        .then(res => setCommetlist(res.data));
-    }
-    useEffect(()=>{
-        getCommentlist()
-    },[])
+    
+    axios({
+        method : 'get',
+        url : `//localhost:8080/answers/${post.id}`
+    })
+    .then(res => setCommetlist(res.data))
+    .catch(err => console.log(err));
 
     return(
         <>
