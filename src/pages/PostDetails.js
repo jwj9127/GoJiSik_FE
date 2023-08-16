@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Comments from './Comments'
 
-export default function PostDetails(post) {
+export default function PostDetails(clickId) {
 
     const [files, setFiles] = useState([]);
     const [thisPost, setThisPost] = useState([]);
@@ -11,7 +11,7 @@ export default function PostDetails(post) {
     useEffect(()=>{
         axios({
             method : 'get',
-            url : `//localhost:8080/questions/${post.post}`,
+            url : `//localhost:8080/questions/${clickId.post}`,
         })
         .then(res =>{
             setThisPost(res.data.data[0])
@@ -22,7 +22,7 @@ export default function PostDetails(post) {
     useEffect(()=>{
         axios({
             method : 'get',
-            url : `//localhost:8080/files/${post.post}`
+            url : `//localhost:8080/files/${clickId.post}`
         })
         .then(res => setFiles(res.data.file))
         .catch(err => console.log('에러입니다' + err))

@@ -30,9 +30,12 @@ export default function Comments(post){
         }).then(res => setId(res.data.id))
     }
     useEffect(()=>{
-        axios.get(`//localhost:8080/answers/${post.id}`)
+        axios({
+            method : 'get',
+            url : `//localhost:8080/answers/${post.id}`
+        })
         .then(res => setCommetlist(res.data));
-    },[])
+    },[post.id])
     return(
         <>
             <div className="commentsbox">
