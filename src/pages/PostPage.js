@@ -20,20 +20,17 @@ export default function Postpages() {
     const isClicked = (e) => {
         setIsClick(true)
         setClickId(e.target.key)
+        getpostInfo(e.target.key)
     }
 
-    const getpostInfo = () => {
+    const getpostInfo = (key) => {
         axios({
             method:'get',
-            url:`//localhost:8080/questions/${clickId}`
+            url:`//localhost:8080/questions/${key}`
         })
         .then((res) => setPostInfo(res.data))
         .catch(err => console.log(err))
     }
-
-    useEffect(()=>{
-        getpostInfo();
-    }, [isClick])
 
     useEffect(()=>{
         axios({
