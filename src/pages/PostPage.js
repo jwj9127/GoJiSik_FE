@@ -21,6 +21,9 @@ export default function Postpages() {
         setIsClick(true)
         setClickId(e.target.key)
         getpostInfo(e.target.key)
+        console.log(e)
+        console.log(e.target.key)
+        navigate('/postdetails')
     }
 
     const getpostInfo = (key) => {
@@ -91,7 +94,7 @@ export default function Postpages() {
                 <ul className="postlist">
                     {postlist.data?.map((post) => (
                         <li key={post.id} onClick={isClicked}>
-                            <Link to={`/postdetails`}>{post.title}</Link>
+                            제목 : {post.title}
                             작성자: {post.writer}
                             작성일: {post.createdDate} 
                             조회수: {post.hits}
