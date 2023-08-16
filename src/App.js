@@ -62,6 +62,7 @@ import How from './pages/Ecommerce/Place/How';
 import Yanolja from './pages/Ecommerce/Place/Yanolja';
 import Lightning from './pages/Ecommerce/Used_transaction/Lightning';
 import EcommercePage from './pages/Ecommerce/EcommercePage';
+import PostDetails from './pages/PostDetails';
 
 function App() {
   return (
@@ -77,6 +78,7 @@ function App() {
           <Route path='/post/postWrite' element={<PostWritepage/>}/>  
           <Route path='/login' element={<Login/>}/>
           <Route path='/postpage' element={<Postpages/>}/>
+          <Route path='/postdetails' element={<PostDetails/>}/>
           <Route path='/joinpage' element={<Joinpage/>}/>
           <Route path="/postHistoryPage" element = {<PostHistoryPage />}></Route>
           <Route path="/answerHistoryPage" element = {<AnswerHistoryPage />}></Route>

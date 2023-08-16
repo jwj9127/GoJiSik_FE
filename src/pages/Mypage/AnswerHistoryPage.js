@@ -1,57 +1,38 @@
-import { useState } from "react";
-import "../../css/MyPage/AnswerHistoryPage.css"
+import { useEffect, useState } from "react";
+import "../../css/MyPage/AnswerHistoryPage.css";
+import PostDetails from "../PostDetails";
+import axios from "axios";
 
-function AnswerHistoryPage() {
-    const [title, setTitle] = useState([]);
-    // useEffect(() => {
-    //     axios
-    //       .get("users/{title}")
-    //       .then((response) => {
-    //         setTitle(response.data);
-    //       });
-    //   }, []);
+export default function AnswerHistoryPage() {
+    const [postList, setPostList] = useState([]);
 
-    const [hits, setHits] = useState([]);
-    // useEffect(() => {
-    //     axios
-    //       .get("users/{hits}")
-    //       .then((response) => {
-    //         setHits(response.data);
-    //       });
-    //   }, []);
+    useEffect(() => {
+        
+        // 페이지에 해당하는 게시물 가져오기
+        const getPostList = async () => {
+            const user_id = window.localStorage.getItem("token");
+            const {data} = await(await axios.get(`//localhost:8080/questions/${user_id}`)).data;
+            return data;
+        }
+            // 현재 페이지에 해당하는 게시물로 상태 변경하기
+            getPostList().then(result => setPostList(result));
+    }, [])
 
-    const [contents, setContents] = useState([]);
-    // useEffect(() => {
-    //     axios
-    //       .get("users/{contents}")
-    //       .then((response) => {
-    //         setContents(response.data);
-    //       });
-    //   }, []);
-    
     return (
         <>
-            <div className="answerHistory_main">
+            <div className="postHistory_main">
                 <div className="answerReview">답변 내역 보기</div>
 
-                <div className="answerBox">
-                    <div className="postName">{title}</div>
-                    <div className="review_div">
-                        <div className="review">{hits}</div>
-                    </div>
-                    <div className="showAnswer">{contents}</div>
-                </div>
-
-                <div className="answerBox_2">
-                    <div className="postName">{title}</div>
-                    <div className="review_div">
-                        <div className="review">{hits}</div>
-                    </div>
-                    <div className="showAnswer">{contents}</div>
+                <div className="answerList">
+                {postList.map((item) => (
+                            <PostDetails
+                            idx={item.idx}
+                            title={item.title}
+                            contents={item.contents}
+                          />
+                ))}
                 </div>
             </div>
         </>
     )
 }
-
-export default AnswerHistoryPage;

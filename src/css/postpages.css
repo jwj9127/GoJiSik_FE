@@ -1,0 +1,17 @@
+.postbox{
+    border: 1px solid black;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputserch{
+    height: 1.5rem;
+}
+.postbox-postlistbox{
+    width: 60vw;
+    height: auto;
+    background-color: #F7EBDA;
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

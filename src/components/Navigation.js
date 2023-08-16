@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/Navigation.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +10,17 @@ const Navigation = () => {
     const MoveToMain = e => {
         navigate('/');
     }
+    const [isToken, setIsToken] = useState(null);
+    useEffect(()=>{
+        setIsToken(window.localStorage.getItem('token'));
+    })
+
+    const logoutbtn = e => {
+        e.preventDefault();
+        window.localStorage.removeItem('token');
+        setIsToken(false)
+    }
+
     return (
         <>
         <div className='Navigation'>
@@ -21,8 +32,8 @@ const Navigation = () => {
                 <div id='4' className='btn navigationbox-postbtn' ><Link to={'/post'}>게시글</Link></div>
             </div>
             <div className='mypagebox'>
-                <button className='btn mypagebox-loginbtn'><Link to='/login'><span className='loginicons'><CgLogIn size={20}/></span>로그인</Link></button>
-                <button className='btn mypagebox-mypagebtn'><Link to='/mypage'><span><BsPersonCircle size={50} color='#8195A9'/></span></Link></button>
+                <button className='btn mypagebox-loginbtn'>{isToken ? <button onClick={logoutbtn} className='logoutbtn'>로그아웃</button> :<Link to='/login'><span className='loginicons'><CgLogIn size={20}/></span>로그인</Link>}</button>
+                {isToken ? (<button className='btn mypagebox-mypagebtn'><Link to='/mypage'><span><BsPersonCircle size={50} color='#8195A9'/></span></Link></button>) : null}
             </div>
         </div>
         </>
