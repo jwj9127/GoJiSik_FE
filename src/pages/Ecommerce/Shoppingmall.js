@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import '../../css/Ecommerce/Shoppingmall.css'
+import '../../css/Ecommerce/Shoppingmall.css';
+
 
 export default function Shoppingmall() {
     return (

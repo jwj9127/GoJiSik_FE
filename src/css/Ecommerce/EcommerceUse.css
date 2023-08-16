@@ -1,0 +1,52 @@
+.elevne_street_img, .gmarket_img,.coupang_img,.naver_img,.lightning_img,.skyscanner_img,.trip_img,
+.interpark_img,.hotels_combine_img,.yanolja_img,.how_img{
+    width: 100%;
+    height: 100vw;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+.elevne_street_img{
+    background-image: url('../../img/Ecommerce/Elevne_street.png');
+    height: 8258px;
+}
+.gmarket_img{
+    background-image: url('../../img/Ecommerce/Gmarket.png');
+    height: 6613px;
+}
+.coupang_img{
+    background-image: url('../../img/Ecommerce/Coupang.png');
+    height: 3742px;
+}
+.naver_img{
+    background-image: url('../../img/Ecommerce/Naver.png');
+    height: 3742px;
+}
+.lightning_img{
+    background-image: url('../../img/Ecommerce/lightning.png');
+    height: 3742px;
+}
+.skyscanner_img{
+    background-image: url('../../img/Ecommerce/skyscanner.png');
+    height: 5169px;
+}
+.trip_img{
+    background-image: url('../../img/Ecommerce/trip_img.png');
+    height: 5924px;
+}
+.interpark_img{
+    background-image: url('../../img/Ecommerce/interpark.png');
+    height: 5168px;
+}
+.hotels_combine_img{
+    background-image: url('../../img/Ecommerce/hotels_combine_img.png');
+    height: 3742px;
+}
+.yanolja_img{
+    background-image: url('../../img/Ecommerce/yanolja.png');
+    height: 5168px;
+}
+.how_img{
+    background-image: url('../../img/Ecommerce/how.png');
+    height: 3009px;
+}
