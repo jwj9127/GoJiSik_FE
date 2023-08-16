@@ -1,11 +1,34 @@
+.tap {
+    margin: 60px 60px;
+}
+
+.tap button {
+    font-size: 1.5rem;
+    width: auto;
+    height: 50px;
+    border: 3px solid #C1CCB7;
+    border-radius: 50px;
+    padding: 10px 25px;
+    margin: 0 20px;
+}
+
+.ecommerce_list ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.ecommerce_list ul li {
+    margin: 0 35px 80px;
+}
+
 .ecommerce_list {
     margin-top: 100px;
 }
 
-.shoppingmall,
-.used_transaction,
-.airplane,
-.place {
+
+.eleven_street,.auction,.gmarket,.coupang,.naver_shopping {
     display: flex;
     width: 240px;
     height: 270px;
@@ -14,44 +37,33 @@
     border-radius: 20px;
 }
 
-.eleven_street,
-.auction,
-.gmarket,
-.coupang,
-.naver_shopping {
-    display: flex;
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
-    margin: 20px;
-}
 
-.eleven_street {
+
+.eleven_street{
     background-image: url('../../img/Ecommerce/eleven.jpg');
     background-repeat: no-repeat;
-    background-size: 17rem;
-    background-position: 1rem, -1rem;
+    background-size: 14rem;
+    background-position: 0.5rem, -1rem;
 }
-
 .gmarket {
     background-image: url('../../img/Ecommerce/gmarket.jpg');
     background-repeat: no-repeat;
-    background-size: 17rem;
-    background-position: 1rem, -1rem;
+    background-size: 14rem;
+    background-position: 0.5rem, -1rem;
 }
 
 .coupang {
     background-image: url('../../img/Ecommerce/coupang.jpg');
     background-repeat: no-repeat;
     background-size: 17rem;
-    background-position: 1rem, -1rem;
+    background-position: -0.8rem, -1rem;
 }
 
 .naver_shopping {
     background-image: url('../../img/Ecommerce/naver.jpg');
     background-repeat: no-repeat;
-    background-size: 17rem;
-    background-position: 1rem, -1rem;
+    background-size: 13rem;
+    background-position: 0.5rem, -1rem;
 }
 
 .ecommerce_img{
@@ -66,36 +78,5 @@
     font-size: xx-large;
 }
 
-.elevne_street_img{
-    width: 99vw;
-    height: 10000px;
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: -1.2rem;
-    background-image: url('../../img/Ecommerce/Elevne_street.png');
-}
 
-.gmarket_img{
-    width: 99vw;
-    height: 7000px;
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: -1.2rem;
-    background-image: url('../../img/Ecommerce/Gmarket.png');
-}
 
-.coupang_img, .naver_img{
-    width: 99vw;
-    height: 4500px;
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: -1.2rem;
-}
-
-.coupang_img{
-    background-image: url('../../img/Ecommerce/Coupang.png');
-}
-
-.naver_img{
-    background-image: url('../../img/Ecommerce/Naver.png');
-}
