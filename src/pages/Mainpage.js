@@ -1,6 +1,6 @@
 import {React, useEffect,useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import '../css/Mainpage.css';
 import { RiSchoolFill } from "react-icons/ri";
 import {SlScreenDesktop} from 'react-icons/sl';
@@ -64,13 +64,15 @@ export default function Main() {
                 </div>
             </div>
             <div className="main-postbox">
-                <h3>인기 게시글 목록</h3>
+                <h3>최신 게시글 목록</h3>
                 <div className="mainbox-bestpostbox">
                     {console.log(recentPost)}
                     {recentPost?.map(item => (
-                        <li className="bestpostlist" key={item.id}>
-                            <h4 className="titlepost">제목 : {item.title}</h4>
-                            <div className="posttext">작성자: {item.writer}, 조회수: {item.hits}</div>
+                        <li className="bestpostlist" key={item.id} id={item.id}>
+                            <Link to='/postdetails' state={{id : item.id}}>
+                                <h4 className="titlepost">제목 : {item.title}</h4>
+                                <div className="posttext">작성자: {item.writer}, 조회수: {item.hits}</div>   
+                            </Link>                  
                         </li>
                     ))}
                 </div>

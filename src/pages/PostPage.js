@@ -14,24 +14,7 @@ export default function Postpages() {
     const [isClick, setIsClick] = useState(false)
     const [postInfo, setPostInfo] = useState();
     const [isLogin, setIsLogin] = useState(false);
-    const [clickId, setClickId] = useState('')
 
-    const isClicked = (e) => {
-        setIsClick(true)
-        setClickId(e.target.id)
-        // getpostInfo(e.target.id)
-        console.log(e)
-        console.log(e.target.id)
-    }
-
-    // const getpostInfo = (key) => {
-    //     axios({
-    //         method:'get',
-    //         url:`//localhost:8080/questions/${key}`
-    //     })
-    //     .then((res) => setPostInfo(res.data))
-    //     .catch(err => console.log(err))
-    // }
 
     useEffect(()=>{
         axios({
@@ -64,16 +47,8 @@ export default function Postpages() {
         setInputSearch(e.target.value);
         console.log(inputSearch)
     }
-    // const search = e => {
-    //     axios({
-    //         method : 'post',
-    //         url : ``
-    //     })
-    // }
     return(
         <div className="postbox">
-            {isClick? <PostDetails post={clickId}/> :
-            <>
                 <h3>게시글 목록</h3>
                 {/* <div className="searchbox">
                     <input classname='inputserch' placeholder="검색할 제목을 입력해주세요." onChange={inputsearch}/>
@@ -87,17 +62,17 @@ export default function Postpages() {
                 <div className="postbox-postlistbox">
                 <ul className="postlist">
                     {postlist.data?.map((post) => (
-                        <li id={post.id} onClick={isClicked}>
+                        <Link to={'/postdetails'} state={{id:post.id}}>
+                        <li key={post.id}>
                             제목 : {post.title}
                             작성자: {post.writer}
                             작성일: {post.createdDate} 
                             조회수: {post.hits}
                         </li>
+                        </Link>
                     ))}
                 </ul>
                 </div>
-            </>
-            }
         </div>
     )
 }

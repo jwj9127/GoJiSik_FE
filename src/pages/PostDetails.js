@@ -1,17 +1,20 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, } from "react";
 import axios from "axios";
 import Comments from './Comments'
+import { useLocation } from "react-router-dom";
 
-export default function PostDetails(clickId) {
-
+export default function PostDetails() {
+    const location = useLocation()
+    window.localStorage.setItem('clickid' , location.state.id)
+    console.log(location.state)
     const [files, setFiles] = useState([]);
     const [thisPost, setThisPost] = useState([]);
 
     useEffect(()=>{
         axios({
             method : 'get',
-            url : `//localhost:8080/questions/${clickId.post}`,
+            url : `//localhost:8080/questions/${window.localStorage.getItem('clickid')}`,
         })
         .then(res =>{
             setThisPost(res.data.data[0])
