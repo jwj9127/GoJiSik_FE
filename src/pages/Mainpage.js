@@ -36,7 +36,7 @@ export default function Main() {
         bestpost = bestpost.slice(0, 3)
         console.log(bestpost)
         setBestpost(bestpost);
-    }, [recentPost])
+    }, [postdata])
 
     const MoveToGover = e => {
         navigate('/goverment24')
