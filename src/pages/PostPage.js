@@ -79,7 +79,10 @@ export default function Postpages() {
                 <ul className="postlist">
                     {postlist.data?.map((post) => (
                         <li key={post.id}>
-                            <Link to={`/post/${post.id}`} onClick={isClicked}>{post.title}</Link>
+                            <Link to={`/post/${post.id}`} onClick={() => {
+                                isClicked
+                                setPostInfo(post)
+                                }}>{post.title}</Link>
                             작성자: {post.writer}
                             작성일: {post.createdDate} 
                             조회수: {post.hits}
