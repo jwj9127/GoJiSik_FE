@@ -71,7 +71,7 @@ export default function Main() {
                 </div>
             </div>
             <div className="main-postbox">
-                <h3>인기 게시글 목록</h3>
+                <h3>진짜 게시글 목록</h3>
                 <div className="mainbox-bestpostbox">
                     {bestpost?.map(item => (
                         <li className="bestpostlist" key={item.id} id={item.id}>
