@@ -23,16 +23,17 @@ export default function Main() {
         };
         BestPost();
     }, [])
-    useEffect(() => {
-        if (postdata.length > 0) {
-            const recent = postdata.slice(0, 3);
-            setRecentPost(recent);
-            console.log(recent);
-        }
-    }, [postdata]);
+    // useEffect(() => {
+    //     if (postdata.length > 0) {
+    //         const recent = postdata.slice(0, 3);
+    //         setRecentPost(recent);
+    //         console.log(recent);
+    //     }
+    // }, [postdata]);
 
     useEffect(()=>{
-        let bestpost = recentPost.sort((a, b) => (b.hits - a.hits))
+        let bestpost = postdata.sort((a, b) => (b.hits - a.hits))
+        bestpost = bestpost.slice(0, 3)
         console.log(bestpost)
         setBestpost(bestpost);
     }, [recentPost])
