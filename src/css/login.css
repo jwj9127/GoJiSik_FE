@@ -2,14 +2,16 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem;
+    
+    background-size: 60%;
+    background-image: url('../img/로그인 사진.png');
+    background-repeat: no-repeat;
+    background-position: 0 -20px;
 }
 .loginpage-logo{
-    width: 50vw;
-    height: 80vh;
-    background-image: url('../img/로그인페이지로고.png');
-    background-repeat: no-repeat;
-    background-position: 12rem 6rem;
+    width: 50%;
+    height: 100vh;
+   
 }
 
 .loginform{
@@ -24,14 +26,17 @@
     flex-direction: column;
     justify-content: center;
     align-items:flex-start;
-    padding-left: 10rem;
+    
     padding-right: 10rem;
 }
 .loginpage-loginbox__box{
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+.loginpage-loginbox__box label {
+    margin-left: 20%;
 }
 .ID, .PW{
     position: relative;
@@ -49,7 +54,9 @@
     padding: 2rem;
     border-radius: 15px;
     width: 23vw;
-    margin-left: 19.5rem;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 30%;
     &:hover{
         transform: scale(105%);
     }
@@ -63,10 +70,15 @@
     margin-top:-3rem;
     margin-left: 13rem;
 }
+
+.joinbtn{
+    margin-left: 1rem;
+}
 .jointextbox{
     display: flex;
     flex-direction: column;
     padding-left: 21.5vw;
+
 }
 .gotojoinbtn :first-child{
     &:hover{

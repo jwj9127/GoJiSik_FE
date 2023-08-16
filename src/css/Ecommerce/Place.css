@@ -2,10 +2,7 @@
     margin-top: 100px;
 }
 
-.shoppingmall,
-.used_transaction,
-.airplane,
-.place {
+.hotels_combine,.yanolja,.how {
     display: flex;
     width: 240px;
     height: 270px;
@@ -14,35 +11,25 @@
     border-radius: 20px;
 }
 
-.hotels_combine,
-.yanolja,
-.how {
-    display: flex;
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
-    margin: 20px;
-}
-
 .hotels_combine {
     background-image: url('../../img/Ecommerce/hotels_combine.png');
     background-repeat: no-repeat;
     background-size: 17rem;
-    background-position: 1rem, -1rem;
+    background-position: -1.2rem, -1rem;
 }
 
 .yanolja {
     background-image: url('../../img/Ecommerce/yanolja.jpg');
     background-repeat: no-repeat;
     background-size: 17rem;
-    background-position: 1rem, -1rem;
+    background-position: -0.8rem, -1rem;
 }
 
 .how {
     background-image: url('../../img/Ecommerce/how.jpg');
     background-repeat: no-repeat;
-    background-size: 17rem;
-    background-position: 1rem, -1rem;
+    background-size: 14rem;
+    background-position: 0.5rem, -1rem;
 }
 
 .ecommerce_img{

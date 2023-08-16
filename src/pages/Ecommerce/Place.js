@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import '../../css/Ecommerce/Place.css';
 
+
 export default function Place() {
     return (
         <>
