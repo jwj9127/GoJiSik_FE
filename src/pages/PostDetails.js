@@ -15,8 +15,8 @@ export default function PostDetails(post) {
         })
         .then(res =>{
             setFiles(res.files)
-            setThisPost(res.data)
-            console.log(res.data)
+            setThisPost(res.data[0])
+            console.log(res.data[0])
         })
         .catch(err => console.log(err))
     },[]) 
@@ -24,16 +24,16 @@ export default function PostDetails(post) {
     return(
         <div className = 'postdetails'>  
             <h3>제목</h3>
-            <h5>작성자 : {post.writer}</h5>
+            <h5>작성자 : {thisPost.writer}</h5>
             <div className='postdetails-titlebox'>
-                {post.title}
+                {thisPost.title}
             </div>
             <h3>카테고리</h3>
             <div className='postdetails-categorybox'>
-                {post.category}
+                {thisPost.category}
             </div>
             <div className='postdetails-contentsbox'>
-                {post.contents}
+                {thisPost.contents}
             </div>
             <h3>첨부파일</h3>
             <div>
@@ -42,7 +42,7 @@ export default function PostDetails(post) {
                })}
             </div>
             <h3>댓글</h3>
-            <Comments id={post.id}/>
+            <Comments id={thisPost.id}/>
         </div>
     )
 }
