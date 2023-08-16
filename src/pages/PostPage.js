@@ -90,8 +90,8 @@ export default function Postpages() {
                 <div className="postbox-postlistbox">
                 <ul className="postlist">
                     {postlist.data?.map((post) => (
-                        <li key={post.id}>
-                            <Link to={`/postdetails`} onClick={isClicked}>{post.title}</Link>
+                        <li key={post.id} onClick={isClicked}>
+                            <Link to={`/postdetails`}>{post.title}</Link>
                             작성자: {post.writer}
                             작성일: {post.createdDate} 
                             조회수: {post.hits}
