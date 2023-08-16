@@ -20,20 +20,20 @@ export default function Postpages() {
     const isClicked = (e) => {
         setIsClick(true)
         setClickId(e.target.id)
-        getpostInfo(e.target.id)
+        // getpostInfo(e.target.id)
         console.log(e)
         console.log(e.target.id)
         navigate('/postdetails')
     }
 
-    const getpostInfo = (key) => {
-        axios({
-            method:'get',
-            url:`//localhost:8080/questions/${key}`
-        })
-        .then((res) => setPostInfo(res.data))
-        .catch(err => console.log(err))
-    }
+    // const getpostInfo = (key) => {
+    //     axios({
+    //         method:'get',
+    //         url:`//localhost:8080/questions/${key}`
+    //     })
+    //     .then((res) => setPostInfo(res.data))
+    //     .catch(err => console.log(err))
+    // }
 
     useEffect(()=>{
         axios({
@@ -78,7 +78,7 @@ export default function Postpages() {
     }
     return(
         <div className="postbox">
-            {isClick? <PostDetails post={postInfo}/> :
+            {isClick? <PostDetails post={clickId}/> :
             <>
                 <h3>게시글 목록</h3>
                 <div className="searchbox">

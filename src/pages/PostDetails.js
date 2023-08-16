@@ -11,7 +11,7 @@ export default function PostDetails(post) {
     useEffect(()=>{
         axios({
             method : 'get',
-            url : `//localhost::8080/questions/${post.id}`,
+            url : `//localhost::8080/questions/${post}`,
         })
         .then(res =>{
             setFiles(res.files)
