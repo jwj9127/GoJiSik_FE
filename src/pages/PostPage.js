@@ -19,10 +19,10 @@ export default function Postpages() {
 
     const isClicked = (e) => {
         setIsClick(true)
-        setClickId(e.target.name)
-        getpostInfo(e.target.name)
+        setClickId(e.target.id)
+        getpostInfo(e.target.id)
         console.log(e)
-        console.log(e.target.name)
+        console.log(e.target.id)
         navigate('/postdetails')
     }
 
@@ -93,7 +93,7 @@ export default function Postpages() {
                 <div className="postbox-postlistbox">
                 <ul className="postlist">
                     {postlist.data?.map((post) => (
-                        <li name={post.id} onClick={isClicked}>
+                        <li id={post.id} onClick={isClicked}>
                             제목 : {post.title}
                             작성자: {post.writer}
                             작성일: {post.createdDate} 
