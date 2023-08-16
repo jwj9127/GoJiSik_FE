@@ -15,11 +15,19 @@ export default function Postpages() {
     const [postInfo, setPostInfo] = useState();
     const [isLogin, setIsLogin] = useState(false);
     const [isInput, setIsinput] = useState(false)
+    const [clickId, setClickId] = useState('')
 
-    const isClicked = (e, post) => {
+    const isClicked = (e) => {
         setIsClick(true)
-        setPostInfo(post)
+        setClickId(e.target.key)
     }
+    useEffect(()=>{
+        axios({
+            method:'get',
+            url:`//localhost:8080/questions/${clickId}`
+        })
+        .then((res) => setPostInfo(res.data))
+    }, [isClicked])
     useEffect(()=>{
         axios({
             method: 'get',
@@ -79,10 +87,7 @@ export default function Postpages() {
                 <ul className="postlist">
                     {postlist.data?.map((post) => (
                         <li key={post.id}>
-                            <Link to={`/post/${post.id}`} onClick={() => {
-                                isClicked
-                                setPostInfo(post)
-                                }}>{post.title}</Link>
+                            <Link to={`/post/postdetails`} onClick={isClicked}>{post.title}</Link>
                             작성자: {post.writer}
                             작성일: {post.createdDate} 
                             조회수: {post.hits}
