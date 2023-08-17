@@ -20,6 +20,7 @@ export default function Loginpage(){
             url : '//localhost:8080/users/login',
             data : UserInfo
         }) .then(result => {
+            console.log(result)
             setIsLogin(true)
             window.localStorage.setItem('token', result.data.token);
             setToken(result.data.token)

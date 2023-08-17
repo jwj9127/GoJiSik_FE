@@ -12,34 +12,26 @@ export default function MyPage() {
     const backgroundArr = [img1, img2, img3, img4, img5];
     const randomIndex = Math.floor(Math.random() * backgroundArr.length);
     const backgroundImg = backgroundArr[randomIndex];
-        
-    const [id, setId] = useState([]);
-    const [token, setToken] = useState();
-    
+    const [userName, setUserName] = useState('')
+    const token = window.localStorage.getItem('token')
     useEffect(() => {
-        const storedId = window.localStorage.getItem("username");
-        const storedToken = window.localStorage.getItem("token");
-
-        if (storedId && storedToken) {
-            setId(storedId);
-            setToken(storedToken);
-      
-            axios
-              .get(`//localhost:8080/users`, {
-                headers: { Authorization: `Bearer ${storedToken}` },
-              })
+            axios({
+                method : 'get',
+                url : '//localhost:8080/users',
+                headers :{
+                    Authorization: `Bearer ${token}`
+                }
+            })
               .then((result) => {
-                window.localStorage.setItem("phonenum", result.data.phonenum);
+                setUserName(result.data.username)
               })
-              .catch((err) => alert(err.response.data.message));
-          }
+              .catch(err=> console.log(err))
         }, []);
     
     return (
         <>
             <div className='mypage_main'>
-                <div className='profil' style={{ backgroundImage: `url(${backgroundImg})`}}>{id}</div>
-
+                <div className='profil' style={{ backgroundImage: `url(${backgroundImg})`}}>{userName}</div>
                 <div className='view'>
                     <div className='postHistoryPage'><Link to={'/postHistoryPage'}>게시글 내역 보기</Link></div>
                     <div className='answerHistoryPage'><Link to={'/answerHistoryPage'}>답변 내역 보기</Link></div>
