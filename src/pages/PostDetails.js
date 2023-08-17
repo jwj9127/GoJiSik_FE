@@ -3,6 +3,7 @@ import { useEffect, useState, } from "react";
 import axios from "axios";
 import Comments from './Comments'
 import { useLocation } from "react-router-dom";
+import { Cookies } from "react-cookie";
 
 export default function PostDetails() {
     const location = useLocation()
@@ -11,11 +12,24 @@ export default function PostDetails() {
     console.log(location.state)
     const [files, setFiles] = useState([]);
     const [thisPost, setThisPost] = useState([]);
+    const cookies = new Cookies();
+
+    useEffect(()=> {
+        const expire = new Date();
+        cookies.set('postView', clickId ,{
+            path : '/',
+            expires : expire
+        })
+    },[])
 
     useEffect(()=>{
         axios({
             method : 'get',
             url : `//localhost:8080/questions/${clickId}`,
+            withCredentials : true,
+            headers : {
+               'Set-Cookies' : cookies.get('postView')
+            }
         })
         .then(res =>{
             setThisPost(res.data.data[0])
@@ -35,6 +49,7 @@ export default function PostDetails() {
         .catch(err => console.log('에러입니다' + err))
     },[])
     return(
+        <CookiesProvider>
         <div className = 'postdetails'>  
             <h3>제목</h3>
             <h5>작성자 : {thisPost.writer}</h5>
@@ -58,5 +73,6 @@ export default function PostDetails() {
             <h3>댓글</h3>
             <Comments id={thisPost.id}/>
         </div>
+        </CookiesProvider>
     )
 }
