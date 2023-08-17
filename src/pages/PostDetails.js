@@ -14,14 +14,6 @@ export default function PostDetails() {
     const [thisPost, setThisPost] = useState([]);
     const cookies = new Cookies();
 
-    useEffect(()=> {
-        const expire = new Date();
-        cookies.set('postView', clickId ,{
-            path : '/',
-            expires : expire
-        })
-    },[])
-
     useEffect(()=>{
         axios({
             method : 'get',
