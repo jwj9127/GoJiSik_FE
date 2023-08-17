@@ -47,11 +47,11 @@ export default function Loginpage(){
                 <div className="loginpage-loginbox">
                     <div className="loginpage-loginbox__box">
                         <label htmlfor='id'>아이디</label>
-                        <input id="id" className="ID" type="text" placeholder="전화번호를 입력해주세요 ( '-' 제외)" onChange={inputId}></input>
+                        <input id="id" className="ID" type="text" placeholder="전화번호를 입력해주세요 ( '-' 제외)" onChange={inputId} maxLength={11}></input>
                     </div>
                     <div className="loginpage-loginbox__box">
                         <label htmlFor="pw">비밀번호</label>
-                        <input id="pw" className="PW" type="password" placeholder="설정하신 비밀번호 4자리를 입력해주세요" onChange={inputPw}></input>
+                        <input id="pw" className="PW" type="password" placeholder="설정하신 비밀번호 4자리를 입력해주세요" onChange={inputPw} maxLength={4}></input>
                     </div>
                 </div>
                 <span className="loginerrormsg">{isLogin?null :'설정하신 아이디와 비밀번호의 형식과 다릅니다.'}</span>
