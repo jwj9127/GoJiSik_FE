@@ -22,6 +22,10 @@ export default function Comments({id}){
     }
 
     const commentbtn = e =>{
+        console.log('gdgd')
+        console.log(id)
+        console.log(comment)
+        e.preventDefault();
         axios({
             url : `//localhost:8080/answers/${id}`,
             method : 'post',

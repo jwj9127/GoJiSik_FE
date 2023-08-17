@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 
 export default function PostDetails() {
     const location = useLocation()
-    window.localStorage.setItem('clickid' , location.state.id)
+    const clickId = window.localStorage.setItem('clickid' , location.state.id)
     console.log(location.state)
     const [files, setFiles] = useState([]);
     const [thisPost, setThisPost] = useState([]);
@@ -22,14 +22,14 @@ export default function PostDetails() {
         })
         .catch(err => console.log(err))
     },[]) 
-    // useEffect(()=>{
-    //     axios({
-    //         method : 'get',
-    //         url : `//localhost:8080/files/${clickId.post}`
-    //     })
-    //     .then(res => setFiles(res.data.file))
-    //     .catch(err => console.log('에러입니다' + err))
-    // })
+    useEffect(()=>{
+        axios({
+            method : 'get',
+            url : `//localhost:8080/files/${clickId}`
+        })
+        .then(res => setFiles(res.data.file))
+        .catch(err => console.log('에러입니다' + err))
+    })
     return(
         <div className = 'postdetails'>  
             <h3>제목</h3>
