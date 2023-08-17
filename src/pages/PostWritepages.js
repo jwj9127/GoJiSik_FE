@@ -22,7 +22,6 @@ export default function PostWritepage() {
     const [analyser, setAnalyser] = useState();
     const [audioUrl, setAudioUrl] = useState();
     const [disabled, setDisabled] = useState(true); // 😀😀😀
-    const file = [image, audio]
 
     const token = window.localStorage.getItem('token')
 
@@ -102,8 +101,10 @@ export default function PostWritepage() {
       const sound = new File([audioUrl], "soundBlob", {
         lastModified: new Date().getTime(),
         type: "audio",
+        accept : 'audio/*'
       });
       setAudio(sound);
+      console.log(sound)
       
       // 😀😀😀
       setDisabled(false);
@@ -129,6 +130,7 @@ export default function PostWritepage() {
         setContents(e.target.value)
     }
     const handleimage = e => {
+        console.log(e)
         setImage(e.target.files[0]);
     }
     // const startRecording = (e) => {
@@ -162,7 +164,9 @@ export default function PostWritepage() {
     // };
     const postWrite = e => {
         e.preventDefault();
-        Question.append('files', file)
+        Question.append('files', image)
+        Question.append('files', audio)
+        console.log(audio)
         Question.append("dto", new Blob([JSON.stringify({                                            
           'title': posttitle,                                                          
           'category': category,                                                             

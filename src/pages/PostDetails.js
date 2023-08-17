@@ -29,7 +29,10 @@ export default function PostDetails() {
             method : 'get',
             url : `//localhost:8080/files/${clickId}`
         })
-        .then(res => setFiles(res.data.file))
+        .then(res => {
+            setFiles(res.data.file)
+            console.log(res)
+        })
         .catch(err => console.log('에러입니다' + err))
     },[])
     return(
