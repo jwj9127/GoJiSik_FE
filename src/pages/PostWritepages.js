@@ -100,7 +100,7 @@ export default function PostWritepage() {
       // File 생성자를 사용해 파일로 변환
       const sound = new File([audioUrl], "soundBlob", {
         lastModified: new Date().getTime(),
-        type: "audio/*",
+        type: "audio/mpeg",
         accept : 'audio/*'
       });
       setAudio(sound);
