@@ -15,7 +15,7 @@ export default function Postpages() {
     const [isLogin, setIsLogin] = useState(false);
     const [rehitarry, setRehitarry] = useState([]);
     const [togglevalue, setTogglevalue] = useState(false)
-    const tableheader = ['제목', '작성자', '작성일', '조회수']
+    const tableheader = ['작성자', '제목', '작성일', '조회수']
     useEffect(()=>{
         axios({
             method: 'get',
@@ -70,8 +70,8 @@ export default function Postpages() {
                             {postlist.data?.map(post => {
                                 return (
                                     <tr>
-                                        <td>{post.title}</td>
                                         <td>{post.writer}</td>
+                                        <Link to={'/postdetails'} state={{id:post.id}}><td>{post.title}</td></Link>
                                         <td>{post.createdDate}</td>
                                         <td>{post.hits}</td>
                                     </tr>
