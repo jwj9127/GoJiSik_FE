@@ -1,21 +1,29 @@
 .postwrite{
-    border : 1px solid black;
     padding-top : 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-image: url('../img/배경\ 사진.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 35px 0;
+}
+.ee{
+    margin-bottom: 10px;
 }
 .postWriteform{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 100vh;
+    height: 733px;
     align-items: start;
-    padding: 5rem 10rem 5rem 10rem;
-    border: 1px solid black;
+    padding: 2rem 5rem;
+    border-radius: 15px;
     background-color: rgb(245, 243, 241);
+    
 }
+
 .postinfo{
     width: 30vw;
     font-size: 1.5rem;
@@ -23,10 +31,14 @@
     border-bottom: 1px solid black;
 }
 .infobox{
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+}
+textarea{
+    margin-bottom: 30px;
 }
 .postbox-wirtebox{
     display: flex;
@@ -36,10 +48,12 @@
     height: 80vh;
 }
 .postbtn{
-    width: 10vw;
-    height: 4vh;
+    width: 14vw;
+    height: 9vh;
+    margin-bottom: 10px;
     font-size: 1rem;
     background-color: #FDFBEB;
+    border-radius: 5px;
     border : none;
     cursor: pointer;
     &:hover{
@@ -52,4 +66,14 @@
 .postwritebox{
     width: 10vw;
     height: 4vh;
+}
+.postwritebtn{
+    padding: 20px 200px;
+    border-style: none;
+    border-radius: 15px;
+    background-color: #E3EEDE;
+}
+.posttitle{
+    font-weight: bold;
+    font-size: 2rem;
 }

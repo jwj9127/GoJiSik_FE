@@ -29,17 +29,6 @@ export default function PostDetails() {
         })
         .catch(err => console.log(err))
     },[]) 
-    useEffect(()=>{
-        axios({
-            method : 'get',
-            url : `//localhost:8080/files/${clickId}`
-        })
-        .then(res => {
-            setFiles(res.data.data)
-            console.log(res)
-        })
-        .catch(err => console.log('에러입니다' + err))
-    },[])
     return(
         <CookiesProvider>
         <div className = 'postdetails'>  
@@ -52,15 +41,13 @@ export default function PostDetails() {
             <div className='postdetails-categorybox'>
                 {thisPost.category}
             </div>
+            <h3>내용</h3>
             <div className='postdetails-contentsbox'>
                 {thisPost.contents}
             </div>
             <h3>첨부파일</h3>
             <div>
-                <div>
-                    <img src={`http://localhost:8080/files/image/${clickId}`}/>
-                    <audio controls src={`http://localhost:8080/files/audio/${clickId}`} />
-                </div>
+                <img src={`http://localhost:8080/files/image/${clickId}`}/>
             </div>
             <h3>댓글</h3>
             <Comments id={thisPost.id}/>

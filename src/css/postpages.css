@@ -1,5 +1,8 @@
 .postbox{
-    border: 1px solid black;
+    background-image: url('../img/배경\ 사진.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: 35px 0;
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -58,10 +61,11 @@
 }
 table {
     width: 100%;
-    border: 1px solid #444444;
+    border-radius: 50px;
+    border: 3px solid #C1CCB7;
     border-collapse: collapse;
   }
   th, td {
-    border-bottom: 1px solid #444444;
-    padding: 10px;
+    border-bottom: 1px solid #C1CCB7;
+    padding: 22px;
   }
