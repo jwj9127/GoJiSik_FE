@@ -2,7 +2,6 @@ import React, { useEffect, useState  } from "react";
 import {useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import '../css/postpages.css'
-import PostDetails from "./PostDetails";
 
 
 export default function Postpages() {
@@ -47,22 +46,12 @@ export default function Postpages() {
         setInputSearch(e.target.value);
         console.log(inputSearch)
     }
-    // useEffect(() => {
-    //     if(postlist.length>0){
-    //         console.log(postlist)
-    //     if (value) {
-    //         // 조회순 정렬
-    //         let sortedArray = postlist.slice().sort((a, b) => b.hits - a.hits);
-    //         setTogglevalue(false);
-    //         setRehitarry(sortedArray);
-    //     } else {
-    //         // 최신순 정렬
-    //         let sortedArray = postlist.slice().sort((a, b) => new Date(b.createdDate) - new Date(a.createdDate));
-    //         setRehitarry(sortedArray);
-    //         setTogglevalue(true);
+    // useEffect(()=>{
+    //     if(postlist !== []){
+    //         console.log(postlist.data)
+    //         value ? postlist.data.sort((a, b)=> b.hits - a.hits) : postlist.data.sort((a,b)=> b.createdDate - a.createdDate)
     //     }
-    // }
-    // }, [value, postlist]);
+    // },[value, postlist])
     return(
         <div className="postbox">
                 <h3>게시글 목록</h3>
