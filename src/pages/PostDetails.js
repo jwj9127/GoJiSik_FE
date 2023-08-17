@@ -51,8 +51,8 @@ export default function PostDetails() {
             <h3>첨부파일</h3>
             <div>
                 <div>
-                    <img src={`http://localhost:8080/files/img/${clickId}`}/>
-                    <audio controls src={`http://localhost:8080/files/${clickId}`} />
+                    <img src={`http://localhost:8080/files/image/${clickId}`}/>
+                    <audio controls src={`http://localhost:8080/files/audio/${clickId}`} />
                 </div>
             </div>
             <h3>댓글</h3>
