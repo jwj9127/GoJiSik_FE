@@ -30,8 +30,8 @@ export default function PostDetails() {
             url : `//localhost:8080/files/${clickId}`
         })
         .then(res => {
-            setFiles(res.data.file)
-            console.log(res)
+            setFiles(res.data.data)
+            console.log(res.data.data)
         })
         .catch(err => console.log('에러입니다' + err))
     },[])
@@ -50,11 +50,10 @@ export default function PostDetails() {
                 {thisPost.contents}
             </div>
             <h3>첨부파일</h3>
-            {/* <div>
-               {files.map(item => {
-                <div>{item}</div>
-               })}
-            </div> */}
+            <div>
+               <img src={files[0].file}/>
+               <audio src={files[1].file}/>
+            </div>
             <h3>댓글</h3>
             <Comments id={thisPost.id}/>
         </div>
