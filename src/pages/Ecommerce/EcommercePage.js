@@ -6,7 +6,7 @@ export default function EcommercePage() {
     return (
         <>
             <div className="title">
-                <Link to="/shoppingmall"><span>이커머스</span></Link>
+                <Link to="/shoppingmall"><span>전자상거래</span></Link>
             </div>
             <div>
                 <div className="tap">

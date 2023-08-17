@@ -5,7 +5,7 @@ export default function Naver(){
     return(
         <>
         <div className="title">
-            <Link to="/ecommerce"><span>이커머스</span></Link>
+            <Link to="/ecommerce"><span>전자상거래</span></Link>
         </div>
         <div className="tap">
             <Link to={'/shoppingmall'}><button>쇼핑몰</button></Link>

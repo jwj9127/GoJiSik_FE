@@ -45,7 +45,7 @@ export default function Main() {
         navigate('/movie');
     }
     const MoveToEcor = e => {
-        navigate('/ecommerce');
+        navigate('/shoppingmall');
     }
     return (
         <div className="Mainbody">
