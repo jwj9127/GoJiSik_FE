@@ -9,6 +9,7 @@
     "assert": "^2.0.0",
     "axios": "^1.4.0",
     "fs": "^0.0.1-security",
+    "moment": "^2.29.4",
     "path-browserify": "^1.0.1",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",

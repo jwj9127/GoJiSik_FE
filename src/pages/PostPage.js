@@ -2,6 +2,8 @@ import React, { useEffect, useState  } from "react";
 import {useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import '../css/postpages.css'
+import moment from "moment/moment";
+import 'moment/locale/ko';
 
 
 export default function Postpages() {
@@ -80,7 +82,7 @@ export default function Postpages() {
                                     <tr>
                                         <td>{post.writer}</td>
                                         <Link to={'/postdetails'} state={{id:post.id}}><td>{post.title}</td></Link>
-                                        <td>{post.createdDate}</td>
+                                        <td>{moment(post.createdDate).format('YYYY-MM-DD')}</td>
                                         <td>{post.hits}</td>
                                     </tr>
                                 )
