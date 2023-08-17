@@ -11,14 +11,24 @@ const Navigation = () => {
         navigate('/');
     }
     const [isToken, setIsToken] = useState(null);
+    const [name, setName] = useState();
+    const [birthday, setBirthday] = useState();
+    const [phonenum, setPhonenum] = useState();
     useEffect(()=>{
         setIsToken(window.localStorage.getItem('token'));
+        setName(window.localStorage.getItem('username'));
+        setBirthday(window.localStorage.getItem('birthday'));
+        setPhonenum(window.localStorage.getItem('phonenum'));
     })
 
     const logoutbtn = e => {
         e.preventDefault();
         window.localStorage.removeItem('token');
+        window.localStorage.removeItem('username');
+        window.localStorage.removeItem('birthday');
+        window.localStorage.removeItem('phonenum');
         setIsToken(false)
+        navigate('/');
     }
 
     return (
