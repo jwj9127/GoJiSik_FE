@@ -12,6 +12,7 @@ export default function PostDetails() {
     console.log(location.state)
     const [files, setFiles] = useState([]);
     const [thisPost, setThisPost] = useState([]);
+    const [imageError, setImageError] = useState(false);
     const cookies = new Cookies();
 
     useEffect(()=>{
@@ -45,11 +46,18 @@ export default function PostDetails() {
             <div className='postdetails-contentsbox'>
                 {thisPost.contents}
             </div>
-            <h3>첨부파일</h3>
-            <div>
-                <img src={`http://localhost:8080/files/image/${clickId}`}/>
-            </div>
-            <h3>댓글</h3>
+            
+            {!imageError && (
+                    <div>
+                        <h3>첨부파일</h3>
+                        <img
+                            src={`http://localhost:8080/files/image/${clickId}`}
+                            onError={() => setImageError(true)}
+                            style={{ display: imageError ? 'none' : 'block' }}
+                            alt="Attachment"
+                        />
+                    </div>
+                )}
             <Comments id={thisPost.id}/>
         </div>
         </CookiesProvider>

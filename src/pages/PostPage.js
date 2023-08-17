@@ -6,7 +6,6 @@ import '../css/postpages.css'
 
 export default function Postpages() {
     const [value, setValue] = useState(true);
-    const [postlist, setPostlist] = useState([]);
     const navigate = useNavigate();
     const [inputSearch, setInputSearch] = useState('')
     const [searchlist, setSearchlist] = useState('')
@@ -27,9 +26,10 @@ export default function Postpages() {
         .then((response)=>{
             const reverselist = response.data.data.reverse()
             const bestpostlist = response.data.data.sort((a,b)=>(b.hits - a.hits))
+            console.log(bestpostlist)
+            console.log(reverselist)
             setRepostlist(reverselist)
             setBestlist(bestpostlist)
-            setPostlist(response.data)
         })
         .catch((error) => {
             console.error('에러왜나 : ', error)
@@ -43,14 +43,8 @@ export default function Postpages() {
             setIsLogin(true)
         }
     },[])
-    // useEffect(()=> {
-    //     console.log(postlist.data)
-    //     if(postlist.data !== undefined){
-    //         let repostlist = postlist.data.sort((a,b)=>(a.id, b.id))
-    //         setPostlist(repostlist)
-    //         console.log(repostlist)
-    //     }
-    // },[postlist])
+
+  
     const toggleclick = e => {
         setValue(value => !value);
     }
@@ -81,7 +75,7 @@ export default function Postpages() {
                             </tr>
                         </thead>
                         <tbody>
-                            {repostlist?.map(post => {
+                            {bestlist?.map(post => {
                                 return (
                                     <tr>
                                         <td>{post.writer}</td>
@@ -89,7 +83,6 @@ export default function Postpages() {
                                         <td>{post.createdDate}</td>
                                         <td>{post.hits}</td>
                                     </tr>
-                                   
                                 )
                             })}
                         </tbody>
