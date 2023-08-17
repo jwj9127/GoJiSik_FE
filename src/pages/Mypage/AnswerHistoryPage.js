@@ -5,18 +5,32 @@ import axios from "axios";
 
 export default function AnswerHistoryPage() {
     const [postList, setPostList] = useState([]);
-
+    const token = window.localStorage.getItem("token");
     useEffect(() => {
         
         // 페이지에 해당하는 게시물 가져오기
-        const getPostList = async () => {
-            const user_id = window.localStorage.getItem("token");
-            const {data} = await(await axios.get(`//localhost:8080/questions/${user_id}`)).data;
-            return data;
+        axios({
+            method : 'get',
+            url : '//localhost:8080/questions/my-question',
+            headers:{
+                "Authorization": `Bearer ${token}`,
+            }
+        })
+        .then(res => {
+            setPostList(res.data)
+            console.log(res.data)
+        })
+        .catch((err)=> console.log(err))
         }
-            // 현재 페이지에 해당하는 게시물로 상태 변경하기
-            getPostList().then(result => setPostList(result));
-    }, [])
+    )
+    //     const getPostList = async () => {
+            
+    //         const {data} = await(await axios.get(`//localhost:8080/questions/my-question`)).data;
+    //         return data;
+    //     }
+    //         // 현재 페이지에 해당하는 게시물로 상태 변경하기
+    //         getPostList().then(result => setPostList(result));
+    // }, [])
 
     return (
         <>
