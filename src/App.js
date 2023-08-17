@@ -63,6 +63,7 @@ import Yanolja from './pages/Ecommerce/Place/Yanolja';
 import Lightning from './pages/Ecommerce/Used_transaction/Lightning';
 import EcommercePage from './pages/Ecommerce/EcommercePage';
 import PostDetails from './pages/PostDetails';
+import UserSearchPage from './pages/MyPage/UserSearchPage';
 
 function App() {
   return (
@@ -131,6 +132,7 @@ function App() {
           <Route path="/myPage" element={<MyPage />}></Route>
           <Route path="/postHistoryPage" element={<PostHistoryPage />}></Route>
           <Route path="/answerHistoryPage" element={<AnswerHistoryPage />}></Route>
+          <Route path="/userSearchPage" element={<UserSearchPage />}></Route>
           <Route path="/modifyUserPage" element={<ModifyUserPage />}></Route>
           <Route path="/JuminPage" element={<JuminPage />}></Route>
           <Route path="/Year" element={<Year />}></Route>
