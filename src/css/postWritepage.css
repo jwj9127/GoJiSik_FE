@@ -9,17 +9,27 @@
     background-size: 100%;
     background-position: 35px 0;
 }
-
+.infobox >label {
+    align-items: start;
+    font-weight: bold;
+}
+.postbox-wirtebox >label{
+    font-weight: bold; 
+    align-items: start;
+}
 .ee {
     margin-bottom: 10px;
 }
 
 .postWriteform {
+    width: 700px;
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 733px;
+    /*justify-content: space-around;*/
+    height: 907px;
     align-items: start;
     padding: 2rem 5rem;
+    margin-bottom: 100px;
     border-radius: 15px;
     background-color: rgb(245, 243, 241);
 }
@@ -41,17 +51,13 @@
 }
 
 .postbox-wirtebox {
-    display: flex;
     flex-direction: column;
 
     align-items: start;
     height: 80vh;
 }
 
-.postwritebox {
-    width: 10vw;
-    height: 4vh;
-}
+
 
 .postwritebtn {
     padding: 20px 200px;
@@ -137,4 +143,10 @@ textarea {
     border-radius: 15px;
     background-color: #E3EEDE;
 }
-
+.postwritebox {
+    width: 10vw;
+    height: 4vh;
+}
+.contents{
+    align-items: start;
+}
