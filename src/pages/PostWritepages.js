@@ -217,9 +217,6 @@ export default function PostWritepage() {
             <textarea rows={30} cols={80} onChange={hadlecontents}></textarea>
             <div className="ee">이미지 첨부</div>
             <input className="postbtn" type="file" accept="image/*" onChange={handleimage} />
-            <div className="ee">음성 첨부</div>
-            <button className="postbtn" onClick={onRec ? onRecAudio : offRecAudio}><BsMicFill /> 녹음</button>
-            <button className="postbtn" onClick={play} disabled={disabled}>재생</button>
             <input className="postwritebtn" type="submit" value={'게시글 등록'} onClick={postWrite} />
           </div>
         </form>

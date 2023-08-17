@@ -1,73 +1,68 @@
 .mypage_main {
-    height: 90vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-image: url('../../img/배경\ 사진.png');
 }
 
 .profil {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid #C1CCB7;
     border-radius: 50%;
+    font-size: xx-large;
     font-weight: bold;
-    background-size: 10rem;
+    background-size: 15rem;
     background-repeat: no-repeat;
     color: beige;
 }
 
-.detail {
-    width: 80vw;
-    display: flex;
-    justify-content: space-around;
-}
-
-.gradeAndpoint {
-    display: flex;
-}
-
-.grade {
-    margin-right: 20px;
-}
-
-.point {
-    margin-left: 20px;
+.profil:hover{
+    cursor: default;
 }
 
 .view {
-    width: 80vw;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.record {
+.postHistoryPage a {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 100px;
+    border: 1px solid #8195A9;
+    background-color: #C1CCB7;
 }
 
-.postHistoryPage {
-    border: 1px solid black;
-    margin-bottom: 10px;
+.answerHistoryPage a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 100px;
+    border: 1px solid #8195A9;
+    background-color: #C1CCB7;
 }
 
-.answerHistoryPage {
-    border: 1px solid black;
-    margin-top: 10px;
+.userSearchPage a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 100px;
+    border: 1px solid #8195A9;
+    background-color: #C1CCB7;
 }
 
-.modifyUserPage {
-    border: 1px solid black;
-}
-
-.bulletin {
-    margin-bottom: 20px;
-}
-
-.answer {
-    margin-top: 20px;
+.view a:hover{
+    transform: scale(110%);
 }

@@ -1,34 +1,40 @@
-.modifyUser_main{
-    height: 90vh;
+.modifybox{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('../../img/배경\ 사진.png');
+}
+
+.modifyform-body{
+    width: 80vw;
+    height: 70vh;
+    display: flex;
     justify-content: space-around;
-}
-
-.modifyUserFix{
-    width: 150px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-}
-
-.fix{
-    display: flex;
-    width: 1000px;
-    height: 500px;
-    border: 1px solid black;
     flex-direction: column;
-    justify-content: space-around;
+    border: 1px solid #8195A9;
+    align-items: start;
 }
 
-button{
-    width: 100px;
-    height: 30px;
+.modifyform-label{
+    margin-left: 100px;
 }
 
-.id, .pw, .new_pw, .new_pw_check, .nickName{
-    margin-left: 20px;
+.input-info{
+    margin-left: 40px;
+}
+
+#inputname{
+    margin-left: 150px;
+}
+
+#inputpw{
+    margin-left: 100px;
+}
+
+#inputpwchk{
+    margin-left: 45px;
+}
+
+#inputdate{
+    margin-left: 95px;
 }

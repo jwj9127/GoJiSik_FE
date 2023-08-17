@@ -1,0 +1,55 @@
+.usersearch_main{
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('../../img/배경\ 사진.png');
+}
+
+.usersearch_main div {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.usersearch_main a{
+    width: 20vw;
+    height: 20vh;
+}
+
+.usersearch_box{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    border: 1px solid #8195A9;
+    cursor: default;
+}
+
+.usersearch_mainbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 70vw;
+    height: 60vh;
+    border: 1px solid #8195A9;
+    background-color: #FDFBEB;
+    cursor: default;
+}
+
+.usersearch_img{
+    display: flex;
+    width: 22vw;
+    height: 20vh;
+    background-image: url('../../img/로고.png');
+    background-position: -2.5rem -2.5rem;
+    background-size: 600px;
+    background-repeat: no-repeat;
+    border: 1px solid #8195A9;
+
+}
+
+.usersearch_footerbox{
+    border: 1px solid #8195A9;
+}

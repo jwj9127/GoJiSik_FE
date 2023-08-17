@@ -14,12 +14,10 @@ export default function MyPage() {
     const backgroundImg = backgroundArr[randomIndex];
         
     const [id, setId] = useState([]);
-    const [grade, setGrade] = useState([]);
-    const [point, setPoint] = useState([]);
     const [token, setToken] = useState();
     
     useEffect(() => {
-        const storedId = window.localStorage.getItem("phonenum");
+        const storedId = window.localStorage.getItem("username");
         const storedToken = window.localStorage.getItem("token");
 
         if (storedId && storedToken) {
@@ -32,33 +30,19 @@ export default function MyPage() {
               })
               .then((result) => {
                 window.localStorage.setItem("phonenum", result.data.phonenum);
-                // setGrade(response.data);
-                // setPoint(response.data);
               })
               .catch((err) => alert(err.response.data.message));
           }
         }, []);
     
-    
-    
     return (
         <>
             <div className='mypage_main'>
-                <div className='profil' style={{ backgroundImage: `url(${backgroundImg})` }}>{id}</div>
-
-                <div className='detail'>
-                    <div className='nickname'>{id}</div>
-                    <div className='gradeAndpoint'>
-                        {/* <div className='grade'>{grade}</div>
-                        <div className='point'>{point}</div> */}
-                    </div>
-                </div>
+                <div className='profil' style={{ backgroundImage: `url(${backgroundImg})`}}>{id}</div>
 
                 <div className='view'>
-                    <div className='record'>
-                        <div className='postHistoryPage'><Link to={'/postHistoryPage'}>게시글 내역 보기</Link></div>
-                        <div className='answerHistoryPage'><Link to={'/answerHistoryPage'}>답변 내역 보기</Link></div>
-                    </div>
+                    <div className='postHistoryPage'><Link to={'/postHistoryPage'}>게시글 내역 보기</Link></div>
+                    <div className='answerHistoryPage'><Link to={'/answerHistoryPage'}>답변 내역 보기</Link></div>
                     <div className='userSearchPage'><Link to={'/userSearchPage'}>내 정보 조회</Link></div>
                 </div>
             </div>

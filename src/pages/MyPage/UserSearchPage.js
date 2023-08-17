@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import '../../css/MyPage/UserSearchPage.css'
+import '../../css/MyPage/UserSearchPage.css'
 
 export default function UserSearchPage(){
     const [id, setId] = useState([]);
@@ -32,17 +32,21 @@ export default function UserSearchPage(){
 
     return (
         <>
-        <div>정보 조회
-            <div className="search_name">이름
-                <span>{beforeName}</span>
-            </div>
-            <div className="search_birthday">생년월일
-                <span>{beforebirthday}</span>
-            </div>
-            <div className="search_phonenum">전화번호
-                <span>{beforephone}</span>
-            </div>
-            <div className=''><Link to={'/modifyUserPage'}>내 정보 수정</Link></div>
+        <div className="usersearch_main">
+                <div className="usersearch_box">정보 조회</div>
+                <div className="usersearch_mainbox">
+                    <Link to={'/'}><div className='usersearch_img'></div></Link>
+                    <div className="search_name">이름 :
+                        <span> {beforeName}</span>
+                    </div>
+                    <div className="search_birthday">생년월일 :
+                        <span> {beforebirthday}</span>
+                    </div>
+                    <div className="search_phonenum">전화번호 :
+                        <span> {beforephone}</span>
+                    </div>
+                </div>
+                <div className='usersearch_footerbox'><Link to={'/modifyUserPage'}>내 정보 수정</Link></div>
         </div>
         </>
     )

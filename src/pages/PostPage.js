@@ -16,12 +16,19 @@ export default function Postpages() {
     const [rehitarry, setRehitarry] = useState([]);
     const [togglevalue, setTogglevalue] = useState(false)
     const tableheader = ['작성자', '제목', '작성일', '조회수']
+    const [repostlist, setRepostlist] = useState([])
+    const [bestlist, setBestlist] = useState([])
+
     useEffect(()=>{
         axios({
             method: 'get',
             url : "//localhost:8080/questions",
         })
         .then((response)=>{
+            const reverselist = response.data.data.reverse()
+            const bestpostlist = response.data.data.sort((a,b)=>(b.hits - a.hits))
+            setRepostlist(reverselist)
+            setBestlist(bestpostlist)
             setPostlist(response.data)
         })
         .catch((error) => {
@@ -35,8 +42,15 @@ export default function Postpages() {
         }else{
             setIsLogin(true)
         }
-    })
-
+    },[])
+    // useEffect(()=> {
+    //     console.log(postlist.data)
+    //     if(postlist.data !== undefined){
+    //         let repostlist = postlist.data.sort((a,b)=>(a.id, b.id))
+    //         setPostlist(repostlist)
+    //         console.log(repostlist)
+    //     }
+    // },[postlist])
     const toggleclick = e => {
         setValue(value => !value);
     }
@@ -67,7 +81,7 @@ export default function Postpages() {
                             </tr>
                         </thead>
                         <tbody>
-                            {postlist.data?.map(post => {
+                            {repostlist?.map(post => {
                                 return (
                                     <tr>
                                         <td>{post.writer}</td>
@@ -75,22 +89,11 @@ export default function Postpages() {
                                         <td>{post.createdDate}</td>
                                         <td>{post.hits}</td>
                                     </tr>
+                                   
                                 )
                             })}
                         </tbody>
                     </table>
-                {/* <ul className="postlist">
-                    {postlist.data?.map((post) => (
-                        <Link to={'/postdetails'} state={{id:post.id}}>
-                        <li className="postlist-listbox" key={post.id}>
-                            <h4 className="postlist-posttitle">제목 : {post.title}</h4>
-                            작성자: {post.writer}
-                            작성일: {post.createdDate} 
-                            조회수: {post.hits}
-                        </li>
-                        </Link>
-                        ))}
-                    </ul> */}
                 </div>
             </div>
         </div>

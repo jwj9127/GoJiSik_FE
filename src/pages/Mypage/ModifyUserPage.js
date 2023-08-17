@@ -95,8 +95,10 @@ export default function ModifyUserPage() {
         })
         .then(result => {console.log(result)
         console.log(result)
-        alert('정보수정 완료!')
-        navigate('/userSearchPage')
+        alert('정보수정 완료!');
+        alert('다시 로그인 해주세요');
+        window.localStorage.removeItem('token');
+        navigate('/login');
     })
         .catch(error => {console.log('요청실패')
         console.log(axios.Authorization);
@@ -110,15 +112,15 @@ export default function ModifyUserPage() {
             <div className="modifyform-body">
                 <div className="modifyform-box">
                     <div className='modifyform-boxtobox'>
-                        <label htmlFor="inputname" className="modifyform-nametext">이름  </label>
-                        <input required type="text" className="input-info modifyform-inputname" id="inputname" placeholder="이름을 입력해주세요" onChange={inputName}/>
+                        <label htmlFor="inputname" className="modifyform-label">이름</label>
+                        <input required type="text" className="input-info" id="inputname" placeholder="이름을 입력해주세요" onChange={inputName}/>
                     </div>
                     {name.length > 0 && <span className={`message ${isName ? 'success' : 'error'}`}>{nameMessage}</span>}
                 </div>
                 <div className="modifyform-box">
                     <div className='modifyform-boxtobox'>
-                        <label htmlFor="inputpw" className="modifyform-pwtext">비밀번호  </label>
-                        <input required type='password' id="inputpw" className="input-info modifyform-inputpw" placeholder="숫자 4자리를 입력해주세요" maxLength={4} onChange={inputPw}/>
+                        <label htmlFor="inputpw" className="modifyform-label">비밀번호</label>
+                        <input required type='password' id="inputpw" className="input-info" placeholder="숫자 4자리를 입력해주세요" maxLength={4} onChange={inputPw}/>
                     </div>
                     {pw.length > 0 && (
                     <span className={`message ${isPw ? 'success' : 'error'}`}>{pwMessage}</span>
@@ -126,8 +128,8 @@ export default function ModifyUserPage() {
                 </div>
                 <div className="modifyform-box">
                     <div className='modifyform-boxtobox'>
-                        <label htmlFor="inputpwchk" className="modifyform-pwchktext">비밀번호 확인  </label>
-                        <input required type='password' id="inputpwchk" className='input-info modifyform-inputpwchk' placeholder="비밀번호를 다시 입력해주세요" maxLength={4} onChange={inputPwchk}/>
+                        <label htmlFor="inputpwchk" className="modifyform-label">비밀번호 확인</label>
+                        <input required type='password' id="inputpwchk" className='input-info' placeholder="비밀번호를 다시 입력해주세요" maxLength={4} onChange={inputPwchk}/>
                     </div>
                     {pwchk.length > 0 && (
                         <span className={`message ${isPwConfirm ? 'success' : 'error'}`}>{pwchkMessage}</span>
@@ -135,8 +137,8 @@ export default function ModifyUserPage() {
                 </div>
                 <div className="modifyform-box">
                     <div className='modifyform-boxtobox'>
-                        <lable htmlFor='inputbirth' className='modifyform-birthtext'>생년월일  </lable>
-                        <input required type="Date" className="input-info modifyform-inputbirth" onChange={inputBirth}/>
+                        <lable htmlFor='inputbirth' className='modifyform-label'>생년월일   </lable>
+                        <input required type="Date" id="inputdate" className="input-info" onChange={inputBirth}/>
                     </div>
                 </div>
             </div>
