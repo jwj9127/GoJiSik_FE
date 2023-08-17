@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../../css/MyPage/PostHistoryPage.css";
-import PostDetails from "../PostDetails";
 import axios from "axios";
+import {Link} from 'react-router-dom';
 
 export default function PostHistoryPage() {
     const [postList, setPostList] = useState([]);
@@ -11,7 +11,7 @@ export default function PostHistoryPage() {
         // 페이지에 해당하는 게시물 가져오기
         axios({
             method : 'get',
-            url : '//localhost:8080/questions/my-answer',
+            url : '//localhost:8080/questions/my-question',
             headers:{
                 "Authorization": `Bearer ${token}`,
             }
@@ -25,20 +25,22 @@ export default function PostHistoryPage() {
     , [])
 
     return (
-        <>
+        <div>
             <div className="postHistory_main">
                 <div className="questionReview">질문 내역 보기</div>
 
                 <div className="questionList">
-                {postList.map((item) => (
-                            <PostDetails
-                            idx={item.idx}
-                            title={item.title}
-                            contents={item.contents}
-                          />
-                ))}
+                {
+                    postList.data?.map((post)=>(
+                        <Link to={'/postdetails'} state={{id : post.id}}>
+                            <li key={post.id}>
+                               제목 : {post.title}   
+                            </li>
+                        </Link>
+                    ))
+                }
                 </div>
             </div>
-        </>
+        </div>
     )
 }

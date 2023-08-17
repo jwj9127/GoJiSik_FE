@@ -46,7 +46,7 @@ export default function MyPage() {
             setToken(storedToken);
       
             axios
-              .get(`//localhost:8080/users/${storedId}`, {
+              .get(`//localhost:8080/users`, {
                 headers: { Authorization: `Bearer ${storedToken}` },
               })
               .then((result) => {
