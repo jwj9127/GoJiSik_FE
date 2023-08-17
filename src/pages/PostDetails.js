@@ -3,10 +3,12 @@ import { useEffect, useState, } from "react";
 import axios from "axios";
 import Comments from './Comments'
 import { useLocation } from "react-router-dom";
+import { click } from "@testing-library/user-event/dist/click";
 
 export default function PostDetails() {
     const location = useLocation()
-    const clickId = window.localStorage.setItem('clickid' , location.state.id)
+    window.localStorage.setItem('clickid' , location.state.id)
+    const clickId = window.localStorage.getItem('clickid')
     console.log(location.state)
     const [files, setFiles] = useState([]);
     const [thisPost, setThisPost] = useState([]);
@@ -14,7 +16,7 @@ export default function PostDetails() {
     useEffect(()=>{
         axios({
             method : 'get',
-            url : `//localhost:8080/questions/${window.localStorage.getItem('clickid')}`,
+            url : `//localhost:8080/questions/${clickId}`,
         })
         .then(res =>{
             setThisPost(res.data.data[0])
@@ -29,7 +31,7 @@ export default function PostDetails() {
         })
         .then(res => setFiles(res.data.file))
         .catch(err => console.log('에러입니다' + err))
-    })
+    },[])
     return(
         <div className = 'postdetails'>  
             <h3>제목</h3>
