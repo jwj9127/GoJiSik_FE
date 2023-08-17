@@ -30,10 +30,14 @@ export default function Comments({id}){
             url : `//localhost:8080/answers/${id}`,
             method : 'post',
             headers : {
-                'Authorization' : `Bearer ${token}`
+                'Authorization' : `Bearer ${token}`,
+                'Content-Type': 'application/json' // 추가
             },
-            data : {contents : comment}
-        }).then(res => setId(res.data.id))
+            data: JSON.stringify({ contents: comment }) // 수정
+        }).then(res => {
+            setId(res.data.id)
+            getCommentlist(); 
+        })
     }
     const getCommentlist = ()=> {
         console.log(id)
@@ -41,7 +45,7 @@ export default function Comments({id}){
             method : 'get',
             url : `//localhost:8080/answers/${id}`
         })
-        .then(res => setCommetlist(res.data));
+        .then(res => setCommetlist(res.data.data));
     }
     useEffect(()=>{
         if (id) {

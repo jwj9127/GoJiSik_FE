@@ -3,7 +3,6 @@ import { useEffect, useState, } from "react";
 import axios from "axios";
 import Comments from './Comments'
 import { useLocation } from "react-router-dom";
-import { click } from "@testing-library/user-event/dist/click";
 
 export default function PostDetails() {
     const location = useLocation()
@@ -31,7 +30,7 @@ export default function PostDetails() {
         })
         .then(res => {
             setFiles(res.data.data)
-            console.log(res.data.data)
+            console.log(res)
         })
         .catch(err => console.log('에러입니다' + err))
     },[])
@@ -51,8 +50,10 @@ export default function PostDetails() {
             </div>
             <h3>첨부파일</h3>
             <div>
-               <img src={files[0].file}/>
-               <audio src={files[1].file}/>
+                <div>
+                    <img src={`http://localhost:8080/files/img/${clickId}`}/>
+                    <audio controls src={`http://localhost:8080/files/${clickId}`} />
+                </div>
             </div>
             <h3>댓글</h3>
             <Comments id={thisPost.id}/>
