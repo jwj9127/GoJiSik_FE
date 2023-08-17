@@ -3,7 +3,7 @@ import { useEffect, useState, } from "react";
 import axios from "axios";
 import Comments from './Comments'
 import { useLocation } from "react-router-dom";
-import { Cookies } from "react-cookie";
+import { Cookies, CookiesProvider } from "react-cookie";
 
 export default function PostDetails() {
     const location = useLocation()
