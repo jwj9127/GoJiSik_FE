@@ -1,0 +1,36 @@
+.postdetails{
+    display: flex;
+    flex-direction: column;
+}
+
+.postdetails-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh;
+}
+
+.postdetails-titlebox{
+    display: flex;
+    align-items: center;
+}
+.postdetails-title{
+    margin: 0;
+}
+
+.postdetails-titlebox-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.postdetails-titlebox-box h2{
+    margin-bottom: 0px;
+}
+
+.postdetails-titlebox-box h5{
+    margin-top: 10px;
+}
+
+.postdetails-title{
+    margin-left: 30px;
+}

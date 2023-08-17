@@ -23,6 +23,7 @@ export default function Loginpage(){
             console.log(result)
             setIsLogin(true)
             window.localStorage.setItem('token', result.data.token);
+            window.localStorage.setItem('phonenum', result.data.phonenum)
             setToken(result.data.token)
             navigate('/')
         })

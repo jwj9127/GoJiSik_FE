@@ -2,6 +2,7 @@ import React from 'react'
 import {GoUpload} from 'react-icons/go'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import moment from "moment/moment";
 
 export default function Comments({id}){
     const [comment, setComment] = useState('')
@@ -65,7 +66,7 @@ export default function Comments({id}){
                     {commentlist.data?.map(item => <li key={item.key}>
                         <div>작성자 : {item.writer}</div>
                         <div>{item.contents}</div>
-                        <span>작성일 : {item.createdDate}</span>
+                        <span>작성일 : {moment(item.createdDate, "YYYY.MM.DD").format("YYYY-MM-DD")}</span>
                         </li>)}
                 </ul>
             </div>  
