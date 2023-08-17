@@ -1,5 +1,5 @@
-.postwrite{
-    padding-top : 3rem;
+.postwrite {
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -9,11 +9,12 @@
     background-size: 100%;
     background-position: 35px 0;
 }
-.ee{
+
+.ee {
     margin-bottom: 10px;
 }
-.postWriteform{
-    display: flex;
+
+.postWriteform {
     flex-direction: column;
     justify-content: space-around;
     height: 733px;
@@ -21,59 +22,119 @@
     padding: 2rem 5rem;
     border-radius: 15px;
     background-color: rgb(245, 243, 241);
-    
 }
 
-.postinfo{
+
+.postinfo {
     width: 30vw;
     font-size: 1.5rem;
     border: none;
     border-bottom: 1px solid black;
 }
-.infobox{
-    margin: 20px 0;
+
+.infobox {
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
 }
-textarea{
-    margin-bottom: 30px;
-}
-.postbox-wirtebox{
+
+.postbox-wirtebox {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+
     align-items: start;
     height: 80vh;
 }
-.postbtn{
-    width: 14vw;
-    height: 9vh;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    background-color: #FDFBEB;
-    border-radius: 5px;
-    border : none;
-    cursor: pointer;
-    &:hover{
-        transform: scale(105%);
-    }
-    &:active{
-        transform: scale(95%);
-    }
-} 
-.postwritebox{
+
+.postwritebox {
     width: 10vw;
     height: 4vh;
 }
-.postwritebtn{
+
+.postwritebtn {
     padding: 20px 200px;
     border-style: none;
     border-radius: 15px;
     background-color: #E3EEDE;
 }
-.posttitle{
+
+.posttitle {
     font-weight: bold;
     font-size: 2rem;
+    margin-bottom: 30px;
 }
+
+.infobox label {
+    margin-bottom: 15px;
+}
+
+.infobox input,
+select,
+.ee {
+    margin-bottom: 35px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 200px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* postWritepage.css */
+.file-input {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    /* 간격 조정 */
+}
+
+.ee {
+    display: inline;
+    margin-bottom: 10px;
+}
+.ee span{
+    margin-right: 176px;
+    font-weight: bold;
+}
+
+
+.postbtn {
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 1rem;
+   
+    cursor: pointer;
+    /*
+  &:hover {
+    transform: scale(105%);
+  }
+  &:active {
+    transform: scale(95%);
+  }*/
+}
+.imagebtn{
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #FDFBEB;
+    border-radius: 5px;
+    border: none;
+    border-style: none;
+}
+
+.postwritebtn {
+    width: 100%;
+    padding: 20px 0;
+    /* 변경: 가로 간격 제거 */
+    border-style: none;
+    border-radius: 15px;
+    background-color: #E3EEDE;
+}
+

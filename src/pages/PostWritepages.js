@@ -195,32 +195,35 @@ export default function PostWritepage() {
   return (
     <div className="postwrite">
       <div className="posttitle">게시글 작성</div>
-      <div className="postbox" >
-        <form className="postWriteform">
-          
-          <div className="infobox postbox-title">
-            <label htmlFor="inputtitle">제목</label>
-            <input required className="postinfo" id="inputtitle" type="text" placeholder="제목을 입력해주세요." maxLength={20} name='posttitle' onChange={handletitle} />
+
+      <form className="postWriteform">
+
+        <div className="infobox postbox-title">
+          <label htmlFor="inputtitle">제목</label>
+          <input required className="postinfo" id="inputtitle" type="text" placeholder="제목을 입력해주세요." maxLength={20} name='posttitle' onChange={handletitle} />
+        </div>
+        <div className="infobox postbox-category">
+          <label htmlFor="categoryselect">카테고리</label>
+          <select id='categoryselect' className=" postinfo" onChange={handlecategory} value={category}>
+            {selectList.map((item) => (
+              <option value={item} key={item}>
+                {item}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="postbox-wirtebox">
+          <label htmlFor="contents">내용</label>
+          <textarea rows={30} cols={80} onChange={hadlecontents}></textarea>
+          <div className="ee">
+            <span>이미지 첨부</span>
+            <div className="imagebtn">
+              <input className="postbtn" type="file" accept="image/*" onChange={handleimage} />
+            </div>
           </div>
-          <div className="infobox postbox-category">
-            <label htmlFor="categoryselect">카테고리</label>
-            <select id='categoryselect' className=" postinfo" onChange={handlecategory} value={category}>
-              {selectList.map((item) => (
-                <option value={item} key={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="postbox-wirtebox">
-            <label htmlFor="contents">내용</label>
-            <textarea rows={30} cols={80} onChange={hadlecontents}></textarea>
-            <div className="ee">이미지 첨부</div>
-            <input className="postbtn" type="file" accept="image/*" onChange={handleimage} />
-            <input className="postwritebtn" type="submit" value={'게시글 등록'} onClick={postWrite} />
-          </div>
-        </form>
-      </div>
+          <input className="postwritebtn" type="submit" value={'게시글 등록'} onClick={postWrite} />
+        </div>
+      </form>
     </div>
   )
 }

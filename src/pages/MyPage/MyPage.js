@@ -23,6 +23,7 @@ export default function MyPage() {
                 }
             })
               .then((result) => {
+                console.log(result)
                 setUserName(result.data.username)
               })
               .catch(err=> console.log(err))
