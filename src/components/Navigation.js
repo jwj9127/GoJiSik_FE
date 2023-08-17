@@ -43,7 +43,7 @@ const Navigation = () => {
             </div>
             <div className='mypagebox'>
                 <button className='btn mypagebox-loginbtn'>{isToken ? <button onClick={logoutbtn} className='logoutbtn'>로그아웃</button> :<Link to='/login'><span className='loginicons'><CgLogIn size={20}/></span>로그인</Link>}</button>
-                {isToken ? (<button className='btn mypagebox-mypagebtn'><Link to='/mypage'><span><BsPersonCircle size={50} color='#8195A9'/></span></Link></button>) : null}
+                {isToken ? (<button className='btn mypagebox-mypagebtn'><Link to='/myPage'><span><BsPersonCircle size={50} color='#8195A9'/></span></Link></button>) : null}
             </div>
         </div>
         </>
