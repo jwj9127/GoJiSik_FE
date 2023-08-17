@@ -12,25 +12,6 @@ export default function MyPage() {
     const backgroundArr = [img1, img2, img3, img4, img5];
     const randomIndex = Math.floor(Math.random() * backgroundArr.length);
     const backgroundImg = backgroundArr[randomIndex];
-    
-    const handleDeleteProfile = (e) => {
-        e.preventDefault();
-        if (window.confirm('확인을 누르면 회원 정보가 삭제됩니다.')) {
-            axios
-            .delete('//localhost:8080/users/{id}')
-            .then(() => {
-                alert('그동안 이용해주셔서 감사합니다.');
-            })
-            .then(
-                ()=>{
-                    navigator('/');
-                }
-                )
-                .catch((err) => alert(err.response.data.message));
-            } else {
-                return;
-            }
-        };
         
     const [id, setId] = useState([]);
     const [grade, setGrade] = useState([]);
@@ -78,10 +59,8 @@ export default function MyPage() {
                         <div className='postHistoryPage'><Link to={'/postHistoryPage'}>게시글 내역 보기</Link></div>
                         <div className='answerHistoryPage'><Link to={'/answerHistoryPage'}>답변 내역 보기</Link></div>
                     </div>
-                    <div className='modifyUserPage'><Link to={'/modifyUserPage'}>내 정보 조회</Link></div>
+                    <div className='userSearchPage'><Link to={'/userSearchPage'}>내 정보 조회</Link></div>
                 </div>
-
-                <div className='withdrawal'><button onClick={handleDeleteProfile}>회원 탈퇴</button></div>
             </div>
         </>
     )

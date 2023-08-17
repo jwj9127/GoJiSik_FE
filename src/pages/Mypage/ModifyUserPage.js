@@ -1,141 +1,147 @@
 import { useCallback, useEffect, useState } from "react";
 import "../../css/MyPage/ModifyUserPage.css";
-import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function ModifyUserPage() {
-//     const token = useSelector(state => state.Auth.token);
-//     const [errorMessage, setErrorMessage] = useState({
-//       idError: "",
-//       pwdError: "",
-//       confirmPwdError: "",
-//     });
-//     const { idError, pwdError, confirmPwdError, nowPwdError } = errorMessage;
+    
+    const [id, setId] = useState([]);
+    const [modifyToken, setModifyToken] = useState();
 
-//     const inputRegexs = {
-//       idReg: /^01(?:0|1|[6-9])(?:\d{4})\d{4}$/,
-//       pwdReg: /^[0-9]{4,4}$/,
-//     };
-//     const validationCheck = useCallback((input, regex) => {
-//       let isValidate = false;
-//       if (input === "") {
-//         isValidate = false;
-//       } else if (regex.test(input)) {
-//         isValidate = true;
-//       } else {
-//         isValidate = false;
-//       }
-//       return isValidate;
-//     }, []);
+    const navigate = useNavigate();
+    //이름, 전화번호, 비밀번호, 생년월일, fornsize 확인
+    const [name, setName] = useState('');
+    const [pw, setPw] = useState('');
+    const [pwchk, setPwchk] = useState('');
+    const [birthday, setBirthday] = useState('');
+    
+    //에러메시지 상태
+    const [nameMessage, setNameMessage] = useState('');
+    const [pwMessage, setPwMessage] = useState('');
+    const [pwchkMessage, setPwchkMessage] = useState('');
+    // 유효성 검사
+    const [isName, setIsName] = useState(false);
+    const [isPw, setIsPw] = useState(false);
+    const [isPwConfirm, setIsPwConfirm] = useState(false);
+    const [buttonColor, setButtonColor] = useState('#B4B4B4');
+    const userInfo = {}
+    const fontsizelist = [24, 32, 40]
 
-//     /* 아이디 체크 */
-//     useEffect(() => {
-//       const findUser = users.useSelector((user) => user.id === id);
+    const inputName = useCallback(e => {
+        setName(e.target.value)
+        if (e.target.value.length < 2 || e.target.value.length > 5) {
+            setNameMessage('2글자 이상 5글자 미만으로 입력해주세요.')
+            setIsName(false)
+          } else {
+            setNameMessage('올바른 이름 형식입니다 :)')
+            setIsName(true)
+          }
+        }, [])
+    
+    const inputPw = useCallback(e => {
+        const passwordRegex = /^[0-9]{4,4}$/;     //비밀번호 패턴
+        const passwordCurrent = e.target.value  //입력한 비밀번호를 변수에 저장  
+        setPw(passwordCurrent)    // 변수에 저장된 비밀번호를 현재의 비밀번호로 set
 
-//       if ((!findUser && validationCheck(id, inputRegexs.idReg)) || id === "") {
-//         setErrorMessage({
-//           ...errorMessage,
-//           idError: "",
-//         });
-//       } else if (findUser !== undefined) {
-//         setErrorMessage({
-//           ...errorMessage,
-//           idError: "이미 가입된 아이디입니다.",
-//         });
-//       } else if (!validationCheck(id, inputRegexs.idReg)) {
-//         setErrorMessage({
-//           ...errorMessage,
-//           idError: "정확한 전화번호를 입력해주세요!",
-//         });
-//       }
-//     }, [id]);
+        if (!passwordRegex.test(passwordCurrent)) {
+            setPwMessage('숫자 4 자리를 입력해주세요!')
+            setIsPw(false)
+        } else {
+            setPwMessage('올바른 형식입니다.')
+            setIsPw(true)
+        }
+    },[])
 
-//     /* 현재 비밀번호 체크 */
-//     useEffect(() => {
-//       if (users.password === nowPwd || nowPwd === "") {
-//         setErrorMessage({
-//           ...errorMessage,
-//           nowPwdError: "",
-//         });
-//       } else {
-//         setErrorMessage({
-//           ...errorMessage,
-//           nowPwdError: "현재 비밀번호와 일치하지 않습니다.",
-//         });
-//       }
-//     }, [nowPwd]);
-//     /* 새 비밀번호 체크 */
-//     useEffect(() => {
-//       if (validationCheck(pwd, inputRegexs.pwdReg) || pwd === "") {
-//         setErrorMessage({
-//           ...errorMessage,
-//           pwdError: "",
-//         });
-//       } else {
-//         setErrorMessage({
-//           ...errorMessage,
-//           pwdError:
-//             "비밀번호는 숫자로 최소 4자 이상이여야 합니다.",
-//         });
-//       }
-//     }, [pwd]);
-//     /* 새 비밀번호 확인 체크 */
-//     useEffect(() => {
-//       if (pwd === confirmPwd || confirmPwd === "") {
-//         setErrorMessage({
-//           ...errorMessage,
-//           confirmPwdError: "",
-//         });
-//       } else {
-//         setErrorMessage({
-//           ...errorMessage,
-//           confirmPwdError: "비밀번호 확인이 일치하지 않습니다.",
-//         });
-//       }
-//     }, [confirmPwd]);
+    const inputPwchk = useCallback(e => {
+        const pwconfirmcurrent = e.target.value
+        setPwchk(pwconfirmcurrent)
 
-//     const onModify = () => {
-//       if (!id || !pwd || !confirmPwd || !nowPwd) {
-//         alert("모든 값을 정확하게 입력해주세요");
-//         return;
-//       }
+        if(pw === pwconfirmcurrent){
+            setPwchkMessage('설정한 비밀번호와 같습니다.')
+            setIsPwConfirm(true)
+        }else{
+            setPwchkMessage('설정한 비밀번호와 다릅니다.')
+            setIsPwConfirm(false)
+        }
+    },[pw])
+    const inputBirth = e => {
+        setBirthday(e.target.value)
+    }
+    useEffect(()=>{
+        const storedId = window.localStorage.getItem("phonenum");
+        const storedToken = window.localStorage.getItem("token");
+        setId(storedId);
+        setModifyToken(storedToken);
 
-//       if (idError) {
-//         alert("아이디가 형식에 맞지 않습니다");
-//         return;
-//       } else if (nowPwdError) {
-//         alert("현재 비밀번호와 일치하지 않습니다.");
-//         return;
-//       } else if (pwdError) {
-//         alert("비밀번호가 형식에 맞지 않습니다");
-//         return;
-//       } else if (confirmPwdError) {
-//         alert("비밀번호 확인이 일치하지 않습니다.");
-//         return;
-//       }
-  
-//       alert("수정을 완료했습니다.");
-//       navigator('/MyPage');
-//     };
-
-    return (
-        <>
-            <div className="modifyUser_main">정보 수정
-            
-                {/* <div className="fix">}
-                    {<div className="id" type="text" value={id}>아이디 : </div>
-                    <div>{idError ? {idError} : ""}</div>
-
-                    <div className="pw" type="password" value={nowPwd}>현재 비밀번호 : </div>
-                    <div>{nowPwdError ? {nowPwdError} : ""}</div>
-
-                    <div className="new_pw" type="password" value={pwd}>새 비밀번호 : </div>
-                    <div>{pwdError ? {pwdError} : ""}</div>
-                    
-                    <div className="new_pw_check" type="password" value={confirmPwd}>새 비밀번호 확인: </div>
-                    <div>{confirmPwdError ? {confirmPwdError} : ""}</div>
+        if(isName&&isPw&&isPwConfirm === true){
+            setButtonColor('#E3EEDE')
+        } else{
+            setButtonColor('#B4B4B4')
+        }
+   }, [isName, isPw, isPwConfirm])
+    const Modifycomplete = e => {
+        e.preventDefault();
+        userInfo['username'] = name;
+        userInfo['password'] = pw;
+        userInfo['birthday'] = new Date(birthday);
+        axios({
+            method:'put',
+            url: `//localhost:8080/users/${id}`,
+            headers : {
+                "Content-Type": `application/json`,
+                Authorization: `Bearer ${modifyToken}`
+            },
+            data:userInfo,
+        })
+        .then(result => {console.log(result)
+        console.log(result)
+        alert('정보수정 완료!')
+        navigate('/userSearchPage')
+    })
+        .catch(error => {console.log('요청실패')
+        console.log(axios.Authorization);
+        navigate('/modifyUserPage')
+    })
+    }
+    return(
+        <div className="modifybox">
+         <h3 className="modifytext">정보수정</h3>
+         <form className="modifyform">
+            <div className="modifyform-body">
+                <div className="modifyform-box">
+                    <div className='modifyform-boxtobox'>
+                        <label htmlFor="inputname" className="modifyform-nametext">이름  </label>
+                        <input required type="text" className="input-info modifyform-inputname" id="inputname" placeholder="이름을 입력해주세요" onChange={inputName}/>
+                    </div>
+                    {name.length > 0 && <span className={`message ${isName ? 'success' : 'error'}`}>{nameMessage}</span>}
                 </div>
-                <button type="submit" value="수정 완료" onClick={onModify} /> */}
+                <div className="modifyform-box">
+                    <div className='modifyform-boxtobox'>
+                        <label htmlFor="inputpw" className="modifyform-pwtext">비밀번호  </label>
+                        <input required type='password' id="inputpw" className="input-info modifyform-inputpw" placeholder="숫자 4자리를 입력해주세요" maxLength={4} onChange={inputPw}/>
+                    </div>
+                    {pw.length > 0 && (
+                    <span className={`message ${isPw ? 'success' : 'error'}`}>{pwMessage}</span>
+                    )}
+                </div>
+                <div className="modifyform-box">
+                    <div className='modifyform-boxtobox'>
+                        <label htmlFor="inputpwchk" className="modifyform-pwchktext">비밀번호 확인  </label>
+                        <input required type='password' id="inputpwchk" className='input-info modifyform-inputpwchk' placeholder="비밀번호를 다시 입력해주세요" maxLength={4} onChange={inputPwchk}/>
+                    </div>
+                    {pwchk.length > 0 && (
+                        <span className={`message ${isPwConfirm ? 'success' : 'error'}`}>{pwchkMessage}</span>
+                    )}
+                </div>
+                <div className="modifyform-box">
+                    <div className='modifyform-boxtobox'>
+                        <lable htmlFor='inputbirth' className='modifyform-birthtext'>생년월일  </lable>
+                        <input required type="Date" className="input-info modifyform-inputbirth" onChange={inputBirth}/>
+                    </div>
+                </div>
             </div>
-        </>
-    );
+            <input className="modifyjoinbtn" type="submit" style={{backgroundColor : buttonColor}} value={'정보수정'} disabled={!(isName && isPw && isPwConfirm)} onClick={Modifycomplete}/>
+         </form>
+        </div>
+    )
 }

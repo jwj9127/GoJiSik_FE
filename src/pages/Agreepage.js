@@ -3,34 +3,6 @@ import { useNavigate } from "react-router";
 import '../css/Agreepage.css'
 
 export default function Agreepage() {
-    //유효성 검사
-    // const [isAllChecked, setIsAllChecked] =  useState(false);
-    // const [agreements, setAgreements] = useState({
-    //     isChecked1 : false,
-    //     isChecked2 : false,
-    // })
-
-    // const allChecked = e => {
-    //     const {checked} = e.target;
-    //     setAgreements(prevAgreements =>
-    //         Object.keys(prevAgreements).reduce((newAgreements, agreementKey)=>({
-    //             ...newAgreements,
-    //             [agreementKey] : checked,
-    //         }),
-    //         {}
-    //         )
-    //     );
-    //         setIsAllChecked(checked);
-    // }
-    // const isChecked = e=>{
-    //     const {name, checked} = e.target;
-
-    //     setAgreements(prevAgreements => ({...prevAgreements, [name] : checked}))
-    //     const allChecked = Object.values({...agreements, [name] : checked}).every(
-    //         value=>value===true
-    //     );
-    //     setIsAllChecked(allChecked);
-    // };
 
     const [isAllChecked, setIsAllChecked] = useState(false)
     const [isChecked1, setIsChecked1] = useState(false)
