@@ -73,7 +73,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Main/>}/>
           <Route path='/goverment24' element={<Goverment/>}/>
-          <Route path='/post' element={<Postpages/>} />
           <Route path='/kiosk' element={<KioskPage/>}/>
           <Route path='/ecommerce' element={<EcommercePage/>}/>
           <Route path='/post/postWrite' element={<PostWritepage/>}/>  
@@ -108,11 +107,9 @@ function App() {
           <Route path="/Br" element = {<Br />}></Route>
           <Route path="/Waffle" element = {<Waffle />}></Route>
           <Route path='/goverment24' element={<Goverment />} />
-          <Route path='/post' element={<Postpages />} />
           <Route path='/main' element={<Main />} />
           <Route path='/post/postWrite' element={<PostWritepage />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/postpage' element={<Postpages />} />
           <Route path='/joinpage' element={<Joinpage />} />
           <Route path='/shoppingmall' element={<Shoppingmall />} />
           <Route path='/eleven_street' element={<Elevne_street />} />

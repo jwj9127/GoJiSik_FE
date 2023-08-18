@@ -39,7 +39,7 @@ const Navigation = () => {
                 <div id='1' className='btn navigationbox-govermentbtn'><Link to='/goverment24'>정부24</Link></div>
                 <div id='2' className='btn navigationbox-kioskbtn'><Link to='/kiosk'>키오스크</Link></div>
                 <div id='3' className='btn navigationbox-ecommercebtn'><Link to='/shoppingmall'>전자상거래</Link></div>
-                <div id='4' className='btn navigationbox-postbtn' ><Link to={'/post'}>게시글</Link></div>
+                <div id='4' className='btn navigationbox-postbtn' ><Link to={'/postpage'}>게시글</Link></div>
             </div>
             <div className='mypagebox'>
                 <button className='btn mypagebox-loginbtn'>{isToken ? <button onClick={logoutbtn} className='logoutbtn'>로그아웃</button> :<Link to='/login'><span className='loginicons'><CgLogIn size={20}/></span>로그인</Link>}</button>
