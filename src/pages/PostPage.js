@@ -26,11 +26,8 @@ export default function Postpages() {
         })
         .then((response)=>{
             const reverselist = response.data.data.reverse()
-            const bestpostlist = response.data.data.sort((a,b)=>(b.hits - a.hits))
-            console.log(bestpostlist)
             console.log(reverselist)
             setRepostlist(reverselist)
-            setBestlist(bestpostlist)
         })
         .catch((error) => {
             console.error('에러왜나 : ', error)
@@ -45,10 +42,6 @@ export default function Postpages() {
         }
     },[])
 
-  
-    const toggleclick = e => {
-        setValue(value => !value);
-    }
     const MoveToWrite = e => { 
         navigate('/post/postwrite')
     }
@@ -62,7 +55,6 @@ export default function Postpages() {
                 <div className="postbox-allbox__headerbox">
                     <h3>게시글 목록</h3>
                     <div className="btnbox">
-                        <button className="btn postbox-viewtogglebtn" value={togglevalue} onClick={toggleclick}>{value?'조회순':'최신순'}</button>
                         <button className="btn postbox-postwritebox" disabled={!isLogin} onClick={MoveToWrite}>게시글 작성</button>
                     </div>
                 </div>
@@ -76,7 +68,7 @@ export default function Postpages() {
                             </tr>
                         </thead>
                         <tbody>
-                            {bestlist?.map(post => {
+                            {repostlist?.map(post => {
                                 return (
                                     <tr>
                                         <td>{post.writer}</td>

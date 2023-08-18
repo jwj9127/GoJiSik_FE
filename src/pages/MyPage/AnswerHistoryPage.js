@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../../css/MyPage/AnswerHistoryPage.css";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import moment from "moment";
 
 export default function AnswerHistoryPage() {
     const navigate = useNavigate();
@@ -54,7 +55,7 @@ export default function AnswerHistoryPage() {
                                     <tr >
                                         <Link to={'/postdetails'} state={{id : post.id}}>
                                         <td>{post.writer}</td>
-                                        <td>{post.createdDate}</td>
+                                        <td>{moment(post.createdDate, "YYYY.MM.DD").format("YYYY-MM-DD")}</td>
                                         </Link>
                                     </tr>
                                 )

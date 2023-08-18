@@ -183,12 +183,12 @@ export default function PostWritepage() {
     })
       .then((response) => {
         alert('/등록되었습니다.')
-        navigate('/post')
+        navigate('/postpage')
       })
       .catch(error => {
         console.log('요청실패')
         console.log(error)
-        navigate('/post')
+        navigate('/postpage')
       })
 
   };
