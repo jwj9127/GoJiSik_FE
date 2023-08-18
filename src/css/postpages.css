@@ -62,15 +62,10 @@
 table {
     width: 100%;
     border-radius: 50px;
-    border: 5px solid #C1CCB7;
+    border: 3px solid #C1CCB7;
     border-collapse: collapse;
   }
-  tr{
-    height: 80px;
-  }
-  td {
-    border-bottom: 3px solid #C1CCB7;
-    border-top: 3px solid #C1CCB7;
-    height: 100px;
-    padding: 0;
+  th, td {
+    border-bottom: 1px solid #C1CCB7;
+    padding: 22px;
   }

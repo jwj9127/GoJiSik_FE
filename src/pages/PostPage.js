@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import React, { useEffect, useState  } from "react";
+import {useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import '../css/postpages.css'
-import moment from "moment";
+import moment from "moment/moment";
+
 
 export default function Postpages() {
     const [value, setValue] = useState(true);
@@ -18,50 +19,50 @@ export default function Postpages() {
     const [repostlist, setRepostlist] = useState([])
     const [bestlist, setBestlist] = useState([])
 
-    useEffect(() => {
+    useEffect(()=>{
         axios({
             method: 'get',
-            url: "//localhost:8080/questions",
+            url : "//localhost:8080/questions",
         })
-            .then((response) => {
-                const reverselist = response.data.data.reverse()
-                const bestpostlist = response.data.data.sort((a, b) => (b.hits - a.hits))
-                console.log(bestpostlist)
-                console.log(reverselist)
-                setRepostlist(reverselist)
-                setBestlist(bestpostlist)
-            })
-            .catch((error) => {
-                console.error('에러왜나 : ', error)
-            })
+        .then((response)=>{
+            const reverselist = response.data.data.reverse()
+            const bestpostlist = response.data.data.sort((a,b)=>(b.hits - a.hits))
+            console.log(bestpostlist)
+            console.log(reverselist)
+            setRepostlist(reverselist)
+            setBestlist(bestpostlist)
+        })
+        .catch((error) => {
+            console.error('에러왜나 : ', error)
+        })
     }, []);
 
     useEffect(() => {
-        if (window.localStorage.getItem('token') === null) {
+        if(window.localStorage.getItem('token') === null){
             setIsLogin(false)
-        } else {
+        }else{
             setIsLogin(true)
         }
-    }, [])
+    },[])
 
-
+  
     const toggleclick = e => {
         setValue(value => !value);
     }
-    const MoveToWrite = e => {
+    const MoveToWrite = e => { 
         navigate('/post/postwrite')
     }
     const inputsearch = e => {
         setInputSearch(e.target.value);
         console.log(inputSearch)
     }
-    return (
+    return(
         <div className="postbox">
-            <div className="postbox-allbox">
+            <div className="postbox-allbox"> 
                 <div className="postbox-allbox__headerbox">
                     <h3>게시글 목록</h3>
                     <div className="btnbox">
-                        <button className="btn postbox-viewtogglebtn" value={togglevalue} onClick={toggleclick}>{value ? '조회순' : '최신순'}</button>
+                        <button className="btn postbox-viewtogglebtn" value={togglevalue} onClick={toggleclick}>{value?'조회순':'최신순'}</button>
                         <button className="btn postbox-postwritebox" disabled={!isLogin} onClick={MoveToWrite}>게시글 작성</button>
                     </div>
                 </div>
@@ -69,9 +70,9 @@ export default function Postpages() {
                     <table>
                         <thead>
                             <tr>
-                                {tableheader?.map(head => {
-                                    return <th>{head}</th>
-                                })}
+                               {tableheader?.map(head => {
+                                return <th>{head}</th>
+                               })}
                             </tr>
                         </thead>
                         <tbody>
@@ -79,7 +80,7 @@ export default function Postpages() {
                                 return (
                                     <tr>
                                         <td>{post.writer}</td>
-                                        <Link to={'/postdetails'} state={{ id: post.id }}><td>{post.title}</td></Link>
+                                        <Link to={'/postdetails'} state={{id:post.id}}><td>{post.title}</td></Link>
                                         <td>{moment(post.createdDate, "YYYY.MM.DD").format("YYYY-MM-DD")}</td>
                                         <td>{post.hits}</td>
                                     </tr>

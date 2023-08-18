@@ -1,25 +1,37 @@
 .postdetails{
-    display: flex;
+    background-image: url('../img/배경\ 사진.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: 35px 0;
     flex-direction: column;
+    padding: 20px 307px;
+    height: 150vh;
 }
 
 .postdetails-box{
-    display: flex;
+   /* display: flex; */
+    
     justify-content: space-between;
     align-items: center;
     height: 60vh;
 }
 
 .postdetails-titlebox{
-    display: flex;
+    /* display: block; */
     align-items: center;
+    
 }
 .postdetails-title{
+    text-align: start;
+    border: 3px solid #E3EEDE;
+    border-radius: 15px;
+    padding: 28px 30px;
     margin: 0;
 }
-
+.postdetails-box-box{
+    width: auto;
+}
 .postdetails-titlebox-box{
-    display: flex;
     flex-direction: column;
 }
 
@@ -31,6 +43,63 @@
     margin-top: 10px;
 }
 
-.postdetails-title{
-    margin-left: 30px;
+.postdetails-contentsbox{
+    width: 50vw;
+    padding: 54px 65px;
+    background-color: #F5F3F1;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.postdetails-titlebox >h6{
+    background-color: #E3EEDE;
+    border-radius: 48px;
+    padding: 15px 25px;
+    /* margin-left: 1052px; */
+    width: 95px;
+}
+hr{
+    border:none;
+    margin-bottom: 50px;
+}
+h3{
+    margin: 0;
+}
+
+.postdetails-contentsbox >h3, .postdetails-contents{
+    text-align: start;
+    padding-left: 30px;
+    border: 3px solid #E3EEDE;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+.postdetails-categorybox h3{
+    background-color:#E3EEDE ;
+    border-bottom: 3px solid #E3EEDE;
+    bottom: 18px;
+    margin-bottom: 30px;
+    padding: 15px 15px;
+}
+.postdetails-contents{
+    padding: 15px 30px;
+    border-radius: 15px;
+    background-color: white;
+    height: 300px;
+}
+.postdetails-categorybox{
+    align-items: center;
+    margin-top: 45px;
+    border: 3px solid #E3EEDE;
+    margin-bottom: 40px;
+    border-radius: 15px;
+}
+
+.postdetails-category{
+    margin-bottom: 30px;
+}
+.file{
+    border: 1px solid;
+}
+.commentsfullbox{
+    margin-bottom: 300px;
 }

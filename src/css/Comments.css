@@ -1,0 +1,43 @@
+.commentsbox {
+    width: 60vw;
+    text-align: start;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    margin-bottom: 300px;
+}
+
+.inputcomment {
+    padding-left: 15px;
+    border-color: #E3EEDE;
+    border-radius: 3px;
+    width: 80%;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.commentbtn {
+    width: 15%;
+    height: 35px;
+}
+
+.commentsbox li {
+    list-style: none;
+}
+
+.commentWriter {
+    margin-right: 52%;
+    
+}
+
+.commentContent {
+    margin-top: 20px;
+}
+.commentbox{
+    padding: 0;
+}
+.commentli{
+    border-radius: 10px;
+    border: 2px solid #E3EEDE;
+    margin-bottom: 30px;
+    padding: 10px;
+}
