@@ -11,7 +11,7 @@ export default function AnswerHistoryPage() {
     const [repostlist, setRepostlist] = useState([])
 
     useEffect(() => {
-        
+        console.log(1)
         // 페이지에 해당하는 게시물 가져오기
         axios({
             method : 'get',

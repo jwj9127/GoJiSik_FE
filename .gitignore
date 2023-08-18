@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/pages/MyPage/AnswerHistoryPage.js
+src/pages/MyPage/ModifyUserPage.js
+src/pages/MyPage/PostHistoryPage.js
