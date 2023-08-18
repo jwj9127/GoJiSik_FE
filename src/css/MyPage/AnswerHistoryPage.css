@@ -1,23 +1,56 @@
-.answerHistory_main{
-    height: 90vh;
+.answerHistorybox{
+    background-image: url('../../img/배경\ 사진.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: 35px 0;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.answerReview{
-    width: 200px;
-    height: 50px;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    align-items: center;
+    
 }
-
-.answerList{
+.answerHistorybox-allbox{
+    width: 80vw;
+    height: auto;
     display: flex;
-    width: 1000px;
-    height: 300px;
     flex-direction: column;
+    align-items: start;
 }
+.answerHistorybox-allbox__headerbox{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.btnbox{
+    display: flex;
+    align-items: center;
+}
+.btnbox button {
+    border: none;
+    background-color: beige;
+    cursor: pointer;
+    &:hover{
+        transform: scale(105%);
+    }
+    &:active{
+        transform: scale(95%);
+    }
+}
+.inputserch{
+    height: 1.5rem;
+}
+.answerbox-postlistbox{
+    width: 80vw;
+    height: auto;
+}
+table {
+    width: 100%;
+    border-radius: 50px;
+    border: 3px solid #C1CCB7;
+    border-collapse: collapse;
+  }
+  th, td {
+    border-bottom: 1px solid #C1CCB7;
+    padding: 22px;
+  }

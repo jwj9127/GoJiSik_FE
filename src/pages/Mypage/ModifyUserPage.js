@@ -25,7 +25,6 @@ export default function ModifyUserPage() {
     const [isPwConfirm, setIsPwConfirm] = useState(false);
     const [buttonColor, setButtonColor] = useState('#B4B4B4');
     const userInfo = {}
-    const fontsizelist = [24, 32, 40]
 
     const inputName = useCallback(e => {
         setName(e.target.value)
@@ -72,6 +71,9 @@ export default function ModifyUserPage() {
         const storedToken = window.localStorage.getItem("token");
         setId(storedId);
         setModifyToken(storedToken);
+        console.log(isName)
+        console.log(isPw)
+        console.log(isPwConfirm)
 
         if(isName&&isPw&&isPwConfirm === true){
             setButtonColor('#E3EEDE')
@@ -101,7 +103,6 @@ export default function ModifyUserPage() {
         navigate('/login');
     })
         .catch(error => {console.log('요청실패')
-        console.log(axios.Authorization);
         navigate('/modifyUserPage')
     })
     }

@@ -218,7 +218,7 @@ export default function PostWritepage() {
           <div className="ee">
             <span>이미지 첨부</span>
             <div className="imagebtn">
-              <input className="postbtn" type="file" accept="image/*" onChange={handleimage} />
+              <input className="postbtn" type="file" accept="image/*"  onChange={handleimage} />
             </div>
           </div>
           <input className="postwritebtn" type="submit" value={'게시글 등록'} onClick={postWrite} />

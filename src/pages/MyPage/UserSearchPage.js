@@ -18,16 +18,8 @@ export default function UserSearchPage(){
         setId(storedId);
         setToken(storedToken);
         setBeforeName(storedName);
-        setBeforeBirthday(storedBirthday.substring(-4,8));
+        setBeforeBirthday(storedBirthday.substring(-4,10));
         setBeforePhone(storedId);
-
-        axios.get(`//localhost:8080/users`, {
-            headers: { Authorization: `Bearer ${storedToken}` },
-          }).then((result) =>{
-            window.localStorage.setItem("username", result.data.username);
-            window.localStorage.setItem("phonenum", result.data.phonenum);
-            window.localStorage.setItem("birthday", result.data.birthday);
-          })
     })
 
     return (
