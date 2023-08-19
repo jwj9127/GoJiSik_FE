@@ -18,7 +18,7 @@ export default function AnswerHistoryPage() {
         // 페이지에 해당하는 게시물 가져오기
         axios({
             method : 'get',
-            url : '//localhost:8080/answers/my-answer',
+            url : '/answers/my-answer',
             headers:{
                 "Authorization": `Bearer ${token}`,
             }

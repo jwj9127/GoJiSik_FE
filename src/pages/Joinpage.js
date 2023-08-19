@@ -99,7 +99,7 @@ export default function Joinpage(){
         userInfo['birthday'] = new Date(birthday);
         axios({
             method:'post',
-            url: '//localhost:8080/users',
+            url: '/users',
             headers : {
                 "Content-Type": `application/json`,
             },

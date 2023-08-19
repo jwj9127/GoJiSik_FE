@@ -29,7 +29,7 @@ export default function Comments({ id }) {
         console.log(comment)
         e.preventDefault();
         axios({
-            url: `//localhost:8080/answers/${id}`,
+            url: `/answers/${id}`,
             method: 'post',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -44,7 +44,7 @@ export default function Comments({ id }) {
         console.log(id)
         axios({
             method: 'get',
-            url: `//localhost:8080/answers/${id}`
+            url: `/answers/${id}`
         })
             .then(res => {
                 setCommetlist(res.data)

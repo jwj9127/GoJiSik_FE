@@ -88,7 +88,7 @@ export default function ModifyUserPage() {
         userInfo['birthday'] = new Date(birthday);
         axios({
             method:'put',
-            url: `//localhost:8080/users/${id}`,
+            url: `/users/${id}`,
             headers : {
                 "Content-Type": `application/json`,
                 Authorization: `Bearer ${modifyToken}`

@@ -174,7 +174,7 @@ export default function PostWritepage() {
     })], { type: "application/json" }));
     axios({
       method: 'post',
-      url: '//localhost:8080/questions',
+      url: '/questions',
       headers: {
         "Content-Type": "multipart/form-data", // Content-Type을 반드시 이렇게 하여야 한다.
         "Authorization": `Bearer ${token}`,

@@ -22,7 +22,7 @@ export default function Postpages() {
     useEffect(()=>{
         axios({
             method: 'get',
-            url : "//localhost:8080/questions",
+            url : "/questions",
         })
         .then((response)=>{
             const reverselist = response.data.data.reverse()

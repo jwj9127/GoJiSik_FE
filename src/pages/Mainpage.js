@@ -14,7 +14,7 @@ export default function Main() {
     useEffect(() => {
         const BestPost = async () => {
             try {
-                const response = await axios.get('//localhost:8080/questions')
+                const response = await axios.get('/questions')
                 setPostdata(response.data.data)
                 console.log(response.data.data)
             } catch (error) {

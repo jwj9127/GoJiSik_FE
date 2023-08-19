@@ -17,7 +17,7 @@ export default function MyPage() {
     useEffect(() => {
             axios({
                 method : 'get',
-                url : '//localhost:8080/users',
+                url : '/users',
                 headers :{
                     Authorization: `Bearer ${token}`
                 }

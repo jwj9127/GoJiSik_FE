@@ -19,7 +19,7 @@ export default function PostDetails() {
     useEffect(() => {
         axios({
             method: 'get',
-            url: `//localhost:8080/questions/${clickId}`,
+            url: `/questions/${clickId}`,
             withCredentials: true,
             headers: {
                 'Set-Cookies': cookies.get('postView')
@@ -59,7 +59,7 @@ export default function PostDetails() {
                         <div className="file">
                             <h3>첨부파일</h3>
                             <img
-                                src={`http://localhost:8080/files/image/${clickId}`}
+                                src={`/files/image/${clickId}`}
                                 onError={() => setImageError(true)}
                                 style={{ display: imageError ? 'none' : 'block' }}
                                 alt="Attachment"

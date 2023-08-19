@@ -17,7 +17,7 @@ export default function PostHistoryPage() {
         // 페이지에 해당하는 게시물 가져오기
         axios({
             method: 'get',
-            url: '//localhost:8080/questions/my-question',
+            url: '/questions/my-question',
             headers: {
                 "Authorization": `Bearer ${token}`,
             }
