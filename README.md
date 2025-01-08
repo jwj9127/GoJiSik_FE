@@ -34,7 +34,7 @@
 
 <table border="" cellspacing="0" cellpadding="0" width="100%">
     <tr width="100%">
-        <td align="center"><a href= "https://github.com/won0324">조아빈</a></td>
+        <td align="center"><a href= "https://github.com/whdkqls122">조아빈</a></td>
         <td  align="center"><a href= "https://github.com/jwj9127">정원준</a></td>
         <td  align="center"><a href= "https://github.com/heesuuuu">정희수</a></td>
         <td  align="center"><a href= "https://github.com/kws9208">김우석</a></td>
