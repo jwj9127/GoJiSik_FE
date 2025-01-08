@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# 2023 멋쟁이사자처럼 중앙 해커톤
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **서비스 소개**
 
-## Available Scripts
+  ### **GoJiSik(고령층 대상 지식IN 서비스, 고지식)**
 
-In the project directory, you can run:
+  _고령화, 디지털 기기를 다루시는데 어려운 분들의 디지털 격차를 해소하고 키오스크, 정부24, 전자 상거래 이용방법을 설명해주는 서비스_
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **핵심기능**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  키오스크, 정부24, 전자 상거래 이용 방법을 사진으로 하나하나 보면서 따라할 수 있는 기능이 있습니다.
+  또한 사진을 봐도 잘 이해가 가지 않는 경우 게시판 글 작성을 통해 서로 정보를 공유할 수 있습니다.
 
-### `npm test`
+## ⚙️기술 스택
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### ✔️ 기획디자인
 
-### `npm run build`
+<img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### ✔️ 프론트엔드
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=html5&logoColor=white">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### ✔️ 백엔드
 
-### `npm run eject`
+<img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/spring Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"> <img src="https://img.shields.io/badge/JPA-6DB33F?style=for-the-badge&logo=JPA&logoColor=white"/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### ✔️ 협업도구
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 👨‍👩‍👧‍👦 개발자들
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<table border="" cellspacing="0" cellpadding="0" width="100%">
+    <tr width="100%">
+        <td align="center"><a href= "https://github.com/won0324">조아빈</a></td>
+        <td  align="center"><a href= "https://github.com/jwj9127">정원준</a></td>
+        <td  align="center"><a href= "https://github.com/heesuuuu">정희수</a></td>
+        <td  align="center"><a href= "https://github.com/kws9208">김우석</a></td>
+        <td  align="center"><a href= "https://github.com/minseo12345">박민서</a></td>
+        <td  align="center"><a href= "https://github.com/rudgns328">송경훈</a></td>
+    </tr>
+    <tr width="100%">
+      <td  align="center"><p>프론트엔드</p></td>
+      <td  align="center"><p>프론트엔드</p></td>
+      <td  align="center"><p>프론트엔드</p></td>
+     <td  align="center">백엔드</td>
+      <td  align="center">백엔드</td>
+      <td  align="center">백엔드</td>
+   </tr>
+</table>
+<br><br>
